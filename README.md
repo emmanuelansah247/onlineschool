@@ -35,9 +35,16 @@ You need to install the following from the windows package manager
 
 
 #### Setting up the database for the application
-You need to have microsoft sql server installed. Create a database [name_of_database]. When you are done creating the database, you need to update the connectionstring in the
-the appsettings.json file
-]Server=[name_of_server];User Id=[user_id[;Initial Catalog=[database_name]; Password=[password_to_the_server];
+You need to have microsoft sql server installed. Create a database [name_of_database]. When you are done creating the database, you need to update the connectionstring in the the appsettings.json file with 
+Server=[name_of_server];User Id=[user_id[;Initial Catalog=[database_name]; Password=[password_to_the_server];
+
+You need to run the following to create the database migration file
+
+     dotnet ef migrations add initial
+     
+Then run the following code (in the application console) to effect the migrations
+
+     dotnet ef database update
 
 Running The Application
 You can run the application using microsoft visual studio (By clicking run )
