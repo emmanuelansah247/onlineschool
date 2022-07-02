@@ -1,0 +1,71 @@
+@model bim_edu.Models.ShareFileViewModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Bim Edu Share Files ";
+    CourseLecturer vCourseLecturer = ViewData["vCourseLecturer"] as CourseLecturer;
+    List<ShareFile> vShareFiles = ViewData["vShareFiles"] as List<ShareFile>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+        <h1 class="page_title"> Share File Uploading Page </h1>
+        <form class="form clear_float" enctype="multipart/form-data" asp-controller="Administration_Four" asp-method="POST">
+
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="CourseLecturerId"> Course </label>
+                        <select class="input" type="text" name="CourseLecturerId">
+                                    <option selected value=@vCourseLecturer.CourseLecturerId > 
+                                        @vCourseLecturer.Course.Name 
+                                    </option>
+                        </select>
+                        <span class="show_on_error" asp-validation-for="CourseLecturerId"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="IFormFile"> Upload File </label>
+                        <input class="input" asp-for="IFormFile" name="IFormFile"/>
+                        <span class="show_on_error" asp-validation-for="IFormFile"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Description"> Title </label>
+                        <input class="input" type="text" name="Description"/>
+                        <span class="show_on_error" asp-validation-for="Description"></span>
+                    </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="AdminShareFile" class="button cursor_pointer" value="Share File"/>
+                    </div>
+        </form>
+
+        <section class="document_list_wrapper">
+            <div class="document_list_container">
+
+                @foreach(ShareFile shareFile in vShareFiles){
+                <figure class="item clear_float">
+                    <div class="left">
+                        <div class="title">
+                            @shareFile.Description
+                        </div>
+                    </div>
+                    <div class="right">
+                        <form asp-controller="Administration_Four" asp-method="POST">
+                            <input type="hidden" name="Id" value="@shareFile.ShareFileId"/>
+                            <a href="~/@GeneralStoredNames.Share_File_Directory/@shareFile.FilePath" target="_blank" class="button cursor_pointer"> View </a>
+                            <input type="submit" asp-action="AdminShareFileDelete"  class="button cursor_pointer" value="Delete"/>
+                        </form>
+                    </div>
+                </figure>
+                }
+
+            </div>
+        </section>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_four/adminsharefile.css" />
+}

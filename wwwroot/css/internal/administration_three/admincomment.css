@@ -1,0 +1,192 @@
+.approved_page_wrapper{
+    width: 100%;
+}
+
+.approved_page_wrapper .approved_page_container{
+    width: 100%;
+}
+
+.approved_page_container .welcome_title{
+    font: normal normal bold 20px/1.2em "Arial";
+    padding: 1% 10%;
+    background-color: #e90172;
+    color: #fff;
+    text-align: center;
+}
+
+.approved_page_container .filter_comment_container{
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    box-sizing: border-box;
+    background-color: #4b345d;
+}
+
+.form .add_comment_container{
+    width: 100%;
+    padding: 2% 10%;
+    background-color: #4e4e4e;
+    box-sizing: border-box;
+}
+
+/* 
+begin add comment area  
+*/
+
+
+.add_comment_container .input_container{
+    width: 60%;
+    float: left;
+}
+
+.add_comment_container .button_container{
+    width: 30%;
+    float: left;
+    margin: 30px 5% 0px 5%;
+}
+
+.add_comment_container .label{
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font: normal normal bold 14px/1.2em "Arial";
+}
+
+.add_comment_container .input_container .input{
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font: normal normal normal 16px/1.2em "Georgia";
+}
+
+
+.add_comment_container .button_container .button{
+    padding: 10px 20px;
+    font: normal normal normal 17px/1.2em "Helvetica";
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.add_comment_container .button_container .button:hover{
+    background-color: #ddd;
+}
+
+@media screen and (max-width:768px){
+
+    .add_comment_container .input_container{
+        width: 100%;
+        float: left;
+    }
+    
+    .add_comment_container .button_container{
+        width: 100%;
+        float: left;
+        margin: 10px 0% 0px 0%;
+    }
+
+}
+
+/* 
+end add comment area 
+*/
+
+/* 
+begin comments area 
+*/
+.comment_wrapper{
+    padding: 5% 10%;
+    background-color: #3d3146;
+    background-color: #f2f1e4;
+    color: #000;
+}
+
+.comment_wrapper .comment_container{
+    margin-bottom: 320px;
+}
+
+.comment_wrapper .comment{
+    margin: 50px 0px;
+    box-sizing: border-box;
+}
+
+.comment_wrapper .comment .name{
+    font: normal normal normal 15px/1.2em "Arial";
+    color: #3d3146;
+}
+
+.comment_wrapper .comment .date{
+    font: italic normal normal 14px/1.2em "Georgia";
+    margin-top: 3px;
+    color: #4e4e4e;
+}
+
+.comment_wrapper .comment .message{
+    margin: 5px 0px 0px 0px;
+    font: normal normal normal 16px/1.2em "Helvetica";
+}
+
+.comment_wrapper .comment .message pre{
+    white-space: pre-wrap;
+    word-break: keep-all;
+}
+
+.comment_wrapper .comment .image_container{
+   float: left;
+   width: 30px;
+   height: 30px;
+   margin: 0px 10px 10px 0px;
+}
+
+.comment_wrapper .comment.staff .message,
+.comment_wrapper .comment.staff .name,
+.comment_wrapper .comment.staff .date{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.comment_wrapper .comment.commentreply{
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.comment_wrapper .comment.commentreply .message{
+    color: brown;
+}
+
+.comment .button_container{
+    width: auto;
+}
+
+.comment .button{
+    padding: 5px 5px;
+}
+
+.comment .image_container img{
+    width: 100%;
+    height: 100%;
+}
+
+.comment .comment_edit{
+    color: #3d3146;
+    cursor: pointer;
+    font: normal normal normal 13px/1.2em "sans-serif";
+}
+
+.comment .edit_comment_container{
+    transition: all .5s ease-in-out;
+    max-height: 0px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.comment .edit_comment_container.active{
+    transition: all .5s ease-in-out;
+    max-height: auto;
+    overflow: hidden;
+}
+
+/*
+end comments area
+*/

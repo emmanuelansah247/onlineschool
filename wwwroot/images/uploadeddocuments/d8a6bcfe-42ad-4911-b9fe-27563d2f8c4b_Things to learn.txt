@@ -1,0 +1,14 @@
+Things to learn
+****************
+
+1. id redo yellopedia
+2. Solid principles
+3. Using linq in C#
+4.unit tests
+5. wire it up to travis CI
+
+**Syntax definition**
+1. Func<T>
+2.Iqueryable<T>
+3. param(Func<T>)
+4.Trace.TraceInformation()

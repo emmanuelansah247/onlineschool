@@ -1,0 +1,41 @@
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = " Bim-Edu Front Desk Clerk Course";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="en_Account" asp-action="Register" class="apply_button"> APPLY </a>
+        </div>
+
+        <h1 class="main_heading"> Vocational Training  </h1>
+        <h2 class="sub_main_heading"> Available at the Center of Excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Front Desk Clerk </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    Front Desk Clerks spend most of their time interacting with the public. Their duties vary by industry, 
+                    but primary responsibilities include customer service and some administrative work, such as word processing or 
+                    data entry. They keep records, answer calls, handle customer complaints, and provide information to guests and 
+                    clients. These workers often perform their duties in comfortable office environments, but dealing with dissatisfied 
+                    customers is difficult. To become a successful Front Desk Clerk, students are trained to develop strong communication 
+                    and computer skills and then gain work experience.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

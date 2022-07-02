@@ -1,0 +1,752 @@
+﻿@inject SignInManager<ApplicationUser> signInManager;
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/internal/shared/shared.css"/>
+    <link rel="stylesheet" href="~/css/internal/shared/header.css"/>
+    <link rel="stylesheet" href="~/css/internal/shared/footer.css"/>
+
+    <title> @ViewData["Title"] </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144344350-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-144344350-1');
+    </script>
+
+
+</head>
+<body>
+
+    <header class="header mobile">
+
+        <div class="mobile_menu clear_float" id="mobile_menu">
+
+            <section class="mobile_left_side">
+
+                <figure class="mobile_company_logo_and_name clear_float">
+
+                    <div class="mobile_company_logo_container">
+                        <a asp-controller="home" asp-action="index"> <img src="~/images/bim_edu_logo.png" alt="BIM - EDU Logo"/> </a> 
+                    </div>
+
+                    <div class="mobile_company_name_wrapper">
+                        <div class="mobile_company_name_container">
+                            <h3 class="mobile_name">BIM-EDU</h3>
+                            <h6 class="mobile_motto"> INSTITUT MANAGEMENT </h6>
+                        </div>
+                    </div>
+                    
+                </figure>
+
+            </section>
+
+            <section class="mobile_right_side">
+                <div class="menu_toggler">
+                    <span class="span_caret"></span>
+                    <span class="span_caret"></span>
+                    <span class="span_caret"></span>
+                </div>
+            </section>
+
+        </div>
+
+    <div class="desktop_menu" id="desktop_menu">
+
+        <figure class="top_bar_wrapper">
+
+            <div class="clear_float">
+                <section class="mobile_right_side">
+                    <div class="menu_toggler">
+                        <span class="span_caret"></span>
+                        <span class="span_caret"></span>
+                        <span class="span_caret"></span>
+                    </div>
+                </section>
+            </div>
+
+            <div class="top_bar_container clear_float">
+
+                <a asp-controller="Account" asp-action="Register" class="top_bar_link apply"> CANDIDATURE </a>
+
+                @if(signInManager.IsSignedIn(User)){
+                    
+                    <a asp-controller="Student" asp-action="Welcome"  class="top_bar_link login"> TABLEAU </a>
+                    <a asp-controller="Account" asp-action="Logout" class="top_bar_link login"> CONNECTEZ OUT @User.Identity.Name </a>
+
+                }
+                else{
+
+                <a asp-controller="Account" asp-action="Register" class="top_bar_link login"> INSCRIPTION </a>
+
+                <a asp-controller="Account" asp-action="Login" class="top_bar_link login"> CONNECTION </a>
+
+                }
+                
+               <div class="search_container">                   
+                    <form asp-controller="Account" asp-action="Search" asp-method="POST">
+                        <input type="search" id="search_text" class="search_button" name="q" placeholder="Search"/>
+                    </form>
+                </div> 
+                <a asp-controller="Home" asp-action="TeachWithUs" class="top_bar_link apply "> ENSEIGNER </a> 
+                
+                @if(signInManager.IsSignedIn(User) && ( User.IsInRole(RoleName.Admin) || User.IsInRole(RoleName.Staff) ) ){
+                    <a asp-controller="Administration" asp-action="Admin"  target="_blank" class="top_bar_link apply teach_with_us"> Admin </a>
+                }
+    
+                <select class="bim_edu_language" id="bim_edu_language">
+                    <option value="en"> LANGUAGE </option>
+                    <option value="fr"> French </option>
+                    <option value="en"> English </option>
+                </select>
+            
+            </div>
+
+        </figure>
+
+        <figure class="middle_bar_wrapper">
+
+            <section class="company_logo_and_name clear_float" id="company_logo_and_name">
+
+                <div class="company_logo_container">
+                   <a asp-controller="home" asp-action="index"> <img src="~/images/bim_edu_logo.png" alt="BIM - EDU Logo"/> </a> 
+                </div>
+
+                <div class="company_name_wrapper">
+                    <div class="company_name_container">
+                        <h3 class="name">BIM-EDU</h3>
+                        <h6 class="motto"> INSTITUT MANAGEMENT </h6>
+                    </div>
+                </div>
+
+            </section>
+
+            <nav class="navigation_wrapper">
+                <div class="navigation_container">
+                    <ul class="navigation">
+
+                        <li class="main_navigation_link has_sub_links drop_down_arrow"><a class="main_link"> Forma Pro </a> 
+                            <div class="sub_navigation_wrapper">
+                                
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP A </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Électromécanicien" class="sub_link"> Électromécanicien </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Mécanicienindustriel" class="sub_link"> Mécanicien industriel </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Automatiste" class="sub_link"> Automatiste </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Programmeur" class="sub_link"> Programmeur </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Technicienenbâtiment" class="sub_link"> Technicien enbâtiment </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Plombier" class="sub_link"> Plombier </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Menuisiermétallique" class="sub_link"> Menuisier métallique </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Agentdebureau" class="sub_link"> Agent de bureau </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Agentconcasseur" class="sub_link"> Agent concasseur </a></li>
+                                    </ul>
+                                </figure>
+
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP B </h4>
+                                    <ul class="sub_navigation">
+
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Menuisierbois" class="sub_link"> Menuisierbois </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Électricienautomobile" class="sub_link"> Électricien automobile </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Mécanicienautomobile" class="sub_link"> Mécanicien automobile</a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Entreprenariat" class="sub_link"> Entreprenariat </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Marketiste" class="sub_link"> Marketiste </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_InfographisteMonteur" class="sub_link"> Infographiste Monteur </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Déléguémédical" class="sub_link"> Délégué médical </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Administrateur" class="sub_link"> Administrateur </a></li>
+
+                                    </ul>
+                                </figure>
+                                
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP C </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Enseignant" class="sub_link"> Enseignant </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Agentdeservice" class="sub_link"> Agent de service </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Agentpâtissier" class="sub_link"> Agent pâtissier </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_AgentdeTourisme" class="sub_link"> Agentde Tourisme </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Assistantenélevage" class="sub_link"> Assistant enélevage </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_ÉlectricienAgent" class="sub_link"> Électricien Agent </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Décorateurprofessionnel" class="sub_link"> Décorateur professionnel </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_AssistantAgentdes" class="sub_link"> Assistant Agentdes </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Opérateurs" class="sub_link"> Opérateurs </a></li>
+                                    </ul>
+                                </figure>
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP D </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Secrétaire" class="sub_link"> Secrétaire </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_AssistantenLogistique" class="sub_link"> Assistant en Logistique </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Agentdetransit" class="sub_link"> Agent de transit </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_AssistantSecrétairecomptable" class="sub_link"> Assistant Secrétaire comptable </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_AssistantSecrétairemédical" class="sub_link"> Assistant Secrétaire médical </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Caissier" class="sub_link"> Caissier </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Auxiliaire" class="sub_link"> Auxiliaire </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Agentforeur" class="sub_link"> Agent foreur </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Forma_Agentdecomptoir" class="sub_link"> Agent de comptoir </a></li>
+                                    </ul>
+                                </figure>
+
+                            </div>
+                        </li>
+
+                        <li class="main_navigation_link has_sub_links drop_down_arrow"><a class="main_link"> Bts d'etat </a> 
+                            <div class="sub_navigation_wrapper">
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP A </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="ScienceEducation" class="sub_link"> Sciences De L'education </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="TransportLogistique" class="sub_link"> Transport & Logistique </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="GestionDesResources" class="sub_link"> Gestion Des Resources </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="BanquesMicroFinances" class="sub_link"> Banques Micro-Finances </a></li>
+                                    </ul>
+                                </figure>
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP B </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="TechnologieDesReseaux" class="sub_link"> Technologie Des Reseaux </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="CommunicationDEntreprise" class="sub_link"> Communication D'Entreprise </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="FinanceComptabilite" class="sub_link"> Finance Comptabilite </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="MarketingGestionCommercial" class="sub_link">Marketing Gestion Commercial</a></li>
+
+                                    </ul>
+                                </figure>
+                                
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP C </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="AssistantDeDirectionBilingue" class="sub_link"> Assistant De Direction Bilingue </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="BusinessAdministration" class="sub_link"> Adminstration Des Affaires </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="GenieCiviBtp" class="sub_link"> Genie Civi Btp </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="GenieCivilMinesCarrieres" class="sub_link"> Genie Civil Mines Carrieres </a></li>
+                                    </ul>
+                                </figure>
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP D </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="GestionPilotageDeProjets" class="sub_link"> Gestion Pilotage De Projets </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="IntelligenceEconomiqueManagementDesConnaissances" class="sub_link"> Econ. Mgt. Des Connaissances </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="SciencePoRelationsInternationales" class="sub_link"> Science Po Relations Int. </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="TraductionInterpretation" class="sub_link"> Traduction Interpretation </a></li>
+                                    </ul>
+                                </figure>
+
+                            </div>
+                        </li>
+                        <li class="main_navigation_link has_sub_links drop_down_arrow"><a class="main_link"> Licence </a> 
+                            <div class="sub_navigation_wrapper">
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP A </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="ScienceEducation" class="sub_link"> Sciences De L'education </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="TransportLogistique" class="sub_link"> Transport & Logistique </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="GestionDesResources" class="sub_link"> Gestion Des Resources </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="BanquesMicroFinances" class="sub_link"> Banques Micro-Finances </a></li>
+                                    </ul>
+                                </figure>
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP B </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="TechnologieDesReseaux" class="sub_link"> Technologie Des Reseaux </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="CommunicationDEntreprise" class="sub_link"> Communication D'Entreprise </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="FinanceComptabilite" class="sub_link"> Finance Comptabilite </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="MarketingGestionCommercial" class="sub_link">Marketing Gestion Commercial</a></li>
+
+                                    </ul>
+                                </figure>
+                                
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP C </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="AssistantDeDirectionBilingue" class="sub_link"> Assistant De Direction Bilingue </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="BusinessAdministration" class="sub_link"> Adminstration Des Affaires </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="GenieCiviBtp" class="sub_link"> Genie Civi Btp </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="GenieCivilMinesCarrieres" class="sub_link"> Genie Civil Mines Carrieres </a></li>
+                                    </ul>
+                                </figure>
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP D </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="GestionPilotageDeProjets" class="sub_link"> Gestion Pilotage De Projets </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="IntelligenceEconomiqueManagementDesConnaissances" class="sub_link"> Econ. Mgt. Des Connaissances </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="SciencePoRelationsInternationales" class="sub_link"> Science Po Relations Int. </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="TraductionInterpretation" class="sub_link"> Traduction Interpretation </a></li>
+                                    </ul>
+                                </figure>
+
+                            </div>
+                        </li>
+                        <li class="main_navigation_link has_sub_links drop_down_arrow"><a class="main_link"> Master </a> 
+                            <div class="sub_navigation_wrapper">
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP A </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_BanquesInstitutionsDeMicrofinances" class="sub_link"> Banques Inst. De Microfinances</a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_ComptabiliteControlAudit" class="sub_link"> Comptabilite Control Audit</a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_EvaluationGestionDeProjects" class="sub_link"> Evaluation Gestion De Projects</a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_GenieCivilEvaluationGestionDesResourcesHumaines" class="sub_link"> Gestion Des Res. Humaines</a></li>
+                                    </ul>
+                                </figure>
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP B </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_GenieCivilGestionDurableDesMines" class="sub_link"> Gestion Durable Des Mines</a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_CommunicationDevelopmentInternational" class="sub_link"> Communication Development Int. </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_GenieCivilIngeniereSystTelcomsReseaux" class="sub_link"> Ingeniere Syst TelcomsReseaux </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_MarketingManagementInternational" class="sub_link"> Marketing Management Int. </a></li>
+                                    </ul>
+                                </figure>
+                                
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP C </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_SciencesDeLeducation" class="sub_link"> Sciences De L&#39;education </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_InterpretationDeConferences" class="sub_link"> Interpretation De Conferences </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_IngenierieConstructionDeLaPaixAndGestionDesConflits" class="sub_link"> Ingenierie Construction </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_GenieCivilIngenieurDeConceptionBtps" class="sub_link"> Genie Civil Ingenieur  </a></li>
+                                    </ul>
+                                </figure>
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP D </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_ManagementDesTransportsAndDeLaLogistique" class="sub_link"> Management Des Transports </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_SantePublique" class="sub_link"> Sante Publique </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_BusinessAdministration" class="sub_link"> Adminstration Des Affaires </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Msc_DevelopmentInternational" class="sub_link"> Development International </a></li>
+                                    </ul>
+                                </figure>
+
+                            </div>
+                        </li>
+
+                        <li class="main_navigation_link"><a asp-controller="Programmes" asp-action="Doc_BusinessAdministration" class="main_link"> Dba </a> </li>
+                        
+                        <li class="main_navigation_link has_sub_links drop_down_arrow"><a class="main_link"> Phd </a> 
+                            <div class="sub_navigation_wrapper">
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP A </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Phd_Communications" class="sub_link"> Communications </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Phd_Education" class="sub_link"> Education</a></li>
+                                    </ul>
+                                </figure>
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP B </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Phd_InternationalRelations" class="sub_link"> International Relations </a></li>
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Phd_OrganizationalLeadership" class="sub_link"> Organizational Leadership </a></li>
+                                    </ul>
+                                </figure>
+                                
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP C </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Phd_PoliticalScience" class="sub_link"> Political Science </a></li>
+                                    </ul>
+                                </figure>
+
+                                <figure class="col_1">
+                                    <h4 class="sub_navigation_heading drop_down_arrow"> GROUP D </h4>
+                                    <ul class="sub_navigation">
+                                        <li class="sub_main_navigation_link"><a asp-controller="Programmes" asp-action="Phd_Psychology" class="sub_link"> Psychology </a></li>
+                                    </ul>
+                                </figure>
+
+                            </div>
+                        </li>
+                        
+                        <li class="main_navigation_link"><a asp-controller="home" asp-action="studentexperience" class="main_link"> Expérience étudiante </a> </li>
+                        <li class="main_navigation_link"><a asp-controller="home" asp-action="about" class="main_link"> A propos  </a> </li>
+                        <li class="main_navigation_link"><a asp-controller="home" asp-action="TuitionFee" class="main_link"> Frais académique </a> </li>
+                    
+                    </ul>
+                </div>
+            </nav>
+
+        </figure>
+
+        </div>
+
+    </header>
+
+
+<div class="body_container">
+    @RenderBody()
+</div>
+
+<section class="enquiry_wrapper">
+    <div class="enquiry_container">
+        <h1 class="heading"> VOYEZ CE QUE BIM-EDU PEUT FAIRE POUR VOUS! </h1>
+        <div class="form">
+            <div class="input_container clear_float">
+                <input class="input" placeholder="Prénom (s)" id="request_firstname" name="firstname"/>
+                <input class="input" placeholder="Nom de famille" id="request_lastname" name="lastname"/>
+                <input type="email" class="input" placeholder="Email" id="request_email" name="email"/>
+            </div>
+            <div class="input_container clear_float">
+                <textarea rows="3" class="input textarea" placeholder="Message" id="request_message" name="message"> </textarea>
+            </div>
+
+            <div class="action_button_container">
+                <a id="request_info"  class="action_button cursor_pointer"> DEMANDE > </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <footer class="footer_wrapper">
+        <div class="footer_container clear_float">
+
+            <div class="app_guide" style="color:white">
+
+                    Bonjour chers encadreurs et chers étudiants 
+
+                    Les cours en ligne obéissent à une charte qui est que les étudiant-e-s doivent se plier aux exigences académiques. 
+
+                    Chaque cours démarre avec des interactions avec l'enseignant (e) et c'est obligatoire car cela est noté. Les étudiant-e-s qui n'interagissent pas sont considérés comme des absents. 
+
+                    L'enseignant(e) est le seul à assurer l'animation du cours et les étudiant-e-s doivent se plier à ses directives. 
+
+                    Après les présentations, et en fonction du cours, l'enseignant(e) peut lancer une thématique de discussion en rapport avec son cours, ou un exercice lui permettant d'apprécier le niveau général des étudiant-e-s. Par la suite il/elle en fera la synthèse et invitera les étudiant-e-s à lire son cours en le téléchargeant dans le bloc DOCUMENTS. Après la lecture chaque étudiant(e) pose les questions de compréhension nécessaires dans le forum et l'enseignant(e) y apporte les réponses. 
+
+                    A l'issue de cette phase, l'enseignant(e) peut donner des exercices additionnels (TD) aux étudiant-e-s ou alors décider de programmer une évaluation si la compréhension du cours par les étudiant-e-s est jugée bonne. 
+
+                    L'évaluation se fait en ligne et chaque étudiant(e) doit s'assurer d'avoir une connexion internet fiable pour faire le devoir car nous estimons que le choix des cours en ligne est motivé par votre aptitude à trouver une connexion internet fiable pour pouvoir les suivre sans trop de difficultés. Il n'y a pas d'heures ni de jour commun à tous les étudiants pour l'évaluation. Par contre une fois que le devoir est convenu, chaque étudiant(e) doit le faire dans un délai d'une semaine. Autrement dit il sera considéré comme absent au devoir et la note zéro lui est attribuée d'emblée. Il/elle devra se justifier valablement avant d'être autorisé (e) à en composer un autre. Les copies de chaque évaluation sont déposées dans les casiers des étudiants dans le bloc SHARE ou PARTAGE et chaque étudiant(e) ne verra que sa propre copie annotée. Cette étape met fin au cours en question. 
+
+                    Nous voudrions donc vous exhorter à suivre scrupuleusement ces exigences car toute étude doit répondre à des exigences pour être valides. 
+
+                    The discussion forum is to be considered as your virtual classroom and your absence from discussions launched on the forum is equivalent to absences from class. It should be remembered that studying online gives you more freedom to take your lessons wherever you are (during your breaks at the office, in town, at home or any other setting that you deem suitable). But there are quality criteria that must be observed in order for the course to meet the standards for obtaining a degree.
+
+                    We do this post in all programs because on a recurring basis many students wish to avoid the requirements of online courses but this is not admissible.
+
+                    Everyone must meet these requirements for successful studies. Studying online does not exempt us from observing academic criteria for conducting studies.
+
+                    Thanks for reading.
+                    Good luck to all !
+            </div>
+
+            <div class="clear_float">
+                
+                <section class="clear_float">
+                    <figure class="footer_item">
+                        <h4 class="footer_heading"> Bts d'etat Programmes </h4>
+                        <div class="footer_links_action_links">
+
+                            <a asp-controller="Programmes" asp-action="ScienceEducation" class="footer_link"> Bts d'etat Sciences De L'education </a>
+                            <a asp-controller="Programmes" asp-action="TransportLogistique" class="footer_link"> Bts d'etat Transport & Logistique </a>
+                            <a asp-controller="Programmes" asp-action="GestionDesResources" class="footer_link"> Bts d'etat Gestion Des Resources </a>
+                            <a asp-controller="Programmes" asp-action="BanquesMicroFinances" class="footer_link"> Bts d'etat Banques Micro-Finances </a>
+                        
+                            <a asp-controller="Programmes" asp-action="TechnologieDesReseaux" class="footer_link"> Bts d'etat Technologie Des Reseaux </a>
+                            <a asp-controller="Programmes" asp-action="CommunicationDEntreprise" class="footer_link"> Bts d'etat Communication D'Entreprise </a>
+                            <a asp-controller="Programmes" asp-action="FinanceComptabilite" class="footer_link"> Bts d'etat Finance Comptabilite </a>
+                            <a asp-controller="Programmes" asp-action="MarketingGestionCommercial" class="footer_link"> Bts d'etat Marketing Gestion Commercial</a>
+
+                            <a asp-controller="Programmes" asp-action="AssistantDeDirectionBilingue" class="footer_link"> Bts d'etat Assistant De Direction Bilingue </a>
+                            <a asp-controller="Programmes" asp-action="BusinessAdministration" class="footer_link"> Bts d'etat Adminstration Des Affaires </a>
+                            <a asp-controller="Programmes" asp-action="GenieCiviBtp" class="footer_link"> Bts d'etat Genie Civi Btp </a>
+                            <a asp-controller="Programmes" asp-action="GenieCivilMinesCarrieres" class="footer_link"> Bts d'etatGenie Civil Mines Carrieres </a>
+                        
+                            <a asp-controller="Programmes" asp-action="GestionPilotageDeProjets" class="footer_link"> Bts d'etat Gestion Pilotage De Projets </a>
+                            <a asp-controller="Programmes" asp-action="IntelligenceEconomiqueManagementDesConnaissances" class="footer_link"> Bts d'etat Econ. Mgt. Des Connaissances </a>
+                            <a asp-controller="Programmes" asp-action="SciencePoRelationsInternationales" class="footer_link"> Bts d'etat Science Po Relations Int. </a>
+                            <a asp-controller="Programmes" asp-action="TraductionInterpretation" class="footer_link"> Bts d'etat Traduction Interpretation </a>
+
+                        </div>
+                    </figure>
+                    <figure class="footer_item">
+                        <h4 class="footer_heading"> Licence Programmes </h4>
+                        <div class="footer_links_action_links">
+
+                            <a asp-controller="Programmes" asp-action="ScienceEducation" class="footer_link"> Licence Sciences De L'education </a>
+                            <a asp-controller="Programmes" asp-action="TransportLogistique" class="footer_link"> Licence Transport & Logistique </a>
+                            <a asp-controller="Programmes" asp-action="GestionDesResources" class="footer_link"> Licence Gestion Des Resources </a>
+                            <a asp-controller="Programmes" asp-action="BanquesMicroFinances" class="footer_link"> Licence Banques Micro-Finances </a>
+                        
+                            <a asp-controller="Programmes" asp-action="TechnologieDesReseaux" class="footer_link"> Licence Technologie Des Reseaux </a>
+                            <a asp-controller="Programmes" asp-action="CommunicationDEntreprise" class="footer_link"> Licence Communication D'Entreprise </a>
+                            <a asp-controller="Programmes" asp-action="FinanceComptabilite" class="footer_link"> Licence Finance Comptabilite </a>
+                            <a asp-controller="Programmes" asp-action="MarketingGestionCommercial" class="footer_link"> Licence Marketing Gestion Commercial</a>
+
+                            <a asp-controller="Programmes" asp-action="AssistantDeDirectionBilingue" class="footer_link"> Licence Assistant De Direction Bilingue </a>
+                            <a asp-controller="Programmes" asp-action="BusinessAdministration" class="footer_link"> Licence Adminstration Des Affaires </a>
+                            <a asp-controller="Programmes" asp-action="GenieCiviBtp" class="footer_link"> Licence Genie Civi Btp </a>
+                            <a asp-controller="Programmes" asp-action="GenieCivilMinesCarrieres" class="footer_link"> Licence Genie Civil Mines Carrieres </a>
+                        
+                            <a asp-controller="Programmes" asp-action="GestionPilotageDeProjets" class="footer_link"> Licence  Gestion Pilotage De Projets </a>
+                            <a asp-controller="Programmes" asp-action="IntelligenceEconomiqueManagementDesConnaissances" class="footer_link"> Licence Econ. Mgt. Des Connaissances </a>
+                            <a asp-controller="Programmes" asp-action="SciencePoRelationsInternationales" class="footer_link"> Licence  Science Po Relations Int. </a>
+                            <a asp-controller="Programmes" asp-action="TraductionInterpretation" class="footer_link"> Licence Traduction Interpretation </a>
+                        
+                        </div>
+                    </figure>
+
+                    <figure class="footer_item">
+                        <h4 class="footer_heading"> Master Programmes </h4>
+                        <div class="footer_links_action_links">
+
+                            <a asp-controller="Programmes" asp-action="Msc_BanquesInstitutionsDeMicrofinances" class="footer_link"> Master Banques Inst. De Microfinances</a>
+                            <a asp-controller="Programmes" asp-action="Msc_ComptabiliteControlAudit" class="footer_link"> Master Comptabilite Control Audit</a>
+                            <a asp-controller="Programmes" asp-action="Msc_EvaluationGestionDeProjects" class="footer_link"> Master Evaluation Gestion De Projects</a>
+                            <a asp-controller="Programmes" asp-action="Msc_GenieCivilEvaluationGestionDesResourcesHumaines" class="footer_link"> Master Gestion Des Res. Humaines</a>
+                        
+                            <a asp-controller="Programmes" asp-action="Msc_GenieCivilGestionDurableDesMines" class="footer_link"> Master Gestion Durable Des Mines</a>
+                            <a asp-controller="Programmes" asp-action="Msc_CommunicationDevelopmentInternational" class="footer_link"> Master Communication Development Int. </a>
+                            <a asp-controller="Programmes" asp-action="Msc_GenieCivilIngeniereSystTelcomsReseaux" class="footer_link"> Master Ingeniere Syst TelcomsReseaux </a>
+                            <a asp-controller="Programmes" asp-action="Msc_MarketingManagementInternational" class="footer_link"> Master Marketing Management Int. </a>
+                        
+                            <a asp-controller="Programmes" asp-action="Msc_SciencesDeLeducation" class="footer_link"> Master Sciences De L&#39;education </a>
+                            <a asp-controller="Programmes" asp-action="Msc_InterpretationDeConferences" class="footer_link"> Master Interpretation De Conferences </a>
+                            <a asp-controller="Programmes" asp-action="Msc_IngenierieConstructionDeLaPaixAndGestionDesConflits" class="footer_link"> Master Ingenierie Construction </a>
+                            <a asp-controller="Programmes" asp-action="Msc_GenieCivilIngenieurDeConceptionBtps" class="footer_link"> Master Genie Civil Ingenieur  </a>
+                        
+                            <a asp-controller="Programmes" asp-action="Msc_ManagementDesTransportsAndDeLaLogistique" class="footer_link"> Master Management Des Transports </a>
+                            <a asp-controller="Programmes" asp-action="Msc_SantePublique" class="footer_link"> Master Sante Publique </a>
+                            <a asp-controller="Programmes" asp-action="Msc_BusinessAdministration" class="footer_link"> Master Adminstration Des Affaires </a>
+                            <a asp-controller="Programmes" asp-action="Msc_DevelopmentInternational" class="footer_link"> Master Development International </a>
+                        
+                        </div>
+                    </figure>
+
+                </section>
+                
+                <section class="clear_float">
+
+                    <figure class="footer_item">
+                        <h4 class="footer_heading"> DBA/Phd Programmes </h4>
+                        <div class="footer_links_action_links">
+
+                            <a asp-controller="Programmes" asp-action="Doc_BusinessAdministration" class="footer_link"> Dba </a> 
+                            <a asp-controller="Programmes" asp-action="Phd_Communications" class="footer_link"> Phd Communications </a>
+                            <a asp-controller="Programmes" asp-action="Phd_Education" class="footer_link"> Phd Education</a>
+                            <a asp-controller="Programmes" asp-action="Phd_InternationalRelations" class="footer_link"> Phd International Relations </a>
+                            
+                            <a asp-controller="Programmes" asp-action="Phd_OrganizationalLeadership" class="footer_link"> Phd Organizational Leadership </a>
+                            <a asp-controller="Programmes" asp-action="Phd_PoliticalScience" class="footer_link"> Phd Political Science </a>
+                            <a asp-controller="Programmes" asp-action="Phd_Psychology" class="footer_link"> Phd Psychology </a>
+
+                        </div>
+                    </figure>
+
+
+                    <figure class="footer_item">
+                        <h4 class="footer_heading"> A propos de BIM-EDU </h4>
+                        <div class="footer_links_action_links">
+                            <a class="footer_link" asp-controller="Home" asp-action="About">
+                            Business Intelligence Institute of Management (Bim-Edu) est la révolution de l'éducation. Elle
+                                est parmi les universités de classe internationale ofrant des programmes accredités aussi bien en
+                                présentiel qu’en ligne.
+                            </a>
+                        </div>
+                    </figure>
+
+                    <figure class="footer_item">
+                        <h4 class="footer_heading"> DEVENEZ ÉTUDIANT  </h4>
+
+                        <div class="footer_links_action_links">
+                            <div class="footer_action_button_container">
+                                <a asp-controller="Account" asp-action="Apply" class="footer_action_button"> CANDIDATURE  > </a>
+                            </div>
+                        </div>
+
+                        <div class="footer_links_action_links documentation">
+                            <div class="footer_action_button_container">
+                                <a asp-controller="Documentation" asp-action="Menu" target="_blank" class="footer_action_button"> Documentation </a>
+                            </div>
+                        </div>
+
+                    </figure>
+                
+                </section>
+
+            </div>
+
+            <div class="social_links clear_float">
+
+                <h1 class="contact_us_heading"> Contactez nous </h1>
+                <div class="contact_us_container clear_float">
+                    <span class="call_us_name"> Appelez nous </span>
+                    <a class="call_us_number" href="tel:+12129209287">+12129209287</a>
+                </div>
+                <div class="contact_us_container clear_float">
+                    <span class="call_us_name"> 1270, Avenue of Americas Floor 7, New York, NY 10020 </span>
+                </div>
+
+                <div class="social_image_wrapper clear_float">
+                    <figure class="social_image_container">
+                      <a href="">  <img src="~/images/Icons/facebook.svg" alt="Bim-Edu Facebook Handle"/></a>
+                    </figure>
+
+                    <figure class="social_image_container">
+                       <a href=""> <img src="~/images/Icons/instagram.svg" alt="Bim-Edu Instragram Handle"/></a>
+                    </figure>
+
+                    <figure class="social_image_container">
+                       <a href=""> <img src="~/images/Icons/linkedin.svg" alt="Bim-Edu LinkedIn Handle"/></a>
+                    </figure>
+
+                    <figure class="social_image_container">
+                       <a href="mailto:Info@bim-edu.us"> <img src="~/images/Icons/mail.svg" alt="Bim-Edu Mail Handle"/></a>
+                    </figure>
+
+                    <figure class="social_image_container">
+                      <a href=""> <img src="~/images/Icons/whatsapp.svg" alt="Bim-Edu Whatsapp Link"/> </a>
+                    </figure>
+                </div>
+
+                <div class="copyright_container">
+                    <span class="copyright"> copyright  &#169;  BIM - EDUCATION  &#64; 2019 </span>
+                </div>
+
+                <div class="ksoftnet">
+                    <span class="ksoftnet_name"> Créé par <a href="https://www.ksoftnet.com">KSoftNet</a>  </span>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script>
+            var baseUrl = "http://localhost:6006/";
+            var _enquiryemailreceiver = "emmanuelansah247@gmail.com";
+
+        </script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+    </environment>
+
+    <environment exclude="Development">
+        <script>
+            var baseUrl = "https://bim-edu.us/";
+            var _enquiryemailreceiver = "registrar@bim-edu.us";
+            
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+    </environment>
+        <script src="~/js/internal/shared/shared.js"></script>
+
+    <script>
+
+    window.onload = function(){
+
+    if(navigator.language.startsWith('en')){
+        var has_language_automatically_changed = localStorage.getItem('has_language_automatically_changed');
+        if(has_language_automatically_changed != '1'){
+                localStorage.setItem('has_language_automatically_changed','1');
+                location.href =  baseUrl + "en_home/index";
+        }
+    }
+
+        bimChangeApplicationLanguage();
+
+        RequestInforMailSender();
+
+        var sub_links = document.getElementsByClassName('has_sub_links');
+
+        var sub_navigation_headings = document.getElementsByClassName('sub_navigation_heading');
+
+        var desktop_menu = document.getElementById('desktop_menu');
+
+        var menu_togglers = document.getElementsByClassName('menu_toggler');
+
+        for(var counter_toggler=0;counter_toggler<menu_togglers.length;counter_toggler++){
+            var menu_toggler = menu_togglers[counter_toggler];
+            menu_toggler.onclick = function(e){
+                    desktop_menu.classList.toggle('mobile_active');
+            }
+        }
+
+        for(var counter_link=0;counter_link<sub_links.length;counter_link++){
+            var sub_link = sub_links[counter_link];
+            sub_link.onclick = function(e){
+                if(e.target.classList.contains('main_link')){
+                e.target.parentElement.classList.toggle('mobile_active');
+                }else{
+                e.target.classList.toggle('mobile_active')
+                }
+            }
+        }
+
+        for(var counter_heading=0;counter_heading<sub_navigation_headings.length;counter_heading++){
+            var sub_navigation_heading = sub_navigation_headings[counter_heading];
+            sub_navigation_heading.onclick = function(e){
+                e.target.nextElementSibling.classList.toggle('mobile_active');
+                e.target.parentElement.parentElement.classList.toggle('mobile_active');
+            }
+        }
+
+        function RequestInforMailSender(){
+            
+            var request_info = document.getElementById('request_info');
+            var request_firstname = document.getElementById('request_firstname');
+            var request_lastname = document.getElementById('request_lastname');
+            var request_email = document.getElementById('request_email');
+            var request_message = document.getElementById('request_message');
+
+            request_info.onclick = function(){
+                var template_subject = "ENQUIRY REQUEST FROM WEBSITE (BIM-EDU)";
+                var template_message = "<div style='padding:20px;background:#4b345d;color:white;'>" +
+                            "<h1 style='color:white;font-weight:bolder;text-align:center;'>" +
+                            "<span style='color:white'>" + template_subject +" </span>" +
+                            "</h1>" +
+                            "<div style='color:white;font-weight:bolder;text-align:center'>" +
+                                "<div style='text-align:left'><span> Name </span> : " + request_firstname.value  + " " + request_lastname.value + "<span> </span></div><br/><br/>" +
+                                "<div style='text-align:left'><span> Email </span style='color:white'> : " + request_email.value + "<span> </span></div><br/><br/>" +
+                                "<div style='text-align:left'><span> Message </span> : " + request_message.value + "<span> </span></div><br/><br/>" +
+                            "</div>" +
+                            "</div>";
+
+                var request_data = {
+                    studentEmail: _enquiryemailreceiver,
+                    subject : "REQUEST INFO FROM BIM-EDU WEBSITE",
+                    message : template_message
+                }
+
+                $.ajax({
+                        type: "GET",
+                        url: baseUrl + "ApiUser/SendEmail",
+                        dataType: "json",
+                        data: request_data,
+                        success: function(credentials){
+                            alert("Request Sent");
+                        },
+                        error: function() { 
+                            alert("Something went wrong");
+                        }
+                })
+            }
+        }
+    }
+
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

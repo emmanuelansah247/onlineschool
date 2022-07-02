@@ -1,0 +1,207 @@
+.programme_wrapper{
+    width: 100%;
+}
+
+.programme_wrapper .programme_container{
+    margin: 5% 10%;
+}
+
+.programme_container .main_heading{
+    font: normal normal bold 35px/1.2em "Arial";
+    color: #4b345d;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.programme_container .sub_main_heading{
+    font: italic normal bold 30px/1.2em "Arial";
+    color: #4b345d;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.programme_container .stand_out{
+    margin: 3% 0px;
+}
+
+.programme_container .description{
+    font:  normal normal normal 18px/1.6em "Georgia";
+    margin-bottom: 20px;
+}
+
+.programme_container .stand_out .medium_heading{
+    margin-bottom: 15px;
+    font: normal normal bold 21px/1.2em "Arial";
+    color: #e90172;
+}
+.programme_container .stand_out .small_heading{
+    margin-bottom: 10px;
+    font: normal normal bold 19px/1.2em "Arial";
+    color: #e90172;
+}
+.programme_container .stand_out .smaller_heading{
+    font: normal normal bold 17px/1.2em "Arial";
+    color: #e90172;
+    margin-bottom: 5px;
+}
+
+
+/* begin table template */
+
+.programme_container .stand_out .table_template{
+    width: 100%;
+}
+
+.programme_container .stand_out .table_template .table_heading{
+    font-weight: bold;
+}
+
+.programme_container .stand_out .table_template tr td{
+    border-right: 1px solid #000;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.programme_container .stand_out .table_template tr td:last-child{
+    border-right: 0px solid #000;
+}
+
+.programme_container .stand_out .table_template{
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+/* end table template */
+
+/* 
+begin first table 
+*/
+
+.programme_container .stand_out .one_table tr:last-child{
+    background-color: #e90172;
+    font-style: italic;
+}
+
+/* 
+end first table 
+*/
+
+/* begin first list */
+
+.programme_container .one_list{
+    margin-left: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* end first list  */
+
+/* 
+begin second table 
+*/
+
+.programme_container .two_table{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.programme_container .two_table .long_bottom_border{
+    border-bottom: 1px solid #000;
+}
+
+.programme_container .two_table .right_side_border{
+    border-right: 1px solid #000 !important;
+}
+
+.programme_container .two_table tr:nth-child(2){
+    background-color: #e90172;
+}
+
+.programme_container .two_table .border_top td{
+    border-top: 1px solid #000;
+    padding-top: 5px;
+}
+
+.programme_container .two_table ul{
+    margin-left: 12px;
+}
+/* 
+end second table 
+*/
+
+
+/* 
+begin three table 
+*/
+
+.programme_container .three_table{
+    width: 100%;
+}
+
+.programme_container .three_table .table_heading td{
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+}
+
+.programme_container .three_table tr td.strong_underline{
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.programme_container .three_table .table_row_stand_out:not(:last-child) tr:last-child td{
+    border-bottom: 1px solid #000;
+}
+
+/* 
+end three table 
+*/
+
+/* 
+begin four table 
+*/
+
+.programme_container .four_table{
+    width: 100%;
+    border-right: 0px solid #000 !important;
+    border-left: 0px solid #000 !important;
+    border-bottom: 0px solid #000 !important;
+    border-top: 1px solid #000 !important;
+}
+
+.programme_container .four_table .table_heading td{
+    border-right: 0px solid #000 !important;
+    font-weight: bold;
+    background-color: #e90172;
+    color: #fff !important;
+}
+
+.programme_container .four_table .change_background td{
+    background-color: #795968;
+    color: #fff !important;
+}
+
+.programme_container .four_table tr td.emphasis{
+    color: #000;
+    font-weight: bold;
+}
+
+.programme_container .four_table .summary_alignment td.align_right{
+    text-align: right;
+    padding-right: 20px;
+}
+
+.programme_container .four_table .summary_alignment td.align_center{
+    text-align: center;
+    color: #795968;
+}
+
+.programme_container .four_table tr td{
+    border-right: 0px solid #000 !important;
+}
+
+/* 
+end four table 
+*/

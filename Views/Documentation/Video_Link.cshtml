@@ -1,0 +1,59 @@
+@model bim_edu.Models.Course;
+@{
+    ViewData["Title"] = "How To Use BIM-EDU Student Portal VIDEO Page";
+}
+
+
+<section class="documentation_page_wrapper">
+
+    <div class="documentation_menu">
+        <a asp-controller="Documentation" asp-action="Menu"> Documentation Menu </a>
+    </div>
+
+    <div class="documentation_page_container clear_float">
+
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use BIM-EDU Student Portal VIDEO Page. 
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> WATCH PROGRAM VIDEO </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Video Page.
+                        <a class="link" asp-controller="en_Other" asp-action="Video" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        Click On 'View Video'. All The Videos Title Will Be Displayed.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Go To Any Video Title And Click On It. The Video Will Be Displayed
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/documentation/documentation.css" />
+}

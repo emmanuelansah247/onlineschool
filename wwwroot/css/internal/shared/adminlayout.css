@@ -1,0 +1,40 @@
+.admin_header_wrapper{
+    width: 100%;
+}
+
+.admin_header_wrapper .admin_header_container{
+    width: 100%;
+    background-color: #e90172;
+    border-bottom: 3px solid #4b345d;
+    padding: 10px 10%;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.admin_header_container .image_container{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.admin_header_container .image_container img{
+    height: 100%;
+    width: auto;
+}
+
+.admin_header_container .text_container{
+    width: 50%;
+    float: right;
+    height: 100%;
+    position: relative;
+}
+
+.admin_header_container .text_container .text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font: normal normal bold 25px/1.2em "Arial";
+    color: #fff;
+}
+

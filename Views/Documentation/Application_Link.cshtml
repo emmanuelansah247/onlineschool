@@ -1,0 +1,53 @@
+@model bim_edu.Models.Course;
+@{
+    ViewData["Title"] = "Using Bim-Edu Student Portal Documentation ";
+}
+
+
+<section class="documentation_page_wrapper">
+
+    <div class="documentation_menu">
+        <a asp-controller="Documentation" asp-action="Menu"> Documentation Menu </a>
+    </div>
+
+    <div class="documentation_page_container clear_float">
+
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use BIM-EDU Student Portal APPLICATION Page. 
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> CHECK APPLICATION STATUS </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Application Page.
+                        <a class="link" asp-controller="en_Student" asp-action="Application" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        Your Application Status Will Be Displayed On This Page (Approved or Rejected). For Your Application To 
+                        Be Processed You Need To Upload The Required Certificates And Documents
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/documentation/documentation.css" />
+}

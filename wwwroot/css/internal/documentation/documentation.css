@@ -1,0 +1,67 @@
+.documentation_page_wrapper{
+    width: 100%;
+}
+
+.documentation_page_wrapper .documentation_menu{
+    background-color: #e90172;
+    padding: 10px 5%;
+    text-align: center;
+}
+
+.documentation_page_wrapper .documentation_menu a{
+    color: #fff;
+    font: normal normal bold 18px/1.2em "Georgia";
+}
+
+.documentation_page_wrapper .documentation_page_container{
+    width: 100%;
+    padding: 3% 10%;
+    box-sizing: border-box;
+}
+
+.documentation_page_container .item{
+    margin: 5% 0%;
+}
+
+.item .heading{
+    background-color: #4b345d;
+    font: normal normal bold 20px/1.2em "Georgia";
+    color: #fff;
+    padding: 10px 10px;
+}
+
+.item .instructions{
+    margin-top: 10px;
+}
+
+.instructions .instruction{
+    color: #000;
+    font: italic normal normal 20px/1.2em "Helvetica";
+}
+
+.instruction .link{
+    color: #e90172;
+}
+
+.instruction .number{
+    color: #ddd;
+    font: normal normal bold 19px/1.2em "Arial";
+}
+
+.instructions .note{
+    margin: 15px 0px;
+}
+
+.instructions .note .title{
+    font:normal normal bold 20px/1.2em "Arial";
+    color: red;
+}
+
+.instructions .note .message{
+    color: #000;
+    font: italic normal normal 17px/1.2em "Helvetica";
+}
+
+.instructions .message .link{
+    color: #e90172 !important;
+}

@@ -1,0 +1,101 @@
+@using System.Linq;
+@model bim_edu.Models.CourseLecturerViewModel;
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Course Lecture | Bim - Edu";
+    Programme v_Program = ViewData["v_Program"] as Programme;
+    List<Lecturer> lecturers = ViewData["lecturers"] as List<Lecturer>;
+    List<CourseLecturer> courseLecturers = ViewData["courseLecturers"] as List<CourseLecturer>;
+    List<Course> v_Courses = ViewData["vCourses"] as List<Course>;
+}
+
+
+<section class="page_wrapper clear_float">
+
+    <div class="page_container clear_float">
+
+        <h1 class="title"> Add Lecturer To Program </h1>
+
+            <form class="main_form clear_float" asp-controller="Administration_Two" asp-method="POST">
+
+                <div class="top_form clear_float">
+
+                    <figure class="section_row "> 
+
+                        <div class="input_wrapper">
+                            <label class="label"> Program </label>
+                            <select class="input" name="ProgrammeId">
+                                    <option value=@v_Program.ProgrammeId > 
+                                        @v_Program.Name
+                                    </option>
+                            </select>
+                        </div>
+
+                        <div class="input_wrapper">
+                            <label class="label"> Course </label>
+                            <select class="input" name="CourseId">
+                                    @foreach(Course item in v_Courses.OrderBy(p=>p.Name)){
+                                        <option value=@item.CourseId > 
+                                            @item.Name
+                                        </option>
+                                    }
+                            </select>
+                        </div>
+
+                    </figure>
+                    
+                    <figure class="section_row">  
+
+                        <div class="input_wrapper">
+                            <label class="label"> Lecturer </label>
+                            <select class="input" name="LecturerId">
+                                        @foreach(Lecturer lecturer in lecturers){
+                                            <option value=@lecturer.LecturerId > 
+                                                @lecturer.ApplicationUser.FirstName 
+                                                @lecturer.ApplicationUser.LastName
+                                            </option>
+                                        }
+                            </select>
+                        </div>
+
+                    </figure>
+
+                </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="AddCourseLecture" class="button cursor_pointer" value="Add Lecturer To Program"/>
+                    </div>
+
+            </form>
+
+            <section class="lecturers_wrapper">
+                <div class="lecturers_container">
+                    <h3 class="heading"> Lecturers </h3>
+                    <div class="lecturers">
+                        @foreach(CourseLecturer courseLecturer in courseLecturers){
+                        <figure class="lecturer">
+                            <form asp-controller="Administration_Two" asp-action="RemoveCourseLecturer" asp-method="POST">
+                                <h3 class="lecturer_name"> 
+                                    @courseLecturer.Lecturer.ApplicationUser.FirstName 
+                                    @courseLecturer.Lecturer.ApplicationUser.LastName 
+                                    -
+                                   <small> @courseLecturer.Course.Name  </small>
+                                </h3>
+                                <input type="text" class="hide_it" value="@courseLecturer.CourseLecturerId" name="courselectureIdtoremove"/>
+                                <input type="submit" class="button cursor_pointer" value="Remove"/>
+                            </form>
+                        </figure>
+                        }
+
+                    </div>
+                </div>
+            </section>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_two/admincourselecture.css" />
+}

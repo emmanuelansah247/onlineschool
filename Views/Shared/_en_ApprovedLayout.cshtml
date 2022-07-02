@@ -1,0 +1,146 @@
+@inject SignInManager<ApplicationUser> signInManager;
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/internal/shared/shared.css"/>
+    <link rel="stylesheet" href="~/css/internal/shared/approvedlayoutheader.css"/>
+
+    <title> @ViewData["Title"] </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144344350-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-144344350-1');
+    </script>
+
+</head>
+<body>
+
+    <header class="header clear_float">
+
+        <figure class="left_side_wrapper clear_float">
+            <div class="left_side_container">
+
+                <div class="menu_name_wrapper cursor_pointer ">
+                    <div class="menu_name_container side_bar_toggler">
+                        <div class="menu_name">MENU</div>
+                    </div>
+                </div>
+
+                <div class="caret_wrapper cursor_pointer ">
+                    <div class="caret_container side_bar_toggler">
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+
+                <div class="company_logo_container">
+                    <div class="company_logo">
+                        <a asp-controller="en_Student" asp-action="Welcome">
+                            <img src="~/images/bim_edu_logo.png" alt="Bim-Edu Company Logo"/></a>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </figure>
+
+        <figure class="right_side_wrapper">
+            <div class="right_side_container">
+
+                <div class="logout_image_container cursor_pointer">
+                    <div class="logout_image" id="logout_image">
+                        <img id="toggle_username_logout_link" src="~/images/Icons/user.svg" alt="Bim-Edu User Logout Image"/></a>
+
+                        <div class="username_and_logout_link">
+                            <div class="username"> @User.Identity.Name </div>
+                            <div class="logout_link"> <a asp-controller="en_Account" asp-action="Logout">Logout</a> </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </figure>
+
+    </header>
+
+    <section class="side_bar_wrapper" id="side_bar_wrapper">
+        <div class="side_bar_container">
+            <div class="close_arrow clear_float">
+                <span class="arrow cursor_pointer side_bar_toggler"></span>
+            </div>
+            <ul class="link_items">
+                <li class="link"><a asp-controller="en_Student" asp-action="Welcome"> Home </a> </li>
+                <li class="link"><a asp-controller="en_Student" asp-action="Application"> Application </a> </li>
+                <li class="link"><a asp-controller="en_Student" asp-action="Payment"> Payments </a> </li>
+                <li class="link"><a asp-controller="en_Student" asp-action="Foundation"> Foundation </a> </li>
+                <li class="link"><a asp-controller="en_Student" asp-action="Policy"> Policy </a> </li>
+                <li class="link"><a asp-controller="en_Other" asp-action="Comment"> Forum </a> </li>
+                <li class="link"><a asp-controller="en_Other" asp-action="Video" > Vidéos  </a> </li>
+                <li class="link"><a asp-controller="en_Student" asp-action="ProgramDocument" > Documents  </a> </li>
+                <li class="link"><a asp-controller="en_Student" asp-action="StudentResult" > Results	</a> </li>
+                <li class="link"><a asp-controller="en_Student" asp-action="Profile" > Profile	</a> </li>
+                <li class="link"><a href="https://www.youtube.com/" target="_blank"> YouTube	 </a> </li>
+                <li class="link"><a asp-controller="en_Home" asp-action="Index" > Website </a> </li> 
+            </ul>
+        </div>
+    </section>
+
+    <div class="body_container">
+        @RenderBody()
+    </div>
+
+    <environment include="Development">
+        <script>
+            var baseUrl = "http://localhost:6006/";
+
+        </script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+    </environment>
+
+    <environment exclude="Development">
+        <script>
+            var baseUrl = "https://bim-edu.us/";
+
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+    </environment>
+    <script src="~/js/internal/shared/shared.js"></script>
+    <script src="~/js/internal/shared/approvedshared.js"></script>
+    <script>
+        var toggle_username_logout_link = document.getElementById('toggle_username_logout_link');
+        var logout_image = document.getElementById('logout_image');
+        var side_bar_wrapper = document.getElementById('side_bar_wrapper');
+
+        toggle_username_logout_link.onclick = function(){
+            logout_image.classList.toggle('active');
+        }
+
+        var side_bar_togglers = document.getElementsByClassName('side_bar_toggler');
+
+        for(var side_bar_counter=0;side_bar_counter<side_bar_togglers.length;side_bar_counter++){
+            side_bar_toggler = side_bar_togglers[side_bar_counter];
+            side_bar_toggler.onclick = function(){
+                side_bar_wrapper.classList.toggle('active');
+            }
+        }
+
+    </script>
+
+    @RenderSection("Scripts", required: false)
+    
+</body>
+</html>

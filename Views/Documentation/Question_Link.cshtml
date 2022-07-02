@@ -1,0 +1,165 @@
+@model bim_edu.Models.Course;
+@{
+    ViewData["Title"] = "How To Use BIM-EDU Student Portal QUESTIONS Page";
+}
+
+
+<section class="documentation_page_wrapper">
+
+    <div class="documentation_menu">
+        <a asp-controller="Documentation" asp-action="Menu"> Documentation Menu </a>
+    </div>
+
+    <div class="documentation_page_container clear_float">
+
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use BIM-EDU Student Portal QUESTIONS Page.
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> VIEW PROGRAM QUESTION </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Question Page.
+                        <a class="link" asp-controller="Student" asp-action="Question" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        All The Program Questions Will Be Displayed. Go To Any Question You Intend To Read.
+                        Click On 'View'. This 'View' Is Located Beside The Name Of The Question
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> UPLOAD SOLUTION FOR A QUESTION </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Question Page.
+                        <a class="link" asp-controller="Student" asp-action="Question" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        All The Program Questions Will Be Displayed. Go To Any Question You Intend To Upload A Solution.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction">                         
+                        Click On 'Choose File'. This Is Located Below The Question. (When This Is Click , A Window Will Be Open 
+                        To Allow You To Upload A File As Solution) 
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction">                         
+                        Click On 'UPLOAD SELECTED FILE AS SOLUTION'.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> VIEW UPLOADED SOLUTION FOR A QUESTION </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Question Page.
+                        <a class="link" asp-controller="Student" asp-action="Question" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        All The Program Questions Will Be Displayed. Go To Any Question You Intend To Read The Solution. 
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction">  
+                        Go To The Solution You Have Provided For The Question.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction">  
+                        Click On 'View'. This 'View' Is Located Beside The Name Of The Solution.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> DELETE UPLOADED SOLUTION FOR A QUESTION </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Question Page.
+                        <a class="link" asp-controller="Student" asp-action="Question" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        All The Program Questions Will Be Displayed. Go To Any Question You Intend To Delete The Solution. 
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction">  
+                        Go To The Solution You Have Provided For The Question.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction">  
+                        Click On 'Delete'.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/documentation/documentation.css" />
+}

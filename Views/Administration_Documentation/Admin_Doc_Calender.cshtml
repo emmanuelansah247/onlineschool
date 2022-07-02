@@ -1,0 +1,100 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "How To Use Bim-Edu Calender Page | Admin ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use The Calender Page.
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> ADD A DOCUMENT/FILE FOR A PROGRAM </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Calender Page.
+                        <a class="link" asp-controller="Administration_Two" asp-action="AdminProgramCalender" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select The Program To Add The Calender From The 'Program Name' Dropdown List
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On 'Choose File' To Upload The Calender
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Enter The Title/Name For The Calender In 'Title' Section
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 5. </span>
+                    <span class="instruction"> 
+                        Click On 'Add Calender' To Save The Calender For The Program
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> VIEW CALENDER FOR A PROGRAM </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Calender Page.
+                        <a class="link" asp-controller="Administration_Two" asp-action="AdminProgramCalender" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select The Program From The 'Program Name' Dropdown List
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On 'View Calender' To List All Calender For The Program
+                    </span>
+                </p>
+                
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_documentation/admin_docs.css" />
+}

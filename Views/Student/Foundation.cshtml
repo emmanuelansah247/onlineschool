@@ -1,0 +1,143 @@
+@model bim_edu.Models.UploadedDocumentViewModel;
+@inject bim_edu.DataContect.Controllers.BimEduDataContext datacontext;
+
+@{
+    Layout = "~/Views/Shared/_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Foundation Bim-Edu Student";
+    var documents = datacontext.UploadedDocuments.ToList();
+    ApplicationUser user = ViewData[GeneralStoredNames.Bim_Edu_Application_User] as ApplicationUser;
+    ProgrammeApplication activeProgrammeApplication = ViewData[GeneralStoredNames.Bim_Edu_Active_Programme_Application] as ProgrammeApplication;
+
+}
+
+
+<section class="approved_page_wrapper">
+
+    <div class="approved_page_container">
+            <h2 class="welcome_title"> Évaluation des fondamentaux  </h2>
+
+            <figure class="desciption_wrapper spacious">
+                <p class="main_description">
+                    Sur cette page, vous trouverez des informations sur votre progression dans	le respect 
+                    des exigences pour devenir un étudiant en quête de diplôme. 
+                </p>
+
+                <p class="sub_description">
+                    Les étudiants qui suivent les cours de Fondements de Bim-­Edu sont tenus de:
+                </p>
+                <div class="description_list">
+                    <div class="list_item">
+                        <span class="number">1.</span>
+                        Envoyer leurs documents	d'admission 
+                    </div>
+                    <div class="list_item">
+                        <span class="number">2.</span>
+                        Avoir une moyenne cumulative de 12,00/20 au minimum dans chacun des deux premiers cours ou alors vous serrez autorisé à suivre à 
+                        nouveau jusqu'à trois autres cours pour pouvoir obtenir une moyenne de 12,00/20 ou plus.	
+                        
+                    </div>
+                </div>
+
+                <p class="sub_description">
+                    Les étudiants qui suivent les cours de Fondements de Bim-­‐Edu	sont tenus de: 
+                </p>
+                <div class="description_list">
+                    <div class="list_item">
+                        <span class="number">1.</span>
+                        Envoyer leurs documents d'admission 
+                    </div>
+                    <div class="list_item">
+                        <span class="number">2.</span>
+                        Avoir une moyenne cumulative de 14,00/20	dans chacun des trois premiers cours ou alors vous serrez autorises à 
+                        suivre à nouveau un cours supplémentaire afin d’obtenir une	 moyenne de 14,00/20.
+                    </div>
+                </div>
+
+            </figure>
+
+            <figure class="program_wrapper spacious">
+                Votre admission pour étudier en 
+                <span class="change_color"> @activeProgrammeApplication.Programme.Certification.Name
+                en @activeProgrammeApplication.Programme.Name dépend
+                </span>   
+                de votre réussite comme 
+                <span class="change_color"> étudiant dans les cours non diplômant. </span>
+                 Ci-­‐dessous, vous pourrez lire des informations	détaillées sur votre statut. 
+                Veuillez contacter votre conseiller d’admission si vous avez d'autres questions. 
+            </figure>
+
+            <figure class="upload_documents spacious">
+                <h2 class="title"> <span class="number">1</span> TELEVERSEZ VOS DOCUMENTS DE CANDIDATURE </h2>
+                <p class="details"> 
+                    Vous devez téléverser ici votre diplôme d'études secondaires ou tout autre diplôme en 
+                    fonction de votre niveau d’étude, vos relevés de notes en Anglais, en Français ou en Espagnol (avec la date	d'obtention du diplôme). 
+                    Les diplômes et les relevés de notes qui ne sont pas dans l’une des langues citées plus haut doivent être soumis avec 
+                    une traduction officielle notariée.
+                </p>
+
+                <div class="stand_out clear_float">
+                        <form class="upload_box" enctype="multipart/form-data" asp-controller="Student" asp-method="POST">
+                            <div class="top clear_float">
+                                <div class="left_side"> <label class="button cursor_pointer" for="IFormFile"> Choisir le fichier </label> </div>
+                                <div class="right_side"> <label class="button cursor_pointer" for="Upload"> Téléverser  </label> </div>
+                            </div>
+                            <div class="bottom">
+                                <textarea rows="10" class="add_comments" id="FileName" name="Description" placeholder="Nom de fichier "></textarea>
+                            </div>
+                            <div class="hide_it">
+                                <input  type="hidden" value="@activeProgrammeApplication.ProgrammeApplicationId" name="ProgrammeApplicationId" />
+                                <input  asp-for="ApplicationUserId" value="_Name_ @user.FirstName _ @user.LastName" name="ApplicationUserId" />
+                                <input  asp-for="IFormFile" id="IFormFile" name="IFormFile" />
+                                <input type="submit" asp-action="UploadStudentDocument" id="Upload"/>
+                            </div>
+                        </form>
+                        <div class="files_table">
+                            <h3 class="files_title"> Fichiers téléversés  </h3>
+                            <table class="table">
+                                @foreach(UploadedDocument UploadedDocument in activeProgrammeApplication.UploadedDocuments){
+                                    var description = UploadedDocument.Description;
+                                    if(description.Length > 50){
+                                      description = description.Substring(0,49) + "...";
+                                    }
+                                <tr>
+                                    <form enctype="multipart/form-data" class="form" asp-controller="Student" asp-method="POST">
+                                        <td class="filename"> @description  </td>
+                                        <td class="hide_it"> <input name="UploadedDocumentId" value="@UploadedDocument.UploadedDocumentId"/> </td>
+                                        <td class="button_container"> <input type="submit" asp-action="RemoveUploadedDocument" class="button cursor_pointer" value=" Remove "/> </td>
+                                    </form>
+                                </tr>
+                                }
+                            </table>
+                        </div>
+                </div>
+                <p class="sub_details">
+
+                   Vous	pouvez téléverser jusqu'à 3 documents. Chaque document doit faire 20 Mo ou moins. Nous	ne pouvons accepter que les formats PNG, 
+                   JPG, GIF,PDF, XLS, DOCX ou XLSX.
+                </p>
+
+            </figure>
+
+            <figure class="meet_criteria spacious">
+                <h2 class="title"> <span class="number">2</span> REMPLIR LES CRITÈRES ACADÉMIQUES  </h2>
+                <p class="details">
+                    Vos notes seront évaluées une fois que vous aurez soumis tous vos documents, comme	requis ci-­‐dessus
+                </p>
+            </figure>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/student/foundation.css" />
+
+    <Script>
+      var FileName = document.getElementById('FileName');
+      var IFormFile = document.getElementById('IFormFile');
+      IFormFile.onchange = function(){
+          filepath_with_extension = IFormFile.value.split('\\')[2];
+          filename = filepath_with_extension.split('.')[0];
+          FileName.value = filename;
+      }
+    </Script>
+}

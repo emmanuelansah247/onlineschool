@@ -1,0 +1,99 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "How To Use Bim-Edu Lecturer Page | Admin ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+
+        <figure class="item">
+            <h2 class="heading"> Adding A Lecturer </h2>
+            <div class="instructions">
+
+                <div class="note">
+                        <span class="title"> NOTE: </span> 
+                        <p class="message">
+                            The lecturer needs to be added first as a staff before you can proceed with the below steps 
+                            <a class="link" asp-controller="Administration_Three" asp-action="AdminStaffRegister" target="_blank"> 
+                                Click here to go to staff page 
+                            </a>
+                        </p>
+                </div>
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Lecturer page.
+                        <a class="link" asp-controller="Administration" asp-action="AdminLecturer" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select the name of staff (the name of the person to be added as lecturer)
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Enter the qualifications in french version
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Enter the qualifications in english version
+                    </span>
+                </p>
+                
+                <p>
+                    <span class="number"> 5. </span>
+                    <span class="instruction"> 
+                        Enter the biography in french version
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 6. </span>
+                    <span class="instruction"> 
+                        Enter the biography in english version
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 7. </span>
+                    <span class="instruction"> 
+                       Click on <strong> Add Lecturer </strong>
+                    </span>
+                </p>
+
+                <div class="note">
+                        <span class="title"> NOTE: </span> 
+                        <p class="message">
+                            To <strong> Add lecturer to a program </strong> ,
+                            <strong> View lecturers for a specific program </strong> and 
+                            <strong> Delete lecturer for a specific program </strong> go to the course documentation page
+                            <a class="link" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Course" target="_blank"> 
+                                Click here to go to course documentation page 
+                            </a>
+                        </p>
+                </div>
+
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_documentation/admin_docs.css" />
+}

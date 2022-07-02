@@ -1,0 +1,113 @@
+.approved_page_wrapper{
+    width: 100%;
+}
+
+.approved_page_wrapper .approved_page_container{
+    width: 100%;
+}
+
+.approved_page_container .welcome_title{
+    font: normal normal bold 20px/1.2em "Arial";
+    padding: 1% 10%;
+    background-color: #e90172;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* 
+begin programme selection  
+*/
+.programme_selection_wrapper{
+    width: 100%;
+}
+
+.programme_selection_wrapper .programme_selection_container{
+    width: 100%;
+    padding: 2% 10%;
+    box-sizing: border-box;
+    background-color: #4b345d;
+}
+
+.programme_selection_container .programme_selection_title{
+    font: normal normal bold 18px/1.2em "Arial";
+    color: #fff;
+}
+
+.programme_selection_container .programme_selection_form{
+    margin-top: 10px;
+}
+
+.programme_selection_form .input_wrapper{
+    width: 300px;
+    margin: 2px 10px;
+    display: inline-block;
+}
+
+.programme_selection_form .input_wrapper .input{
+    width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    font: normal normal normal 16px/1.2em "sans-serif";
+}
+
+.programme_selection_container .button_container{
+    padding: 10px 10px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.programme_selection_container .button_container .button{
+    padding: 10px 10px;
+    font: normal normal normal 16px/1.2em "sans-serif";
+    background-color: #fff;
+    color: #000;
+}
+
+/* 
+end programme selection 
+*/
+.lectures_wrapper{
+    width: 100%;
+}
+
+.lectures_wrapper .lectures_container{
+    width: 100%;
+    padding: 5% 10%;
+    box-sizing: border-box;
+}
+
+.lectures_container .lecture{
+    margin-top: 15px;
+}
+
+.lecture .lecture_title{
+    font: normal normal bold 18px/1.2em "Arial";
+    color: #fff;
+    padding: 10px 10px;
+    background-color: #e90172;
+    box-shadow: 1px 2px 3px #ddd;
+}
+
+.lecture .video_player{
+    margin-top: 5px;
+    width: 500px;
+    height: 0px;
+    transition: height .3s ease-in-out;
+    overflow: hidden;
+}
+
+.lecture .video_player.active{
+    height: 400px;
+    transition: height .3s ease-in-out;
+}
+
+/* 
+begin lecture videos 
+*/
+
+
+
+/* 
+end lecture videos 
+*/

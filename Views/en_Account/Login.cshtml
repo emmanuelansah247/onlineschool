@@ -1,0 +1,64 @@
+@model bim_edu.Models.LoginViewModel
+
+
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = "Login | Bim-Edu";
+    var returnUrl = ViewData["returnUrl"] as string;
+    @if(returnUrl == null){
+        returnUrl = "";
+    }
+}
+
+
+<section class="entity_page clear_float">
+
+    <div class="entity_page_wrapper clear_float">
+
+
+            <form class="entity_page_form" asp-action="Login" asp-method="POST">
+
+                    <div asp-validation-summary="All"></div>
+
+                    <div class="input_wrapper">
+                        <label class="label"  asp-for="Email" ></label>
+                        <input class="input" type="text" id="Username" name="Email"/>
+                        <span class="show_on_error" asp-validation-for="Email"></span>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label"  asp-for="Password" > Password </label>
+                        <input class="input" type="password" id="Password" name="Password"/>
+                        <span class="show_on_error" asp-valaidation-for="Password"></span>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <input class="input" asp-for="RememberMe" type="checkbox" name="RememberMe"/>
+                        <label class="label"  asp-for="RememberMe" > Remember Me </label>
+                    </div>
+
+                    <div class="input_wrapper hide_it">
+                        <input class="input" type="returnUrl" id="returnUrl" name="returnUrl" value="@returnUrl"/>
+                    </div>
+
+                    <div class="button_wrapper">
+                        <input type="submit" id="Login" class="button" value="Login"/>
+                    </div>
+
+                    <div class="password_reset_register_container clear_float">
+                        <div class="PasswordResetEmail clear_float">
+                            <a asp-controller="en_Account" asp-action="PasswordResetEmail"> Forgotten Password ? </a>
+                        </div>
+                        <div class="RegisterInstead clear_float">
+                            <a asp-controller="en_Account" asp-action="Register"> Or Register Instead </a>
+                        </div>
+                    </div>
+
+            </form>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/account/login.css" />
+}

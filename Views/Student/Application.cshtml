@@ -1,0 +1,45 @@
+
+
+
+@{
+    Layout = "~/Views/Shared/_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Application | Bim-Edu ";
+    ApplicationUser user = ViewData[GeneralStoredNames.Bim_Edu_Application_User] as ApplicationUser;
+    ProgrammeApplication activeProgrammeApplication = ViewData[GeneralStoredNames.Bim_Edu_Active_Programme_Application] as ProgrammeApplication;
+}
+
+
+<section class="approved_page_wrapper">
+
+    <div class="approved_page_container">
+            <h2 class="welcome_title"> Bienvenue @user.FirstName <br/>Félicitations!</h2>
+
+            <div class="application_details">
+                <p>
+                Votre demande d’inscription en <span class="change_color">  
+                    @activeProgrammeApplication.Programme.Certification.Name
+                </span> a  <span class="change_color">  
+                    @activeProgrammeApplication.Programme.Name
+                </span> has been processed. <br/>
+                    Si votre candidature est acceptée, vous pourrez commencer	vos études avec le cours sur les <span class="change_color">
+                    Fondamentaux des études supérieures à Bim-­‐Edu  </span> dès lors que votre
+                     <span class="change_color"> candidature est approuvée </span>. Le cas échéant, c’est aussi 
+                    le moment de demander un transfert de crédit ou de faire appel relativement à l'exigence du cours intensif d’Anglais 
+                    académique si vous avez opté pour des études bilingues ou anglophones. Votre conseiller en matière d'admission est 
+                    <span class="change_color">M. Nakelintouba Nikiema.,PhD.</span>
+                    Vous pouvez le contacter à l'adresse <a class="change_color" href="mailto:registrar@bim-edu.us">registrar@bim-edu.us</a>
+                </p>
+            </div>
+
+            <div class="application_approval">
+                <h2 class="approval"> Votre demande n'a pas encore été approuvée!! </h2>
+                <p class="action"> Veuillez télécharger les pièces justificatives de la candidature sur la page
+                    <a asp-controller="Student" asp-action="Foundation">  “Fondements”.</a> </p>
+            </div>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/student/application.css" />
+}

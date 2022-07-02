@@ -1,0 +1,146 @@
+@model bim_edu.Models.UploadedDocumentViewModel;
+@inject bim_edu.DataContect.Controllers.BimEduDataContext datacontext;
+
+@{
+    Layout = "~/Views/Shared/_en_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Foundation Bim-Edu Student";
+    var documents = datacontext.UploadedDocuments.ToList();
+    ApplicationUser user = ViewData[GeneralStoredNames.Bim_Edu_Application_User] as ApplicationUser;
+    ProgrammeApplication activeProgrammeApplication = ViewData[GeneralStoredNames.Bim_Edu_Active_Programme_Application] as ProgrammeApplication;
+
+}
+
+
+<section class="approved_page_wrapper">
+
+    <div class="approved_page_container">
+            <h2 class="welcome_title"> Fundamental evaluation </h2>
+
+            <figure class="desciption_wrapper spacious">
+                <p class="main_description">
+                    On this page you will find information about your progress with respect
+                    to the requirements needed to become a student seeking @activeProgrammeApplication.Programme.Certification.Name.
+                </p>
+
+                <p class="sub_description">
+                    Students taking Bim-Edu Foundation courses are required to:
+                </p>
+                <div class="description_list">
+                    <div class="list_item">
+                        <span class="number">1.</span>
+                        Send their admission documents
+                    </div>
+                    <div class="list_item">
+                        <span class="number">2.</span>
+
+                       Have a minimum cumulative average of 12.00 / 20 in each of the first two courses or you will be allowed to follow 
+                       up to three more courses to get an average of 12.00 / 20 or more.	
+                        
+                    </div>
+                </div>
+
+                <p class="sub_description">
+                    Students taking Bim - Edu Foundation courses are required to:
+                </p>
+                <div class="description_list">
+                    <div class="list_item">
+                        <span class="number">1.</span>
+                        Send their admission documents
+                    </div>
+                    <div class="list_item">
+                        <span class="number">2.</span>
+                        Have a minimum cumulative average of 12.00 / 20 in each of the first two courses or you will be allowed to follow 
+                       up to three more courses to get an average of 12.00 / 20 or more.
+                    </div>
+                </div>
+
+            </figure>
+
+            <figure class="program_wrapper spacious">
+                Your admission to study 
+                <span class="change_color"> @activeProgrammeApplication.Programme.Certification.Name
+                in @activeProgrammeApplication.Programme.Name depends
+                </span>   
+                on your success as
+                <span class="change_color"> student in non-degree courses. </span>
+                 Below you will read detailed information about your status. 
+                 Please contact your Advisor if you have further questions.
+            </figure>
+
+            <figure class="upload_documents spacious">
+                <h2 class="title"> <span class="number">1</span> UPLOAD YOUR APPLICATION DOCUMENTS </h2>
+                <p class="details"> 
+
+                    You need to upload your high school diploma or other degree depending on your level of study, 
+                    your transcripts in English, French or Spanish (with the date of graduation).
+                    Diplomas and transcripts that are not in one of the languages ​​listed above must be submitted with
+                    an official notarized translation.
+
+                </p>
+
+                <div class="stand_out clear_float">
+                        <form class="upload_box" enctype="multipart/form-data" asp-controller="Student" asp-method="POST">
+                            <div class="top clear_float">
+                                <div class="left_side"> <label class="button cursor_pointer" for="IFormFile"> Choose the file </label> </div>
+                                <div class="right_side"> <label class="button cursor_pointer" for="Upload"> Upload  </label> </div>
+                            </div>
+                            <div class="bottom">
+                                <textarea rows="10" class="add_comments" id="FileName" name="Description" placeholder="Enter File Name "></textarea>
+                            </div>
+                            <div class="hide_it">
+                                <input  type="hidden" value="@activeProgrammeApplication.ProgrammeApplicationId" name="ProgrammeApplicationId" />
+                                <input  asp-for="ApplicationUserId" value="_Name_ @user.FirstName _ @user.LastName" name="ApplicationUserId" />
+                                <input  asp-for="IFormFile" id="IFormFile" name="IFormFile" />
+                                <input type="submit" asp-action="UploadStudentDocument" id="Upload"/>
+                            </div>
+                        </form>
+                        <div class="files_table">
+                            <h3 class="files_title"> Uploaded files  </h3>
+                            <table class="table">
+                                @foreach(UploadedDocument UploadedDocument in activeProgrammeApplication.UploadedDocuments){
+                                    var description = UploadedDocument.Description;
+                                    if(description.Length > 50){
+                                      description = description.Substring(0,49) + "...";
+                                    }
+                                <tr>
+                                    <form enctype="multipart/form-data" class="form" asp-controller="Student" asp-method="POST">
+                                        <td class="filename"> @description  </td>
+                                        <td class="hide_it"> <input name="UploadedDocumentId" value="@UploadedDocument.UploadedDocumentId"/> </td>
+                                        <td class="button_container"> <input type="submit" asp-action="RemoveUploadedDocument" class="button cursor_pointer" value=" Remove "/> </td>
+                                    </form>
+                                </tr>
+                                }
+                            </table>
+                        </div>
+                </div>
+                <p class="sub_details">
+
+                   You can upload up to 3 documents. Each document must be 20 MB or less. We can only accept PNG formats,
+                   JPG, GIF, PDF, XLS, DOCX or XLSX.
+                </p>
+
+            </figure>
+
+            <figure class="meet_criteria spacious">
+                <h2 class="title"> <span class="number">2</span> COMPLETE ACADEMIC CRITERIA  </h2>
+                <p class="details">
+                    Your grades will be evaluated once you have submitted all your documents, as required above
+                </p>
+            </figure>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/student/foundation.css" />
+
+    <Script>
+      var FileName = document.getElementById('FileName');
+      var IFormFile = document.getElementById('IFormFile');
+      IFormFile.onchange = function(){
+          filepath_with_extension = IFormFile.value.split('\\')[2];
+          filename = filepath_with_extension.split('.')[0];
+          FileName.value = filename;
+      }
+    </Script>
+}

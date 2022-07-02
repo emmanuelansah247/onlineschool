@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Bim-Edu Vocational Training Course";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="Account" asp-action="Register" class="apply_button"> CANDIDATURE </a>
+        </div>
+
+        <h1 class="main_heading"> PROGRAMMES DE FORMATION PROFESSIONNELLE DE BIM-EDU  </h1>
+        <h2 class="sub_main_heading"> Les programmes de formation professionnelle disponibles au Centre d'excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Agent pâtissier </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    En tant qu'étudiant de notre programme de certificat en pâtisserie, vous aurez l'occasion de combiner la gestion 
+                    d'entreprise et l'entrepreneuriat avec des méthodes et des techniques de pâtisserie classiques, en découvrant les 
+                    compétences de la boulangerie artisanale, de la décoration de gâteaux, de la confiserie et des desserts glacés, 
+                    de la gestion des menus et bien plus encore. Ce cours forme des agents qui pourraient créer leur propre entreprise 
+                    juste après la formation.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

@@ -1,0 +1,259 @@
+
+/* 
+begin enquiry wrapper 
+*/
+.enquiry_wrapper{
+    width: 100%;
+}
+
+.enquiry_wrapper .enquiry_container{
+    background-color: #543d67;
+    padding: 10% 10%;
+}
+
+.enquiry_container .heading{
+    font: normal normal normal 35px/1.2em "sans-serif";
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+}
+
+.enquiry_container .form{
+    margin-top: 20px;
+}
+
+.enquiry_container .form .input_container{
+    width: 100%;
+}
+
+.enquiry_container .input_container .input{
+    width: 30%;
+    margin: 1.5% 1.5%;
+    float: left;
+    font: normal normal normal 16px/1.2em "Georgia";
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.enquiry_container .input_container .input.textarea{
+    width: 96%;
+}
+
+.enquiry_container .action_button_container{
+    margin-top: 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.enquiry_container .action_button_container .action_button{
+    padding: 10px 10px;
+    font: normal normal normal 20px/1.2em "Helvetica";
+    color: #fff;
+    background-color: #e90172;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+@media screen and (max-width:920px){
+
+    .enquiry_wrapper .enquiry_container{
+        background-color: #543d67;
+        padding: 10% 2%;
+    }
+    
+    .enquiry_container .heading{
+        font: normal normal normal 20px/1.2em "sans-serif";
+    }
+
+    .enquiry_container .input_container .input{
+        width: 30.33%;
+        font: normal normal normal 14px/1.2em "Georgia";
+        padding: 10px 5px;
+    }
+    
+    .enquiry_container .action_button_container .action_button{
+        font-size: 15px;
+    }
+    
+}
+/* 
+end enquiry wrapper
+ */
+
+
+
+
+.footer_wrapper{
+    width: 100%;
+}
+
+.footer_wrapper .footer_container{
+    padding: 5% 10%;
+    background-color: #2c2135;
+}
+
+.footer_wrapper .footer_container .app_guide{
+    color: #ddd;
+    font-size: 13px;
+    text-align: justify;
+}
+
+/* begin items */
+
+.footer_container .footer_item{
+    width: 30%;
+    margin: 1.5%;
+    float: left;
+}
+
+@media screen and (max-width:768px){
+    .footer_container .footer_item{
+        width: 90%;
+        margin: 5%;
+        float: left;
+    }
+
+    .footer_container .footer_item:last-child{
+        margin-bottom: 20%;
+    }
+}
+
+.footer_item .footer_heading{
+    font: normal normal bold 18px/1.2em "sans-serif";
+    color: #fff;
+}
+
+.footer_item .footer_links_action_links{
+    margin-top: 10px;
+}
+
+.footer_item .footer_links_action_links.documentation{
+    margin-top: 40px;
+}
+
+.footer_item .footer_links_action_links .footer_link{
+    color: #ddd;
+    font: normal normal normal 14px/1.2em "Georgia";
+    text-decoration: none;
+    display: block;
+}
+
+.footer_item .footer_action_button_container{
+    margin-top: 25px;
+}
+
+.footer_item .footer_action_button{
+    padding: 10px 10px;
+    font: normal normal normal 16px/1.2em "Helvetica";
+    color: #fff;
+    background-color: #e90172;
+    text-decoration: none;
+}
+
+.footer_item .footer_links_action_links.documentation .footer_action_button{
+    padding: 0px 0px;
+    font: normal normal bold 14px/1.2em "Helvetica";
+    text-transform: uppercase;
+    color: #e90172;
+    background-color: inherit;
+
+}
+
+/* end items */
+
+/* begin social  */
+
+.footer_container .social_links{
+    width: 100%;
+    text-align: center;
+}
+
+.footer_container .social_links .contact_us_heading{
+    font: normal normal bold 25px/1.2em "sans-serif";
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer_container .social_links .contact_us_container{
+    margin: 0 15px;
+}
+
+.footer_container .contact_us_container .call_us_name{
+    font: normal normal normal 14px/1.2em "sans-serif";
+    color: #ddd;
+}
+
+.footer_container .contact_us_container .call_us_number{
+    font: normal normal normal 25px/1.2em "sans-serif";
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer_container .social_image_wrapper{
+    margin-top: 20px;
+}
+
+.footer_container .social_image_wrapper .social_image_container{
+    width: 30px;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.footer_container .social_image_wrapper .social_image_container img{
+    width: 100%;
+}
+
+/* end social */
+
+/* begin copyright */
+
+.footer_container .copyright_container{
+    margin-top: 20px;
+}
+
+.footer_container .copyright_container .copyright{
+    font: normal normal bold 12px/1.2em "Georgia";
+    color: #e90172;
+}
+
+
+.footer_container .ksoftnet{
+    margin-top: 20px;
+}
+
+.footer_container .ksoftnet .ksoftnet_name{
+    font: normal normal bold 12px/1.2em "Georgia";
+    color: #ddd;
+}
+
+.footer_container .ksoftnet .ksoftnet_name a{
+    color: #ddd;
+    text-decoration: none;
+}
+
+/* end copyright */
+
+
+/* 
+begin admin link 
+*/
+.admin_link{
+    padding: 10px;
+    background-color: #434343;
+    color: #fff;
+}
+
+.admin_link ul li{
+    float: left;
+    padding: 5px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.admin_link ul li a{
+    color: #fff;
+}
+
+/* 
+end admin link 
+*/

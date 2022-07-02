@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Bim-Edu Mécanicien industriel";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="Account" asp-action="Register" class="apply_button"> CANDIDATURE </a>
+        </div>
+
+        <h1 class="main_heading"> PROGRAMMES DE FORMATION PROFESSIONNELLE DE BIM-EDU  </h1>
+        <h2 class="sub_main_heading"> Les programmes de formation professionnelle disponibles au Centre d'excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Mécanicien industriel </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    Les mécaniciens de machines industrielles, également appelés machinistes de maintenance, maintiennent les machines en état de
+                     marche en détectant et en corrigeant les erreurs avant que la machine ou les produits qu'elle produit ne soient endommagés. 
+                     Beaucoup de ces machines sont de plus en plus gérées par des ordinateurs. Les mécaniciens de machinerie industrielle utilisent 
+                     des manuels techniques, leur compréhension de l'équipement industriel et l'observation pour déterminer la cause d'un problème. 
+                     Ce cours forme des assistants qui pourraient créer leur propre entreprise après avoir atteint un bon niveau d'expérience dans 
+                     l'industrie ou choisir de travailler sous la supervision d'ingénieurs.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

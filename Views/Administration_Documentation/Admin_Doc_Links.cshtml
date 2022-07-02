@@ -1,0 +1,110 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "How To Use Bim-Edu Links Page | Admin ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+
+        <div class="link_container">
+            <span class="number"> 1.</span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Application"> 
+                How To Use The Application Page
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 2.</span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Staff"> 
+                How To Use The Staff Page 
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 3. </span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Certificate"> 
+                How To Use The Certificate Page
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 4. </span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Program"> 
+                How To Use The Program Page
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 5.</span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Video"> 
+                How To Use The Video Page 
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 6. </span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Documents"> 
+                How To Use The Documents Page
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 7. </span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Results"> 
+                How To Use The Results Page
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 8. </span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Calender"> 
+                How To Use The Calender Page
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 9. </span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Course"> 
+                How To Use The Course Page 
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 10. </span>
+            <a class="link" target="_blank"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Lecture"> 
+                How To Use The Lecturer Page 
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 11. </span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_UserRole"> 
+                 How To Use The User/Role Page
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 12. </span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_PaymentCodes"> 
+                How To Use The Payment Codes Page
+            </a>
+        </div>
+
+        <div class="link_container">
+            <span class="number"> 13. </span>
+            <a class="link"  target="_blank" asp-controller="Administration_Documentation" asp-action="Admin_Doc_Payments"> 
+                How To Use The Payments Page
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_documentation/admin_doc_links.css" />
+}

@@ -1,0 +1,96 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "How To Use Bim-Edu Staff Page | Admin ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+
+        <figure class="item">
+            <h2 class="heading"> Adding A Staff </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Staff page.
+                        <a class="link" asp-controller="Administration_Three" asp-action="AdminStaffRegister" target="_blank"> 
+                            Click here to go to staff page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Enter the details for the form (details are information for the staff like first name and last name)
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 7. </span>
+                    <span class="instruction"> 
+                       Click on <strong> REGISTER AS STAFF </strong>
+                    </span>
+                </p>
+
+                <div class="note">
+                        <span class="title"> NOTE: </span> 
+                        <p class="message">
+                            The newly added staff cannot access the <strong> Admin Section </strong> unless you add the staff to a user role 
+                            <a class="link" asp-controller="Administration_Two" asp-action="AdminUserRole" target="_blank"> 
+                                Click here to go to user roles page 
+                            </a>
+                        </p>
+                </div>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> Adding A Staff To A Role </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the User Role page.
+                        <a class="link" asp-controller="Administration_Two" asp-action="AdminUserRole" target="_blank"> 
+                            Click here to go to user roles page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select the email address of the staff
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select the role for the staff
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 7. </span>
+                    <span class="instruction"> 
+                       Click on <strong> Add User To Role </strong>
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_documentation/admin_docs.css" />
+}

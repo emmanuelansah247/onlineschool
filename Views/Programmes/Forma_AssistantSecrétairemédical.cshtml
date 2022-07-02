@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Bim-Edu Assistant/Secrétaire médical";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="Account" asp-action="Register" class="apply_button"> CANDIDATURE </a>
+        </div>
+
+        <h1 class="main_heading"> PROGRAMMES DE FORMATION PROFESSIONNELLE DE BIM-EDU  </h1>
+        <h2 class="sub_main_heading"> Les programmes de formation professionnelle disponibles au Centre d'excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Assistant/Secrétaire médical </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    Les assistants médicaux effectuent des tâches cliniques et administratives dans les cabinets de médecins, 
+                    y compris l'enregistrement des antécédents du patient, la mesure des signes vitaux, la planification des 
+                    rendez-vous des patients et le prélèvement de sang pour les tests de laboratoire. Notre programme d'assistant 
+                    médical est un programme de certificat et peut être complété en aussi peu que 8 mois.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

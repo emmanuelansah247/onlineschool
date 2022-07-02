@@ -1,0 +1,51 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "How To Use Bim-Edu Payment Codes Page | Admin ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Generate A Payment Code. 
+                    This Code Can Be Used During Program Application 
+                    When The Student Has Already Paid For The Fee or Application Fee
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> GENERATE PAYMENT CODE </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the PaymentCodes Page.
+                        <a class="link" asp-controller="Administration_Two" asp-action="AdminPaymentByPassCode" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Click On 'Generate Code' To Generate A New Code
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_documentation/admin_docs.css" />
+}

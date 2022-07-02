@@ -1,0 +1,41 @@
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = " Bim-Edu Industrial mechanics Courses";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="en_Account" asp-action="Register" class="apply_button"> APPLY </a>
+        </div>
+
+        <h1 class="main_heading"> Vocational Training  </h1>
+        <h2 class="sub_main_heading"> Available at the Center of Excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Industrial mechanics </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    Industrial machinery mechanics, also called maintenance machinists, keep machines in working order by 
+                    detecting and correcting errors before the machine or the products it produces are damaged. Many of these machines 
+                    are increasingly run by computers. Industrial machinery mechanics use technical manuals, their understanding of industrial 
+                    equipment, and observation to determine the cause of a problem. This course trains Assistants that could set up their own 
+                    business after achieving a good level of experience 
+                    in the industry or  they may choose to work under supervision of Engineers.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

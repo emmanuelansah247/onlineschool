@@ -1,0 +1,177 @@
+@model bim_edu.Models.QuestionViewModel;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Question | Bim-Edu ";
+    Programme v_Program = ViewData["v_Program"] as Programme;
+    List<Course> v_Courses = ViewData["v_Courses"] as List<Course>;
+    Course v_activeCourse = ViewData["v_activeCourse"] as Course;
+    
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container">
+        <h1 class="page_title" Id="page_title"> Questions Uploading Page </h1>
+        <form class="form clear_float" enctype="multipart/form-data" asp-controller="Administration" asp-method="POST">
+
+                    <div class="input_wrapper">
+                        <label class="label"> Program </label>
+                        <select class="input" type="text" name="ProgramId">
+                                <option value=@v_Program.ProgrammeId > 
+                                    @v_Program.Name
+                                </option>
+                        </select>
+                        <span class="show_on_error" asp-validation-for="ProgramId"></span>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label"> Course </label>
+                        <select class="input" type="text" name="CourseId">
+                                    @foreach (Course item in v_Courses)
+                                    {
+                                        if(item.CourseId == v_activeCourse.CourseId){
+                                            <option selected 
+                                            value=@item.CourseId > 
+                                                @item.Name
+                                            </option>
+                                        }else{
+                                            <option 
+                                            value=@item.CourseId > 
+                                                @item.Name
+                                            </option>
+                                        }
+                                     }
+                        </select>
+                        <span class="show_on_error" asp-validation-for="CourseId"></span>
+                    </div>
+                    
+                    
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="IFormFile"> Upload Question </label>
+                        <input class="input" asp-for="IFormFile" name="IFormFile">
+                        <span class="show_on_error" asp-validation-for="IFormFile"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Description"> Title </label>
+                        <input class="input" type="text" name="Description">
+                        <span class="show_on_error" asp-validation-for="Description"></span>
+                    </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="AdminQuestionView"  class="button cursor_pointer" value="View Questions"/>
+                        <input type="submit" asp-action="AdminQuestion" class="button cursor_pointer" value="Add Question"/>
+                    </div>
+        </form>
+
+        <section class="document_list_wrapper">
+            <div class="document_list_container clear_float">
+
+                @if(v_Program.Questions != null && v_Program.Questions.Count() > 0 ){
+                    foreach(Question item in v_Program.Questions){
+                        if(!item.isremoved){
+                        if(item.CourseId == v_activeCourse.CourseId){
+                            <figure class="item clear_float">
+
+                                <section class="main_question section clear_float">
+                                    <div class="left">
+                                        <div class="title">
+                                            @item.Description
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <form asp-controller="Administration" asp-method="POST">
+                                            <input type="hidden" name="Id" value="@item.QuestionId"/>
+                                            <a href="~/@GeneralStoredNames.Questions_Directory/@item.FilePath" target="_blank" class="button cursor_pointer"> View </a>
+                                            <input type="submit" asp-action="AdminQuestionDelete"  class="button cursor_pointer" value="Delete"/>
+                                        </form>
+                                    </div>
+                                </section>
+
+                                @foreach(QuestionStudentProvidedSolution item_one in item.QuestionStudentProvidedSolutions){
+                                    
+                                    <section class="student_upload section clear_float">
+                                        <div class="left">
+                                            <div class="title">
+                                                @item_one.ApplicationUser.FirstName
+                                                @item_one.ApplicationUser.LastName - 
+                                                Solution
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                                <a href="~/@GeneralStoredNames.Questions_Directory/@item_one.FilePath" target="_blank" class="button cursor_pointer"> View </a>
+                                        </div>                                    
+                                    </section>
+                                    
+                                    <section class="lecturer_upload section clear_float">
+
+                                        @{
+                                            int n_count = 0;
+                                            QuestionLecturerEvaluateStudentSolution item_two = null;
+                                            foreach(QuestionLecturerEvaluateStudentSolution item_count in item_one.QuestionLecturerEvaluateStudentSolutions){
+                                                if(!item_count.isremoved){
+                                                    n_count = n_count + 1;
+                                                    item_two = item_count;
+                                                }
+                                            }
+                                        }
+
+                                        @if(n_count < 1){
+
+                                                <figure class="top clear_float">
+                                                    <form asp-controller="Administration" enctype="multipart/form-data" asp-method="POST">
+                                                        <input type="hidden" name="QuestionStudentProvidedSolutionId" 
+                                                            value="@item_one.QuestionStudentProvidedSolutionId"/>
+                                                        <input type="file" class="input" name="IFormFile"/>
+                                                        <input type="submit" asp-action="AdminQuestionLecturerEvaluateStudentSolution"  
+                                                            class="button cursor_pointer" value="ADD EVALUATED STUDENT SOLUTION"/>
+                                                    </form>
+                                                </figure>
+
+                                        } else{
+
+                                            <figure class="down">
+                                                <div class="left">
+                                                    <div class="title">
+                                                        Lecturer Evaluated Solution
+                                                    </div>
+                                                </div>
+                                                <div class="right">
+                                                    <form asp-controller="Administration" asp-method="POST">
+
+                                                        <input type="hidden" name="QuestionLecturerEvaluateStudentSolutionId" 
+                                                            value="@item_two.QuestionLecturerEvaluateStudentSolutionId"/>
+
+                                                        <a href="~/@GeneralStoredNames.Questions_Directory/@item_two.FilePath" 
+                                                        class="button cursor_pointer" target="_blank"> View </a>
+
+                                                        <input type="submit" asp-action="AdminQuestionLecturerEvaluateStudentSolutionDelete"  
+                                                                class="button cursor_pointer" value="Delete"/>
+
+                                                    </form>
+                                                </div>
+                                            </figure>
+
+                                        }
+
+                                    </section>
+
+                                }
+
+                            </figure>
+                            }
+                         }
+                    }
+                }
+
+            </div>
+        </section>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration/adminquestion.css" />
+}

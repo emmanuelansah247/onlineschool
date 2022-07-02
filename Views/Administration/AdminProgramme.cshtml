@@ -1,0 +1,137 @@
+@model bim_edu.Models.ProgramViewModel
+
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Program | Bim-Edu";
+    List<Certification> certifications = ViewData["Certifications"] as List<Certification>;
+    List<Programme> _programs = ViewData["Programs"] as List<Programme>;
+}
+
+
+<section class="page_wrapper clear_float">
+
+    <div class="page_container clear_float">
+        <h1 class="page_title"> Admin Program </h1>
+
+        <div class="keep_it_top">
+                    <div class="input_wrapper">
+                        <select id="programs" class="input" type="text">
+
+                                    @foreach(Programme item in _programs){
+                                            <option value="@item.ProgrammeId"  
+                                                    certificationId="@item.CertificationId" 
+                                                    applicationfee="@item.ApplicationFee" 
+                                                    fees="@item.Fee"
+                                                    program_name="@item.Name"
+                                                    program_description="@item.Description"
+                                                    program_language="@item.Language"
+                                                    program_url="@item.Url">
+                                               
+                                                    @item.Name
+
+                                            </option>
+                                     }
+
+                        </select>
+                    </div>
+        </div>
+
+
+            <form class="form" asp-controller="Administration" asp-method="POST">
+
+                   
+                    <div class="ValidationError" asp-validation-summary="All"></div>
+
+                    <div class="input_wrapper">
+                        <input type="hidden"  id="programmeId" name="ProgramId" value="0">
+                        <label class="label" asp-for="CertificationId"> Degree Type </label>
+                        <select class="input" type="text"  id="certificationId" name="CertificationId">
+
+                                    @foreach(Certification certification in certifications){
+                                            <option value=@certification.CertificationId >
+                                                @certification.Name
+                                            </option>
+                                     }
+
+                        </select>
+                        <span class="show_on_error" asp-validation-for="CertificationId"></span>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Language"> Language </label>
+                        <select class="input" type="text"  id="program_language" name="Language">
+
+                                    @foreach(string lang in LanguageType.GetAll()){
+                                            <option value="@lang" >
+                                                @lang
+                                            </option>
+                                     }
+
+                        </select>
+                        <span class="show_on_error" asp-validation-for="CertificationId"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="ApplicationFee"> Application Fee </label>
+                        <input class="input" type="number" value="60.00" required value="0" min="0" step="0.01" id="applicationfee" name="ApplicationFee">
+                        <span class="show_on_error" asp-validation-for="ApplicationFee"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Fee"> Fees For Program </label>
+                        <input class="input" type="number" required value="0" min="0" step="0.01" name="Fee"  id="fees">
+                        <span class="show_on_error" asp-validation-for="Fee"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Name"> Name </label>
+                        <input class="input" required type="text" name="Name" id="program_name"/>
+                        <span class="show_on_error" asp-validation-for="Name"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Description"> Description </label>
+                        <textarea rows="8" class="input" required type="text" name="Description" id="program_description"></textarea>
+                        <span class="show_on_error" asp-validation-for="Description"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Url"> Url </label>
+                        <input type="text" class="input" required name="Url" id="program_url"/>
+                        <span class="show_on_error" asp-validation-for="Url"></span>
+                    </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="ProgrammeAdd" id="Add" class="button" value="Add"/>
+                        <input type="submit" asp-action="ProgrammeUpdate" id="Update" class="button" value="Update"/>
+                    </div>
+
+            </form>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration/adminsimpleform.css" />
+    <script>
+    var program_element = document.getElementById('programs');
+    var certification_element = document.getElementById('certificationId');
+
+    program_element.onchange = function(){
+
+        tmp = program_element.options[program_element.selectedIndex];
+        document.getElementById('programmeId').value = tmp.getAttribute('value');
+        certification_element.value = tmp.getAttribute('certificationId');
+        document.getElementById('applicationfee').value = tmp.getAttribute('applicationfee');
+        document.getElementById('fees').value = tmp.getAttribute('fees');
+        document.getElementById('program_name').value = tmp.getAttribute('program_name');
+        document.getElementById('program_description').value = tmp.getAttribute('program_description');
+        document.getElementById('program_url').value = tmp.getAttribute('program_url');
+        document.getElementById('program_language').value = tmp.getAttribute('program_language');
+
+    }
+
+    </script>
+}

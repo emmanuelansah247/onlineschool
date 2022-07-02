@@ -1,0 +1,27 @@
+
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = "Email Activation | Bim-Edu ";
+    var Id = ViewData["Id"] as string;
+}
+
+
+<section class="page_wrapper">
+
+    @if(Id == null || Id == ""){
+    <div class="page_container">
+            <h1 class="heading"> Account Activation Required</h1>
+            <p class="description"> A Confirmation Email Has Been Sent To Your Account. Please Click On The Required Link To Activate Your Account</p>
+    </div>
+    }else{
+        <div class="page_container">
+                <h1 class="heading"> Account  Activated</h1>
+                <p class="description"> Your account has been successfully activated </p>
+        </div>
+    }
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/account/activateemail.css" />
+}

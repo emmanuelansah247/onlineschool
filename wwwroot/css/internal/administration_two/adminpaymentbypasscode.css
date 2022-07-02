@@ -1,0 +1,72 @@
+.page_wrapper{
+    width: 100%;
+}
+
+.page_wrapper .page_container{
+    width: 100%;
+}
+
+.page_container .page_title{
+    padding: 10px 0px;
+    text-align: center;
+    color: #fff;
+    background-color: #4b345d;
+}
+
+.page_container .page_content{
+    margin: 5% 20%;
+}
+
+.page_container .form{
+    background-color: #e90172;
+    padding: 1% 5%;
+    box-sizing: border-box;
+}
+
+.page_container .button_container{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page_container .button_container .button{
+    padding: 10px 20px;
+    font: normal normal normal 17px/1.2em "Helvetica";
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.page_container .button_container .button:hover{
+    background-color: #ddd;
+}
+
+/* begin payment by pass codes table */
+
+.page_container .page_content .table{
+    margin-top: 20px;
+}
+.page_container .page_content .table table{
+    width: 100%;
+}
+
+.page_content table thead th{
+    font: normal normal bold 17px/1.2em "Arial";
+    text-transform: uppercase;
+    background-color: #4b345d;
+    color: #fff;
+
+}
+.page_content table tbody tr{
+    background-color: #4e4e4e;
+    color: #fff;    
+}
+.page_content table tbody tr td{
+    font: normal normal bold 16px/1.2em "Helvetica";
+    background-color: #4e4e4e;
+    color: #fff;    
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* end payment by pass codes table */

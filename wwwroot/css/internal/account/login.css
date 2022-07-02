@@ -1,0 +1,90 @@
+.entity_page{
+    padding: 10% 0%;
+}
+
+.entity_page .entity_page_wrapper{
+    width: 100%;
+}
+
+.entity_page_wrapper .entity_page_form{
+    background-color: #e90172;
+    padding: 50px 50px;
+    margin: 0% 40%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:1280px){
+    .entity_page_wrapper .entity_page_form{
+        margin: 0% 25%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .entity_page_wrapper .entity_page_form{
+        margin: 0% 15%;
+        padding: 50px 20px;
+    }
+}
+
+.entity_page_form .input_wrapper{
+    margin-top: 20px;
+}
+
+.entity_page_form .input_wrapper .label,
+.entity_page_form .input_wrapper .input,
+.entity_page_form .input_wrapper .show_on_error{
+    display: block;
+}
+
+.entity_page_form .input_wrapper .label{
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.entity_page_form .input_wrapper .input{
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+}
+
+.entity_page_form .button_wrapper{
+    text-align: center;
+}
+
+.entity_page_form .button_wrapper .button{
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #fff;
+    color: #000;
+}
+
+/* 
+begin password reset or register 
+*/
+.password_reset_register_container{
+    margin-top: 20px;
+}
+
+.password_reset_register_container .PasswordResetEmail a{
+    font: normal normal normal 15px/1.2em "Helvetica";
+    margin-bottom: 10px;
+    float: right;
+}
+
+.password_reset_register_container .RegisterInstead a{
+    font: normal normal normal 14px/1.2em "Helvetica";
+    margin-bottom: 10px;
+    float: right;
+    color: #fff;
+}
+
+.password_reset_register_container .PasswordResetEmail a:hover,
+.password_reset_register_container .RegisterInstead a:hover{
+    color: #4b345d;
+}
+
+/* 
+begin password reset or register 
+*/
+

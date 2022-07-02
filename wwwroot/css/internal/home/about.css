@@ -1,0 +1,118 @@
+/* 
+begin intro image 
+*/
+
+.intro_image_wrapper{
+    width: 100%;
+}
+
+.intro_image_wrapper .intro_image_container{
+    height: 300px;
+    position: relative;
+    background: url(../../../images/about/graduation.jpg) no-repeat center center /cover;
+    z-index: -1;
+}
+
+.intro_image_container .text_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text_container .heading{
+    font: normal normal bold 20px/1.2em "sans-serif";
+    color: #fff;
+    background-color: #e90172;
+    padding: 10px 10px;
+}
+
+@media screen and (max-width:768px){
+
+    .intro_image_container .text_container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    
+    .text_container .heading{
+        font: normal normal bold 17px/1.2em "sans-serif";
+        color: #fff;
+        background-color: #e90172;
+        padding: 10px 10px;
+        width: 250px;
+    }
+}
+
+/* 
+end intro image 
+*/
+
+/* 
+begin about  
+*/
+.about_wrapper{
+    width: 100%;
+}
+
+.about_wrapper .about_container{
+    padding: 5% 20%;
+}
+
+.about_container .make_it_stand_out{
+    margin: 4% 0%;
+}
+
+.about_container .make_it_stand_out .big_heading{
+    font: normal normal bold 30px/1.2em "sans-serif";
+    margin: 15px 0px;
+    color: #2d1938;
+}
+
+.about_container .make_it_stand_out .small_heading{
+    font: normal normal bold 22px/1.2em "Arial";
+    letter-spacing: 1px;
+    color: #2d1938;
+    margin: 10px 0px;
+}
+
+.about_container .make_it_stand_out .description{
+    font: normal normal normal 18px/1.2em "Georgia";
+}
+
+.about_container .make_it_stand_out .description ul{
+    margin-left: 20px;
+}
+
+@media screen and (max-width:768px){
+    .about_wrapper{
+        width: 100%;
+    }
+    
+    .about_wrapper .about_container{
+        padding: 5% 5%;
+    }
+    
+    .about_container .make_it_stand_out{
+        margin: 20% 0%;
+    }
+    
+    .about_container .make_it_stand_out .big_heading{
+        font-size: 18px;
+    }
+    
+    .about_container .make_it_stand_out .small_heading{
+        font-size: 16px;
+    }
+    
+    .about_container .make_it_stand_out .description{
+        font-size: 14px;
+    }
+}
+
+/* 
+end about  
+*/

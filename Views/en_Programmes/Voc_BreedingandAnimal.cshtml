@@ -1,0 +1,44 @@
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = " Bim-Edu Breeding and Animal Health Assistant Course";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="en_Account" asp-action="Register" class="apply_button"> APPLY </a>
+        </div>
+
+        <h1 class="main_heading"> Vocational Training  </h1>
+        <h2 class="sub_main_heading"> Available at the Center of Excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Breeding and Animal Health Assistant </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    Animal breeders and technicians help breed, raise, and market a variety of animals: cattle, sheep, 
+                    pigs, horses, mules, and poultry for livestock; pets such as canaries, parrots, dogs, and cats; and other 
+                    more exotic animals such as ostriches, alligators, minks, and many zoo animals. Technicians who are primarily 
+                    involved with the breeding and feeding of animals are sometimes referred to as animal husbandry technicians. 
+                    Breeders and technicians are concerned with the propagation, feeding, housing, health, production, and marketing 
+                    of animals. These technicians work in many different settings and capacities. They may supervise unskilled farm 
+                    workers; serve as field representatives assisting in the sales of animals to customers; work in kennels, stables, 
+                    ranches, or zoos reproducing species and breeds for other clients or their own organization; or work on their own 
+                    on a particular breed of interest.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

@@ -1,0 +1,28 @@
+.entity_page{
+    width:  100%;
+}
+
+.entity_page .entity_page_container{
+    padding: 2% 10%;
+    box-sizing: border-box;
+
+}
+
+.entity_page_container .item{
+    margin: 25px 0px;
+}
+
+.item .title{
+    color: #e90172;
+    font: normal normal bold 18px/1.2em "Arial";
+}
+
+.item .subtitle{
+    color: #4e4e4e;
+    margin-bottom: 8px;
+    font: normal normal normal 13px/1.2em "sans-serif";
+}
+
+.item .description{
+    font: normal normal normal 16px/1.2em "Helvetica";
+}

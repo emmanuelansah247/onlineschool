@@ -1,0 +1,52 @@
+.admin_page_wrapper{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin_page_wrapper .admin_page_container{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin_page_container .page_title{
+    font: normal normal bold 18px/1.2em "Arial";
+    background-color: #4b345d;
+    text-align: center;
+    padding: 10px 0px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.admin_page_container .form{
+    width: 100%;
+    padding: 2% 10%;
+    background-color: #4e4e4e;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.form .input_wrapper{
+    display: inline-block;
+    margin: 0px 15px;
+}
+
+.form .input_wrapper .label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form .input_wrapper .input{
+    padding: 10px 10px;
+    font: normal normal normal 15px/1.2em "sans-serif";
+}
+
+.form .button_container{
+    display: inline-block;
+}
+
+.form .button_container .button{
+    padding: 15px 15px;
+    background-color: #fff;
+    color: #000;
+    margin: 0px 10px;
+}

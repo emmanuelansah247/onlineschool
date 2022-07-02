@@ -1,0 +1,368 @@
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Welcome | Bim-Edu ";
+    List<Programme> v_allPrograms = ViewData["v_allPrograms"] as List<Programme>;
+    Programme v_activeProgram =  ViewData[GeneralStoredNames.Bim_Edu_Active_Program] as Programme;
+    CourseLecturer activeCourseLecturer = ViewData[GeneralStoredNames.Bim_Edu_Active_Course_Lecturer] as CourseLecturer;
+}
+
+
+<section class="admin_wrapper">
+
+    <div class="admin_container">
+
+            <div class="form_container">
+
+                <form class="form" asp-controller="Admininstration" asp-method="POST">
+
+                        <figure class="filter_programme_container clear_float">
+
+                            <div class="input_container">
+                                <label class="label"> Active Program </label>
+                                <select class="input" type="text" name="ProgramId">
+                                            @foreach(Programme item in v_allPrograms){
+                                                if(v_activeProgram != null){
+                                                    if(item.ProgrammeId == v_activeProgram.ProgrammeId){
+
+                                                        <option selected 
+                                                            value=@item.ProgrammeId > 
+                                                            @item.Name 
+                                                        </option>
+
+                                                    }else{
+
+                                                        <option 
+                                                            value=@item.ProgrammeId > 
+                                                            @item.Name 
+                                                        </option>
+
+                                                    }
+                                                }
+                                                else{
+
+                                                    <option 
+                                                        value=@item.ProgrammeId > 
+                                                        @item.Name 
+                                                    </option>
+
+                                                 }
+                                            }
+                                </select>
+                            </div>
+
+                            <div class="input_container">
+                                    <input type="submit" asp-action="Admin" value="Make Active" class="button cursor_pointer"/>
+                            </div>
+
+                            <div class="input_container">
+                                <label class="label"> Active Course </label>
+                                <select class="input" type="text" name="CourseLecturerId">
+                                                @if(v_activeProgram != null && v_activeProgram.CourseLecturers != null ){
+                                                    @foreach(CourseLecturer courselecturer in v_activeProgram.CourseLecturers){
+                                                            if(courselecturer.isremoved != true){
+                                                                
+                                                                if(activeCourseLecturer != null){
+                                                                    if(courselecturer.CourseLecturerId == activeCourseLecturer.CourseLecturerId){
+
+                                                                        <option selected value=@courselecturer.CourseLecturerId > 
+                                                                            @courselecturer.Course.Name - 
+                                                                            @courselecturer.Lecturer.ApplicationUser.FirstName 
+                                                                            @courselecturer.Lecturer.ApplicationUser.LastName 
+                                                                        </option>
+
+                                                                    }else{
+
+                                                                        <option value=@courselecturer.CourseLecturerId > 
+                                                                            @courselecturer.Course.Name - 
+                                                                            @courselecturer.Lecturer.ApplicationUser.FirstName 
+                                                                            @courselecturer.Lecturer.ApplicationUser.LastName 
+                                                                        </option>
+
+                                                                    }
+                                                                }else{
+
+                                                                        <option value=@courselecturer.CourseLecturerId > 
+                                                                            @courselecturer.Course.Name - 
+                                                                            @courselecturer.Lecturer.ApplicationUser.FirstName 
+                                                                            @courselecturer.Lecturer.ApplicationUser.LastName 
+                                                                        </option>
+
+                                                                }
+
+                                                            }
+
+                                                    }
+                                                }
+                                </select>
+                            </div>
+
+                            <div class="input_container">
+                                    <input type="submit" asp-action="Admin" value="Make Active" class="button cursor_pointer"/>
+                            </div>
+                </form>
+
+            </div>
+
+                        <div class="welcome_menu_items_contianer">
+                            
+                            <!-- begin items area -->
+                            @if(User.IsInRole(RoleName.Admin)){
+
+                                <a asp-controller="Administration" asp-action="AdminApproval"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            APPLICATIONS
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration" asp-action="AdminStudent"> 
+                                    <figure class="item">
+                                            <div class="menu_link">
+                                                STUDENTS
+                                            </div>
+                                    </figure> 
+                                </a>
+
+                                <a asp-controller="Administration" asp-action="AdminStaff"> 
+                                    <figure class="item">
+                                            <div class="menu_link">
+                                                STAFFS
+                                            </div>
+                                    </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Three" asp-action="AdminStaffRegister"> 
+                                    <figure class="item">
+                                            <div class="menu_link">
+                                                STAFF REGISTER
+                                            </div>
+                                    </figure> 
+                                </a>
+
+                                <a asp-controller="Administration" asp-action="AdminCertification"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            CERTIFICATE
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration" asp-action="AdminProgramme"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            PROGRAM
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Four" asp-action="AdminChangeProgram"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            CHANGE PROGRAM
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration" asp-action="AdminVideo"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            VIDEO
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration" asp-action="AdminProgramDocument"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            DOCUMENTS
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration" asp-action="AdminQuestion"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            EVALUATION
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Four" asp-action="AdminShareFile"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            SHARE
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Two" asp-action="AdminProgramCalender"> 
+                                    <figure class="item">
+                                            <div class="menu_link">
+                                                CALENDER
+                                            </div>
+                                    </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Three" asp-action="AdminCourse"> 
+                                    <figure class="item">
+                                            <div class="menu_link">
+                                                COURSE
+                                            </div>
+                                    </figure> 
+                                </a>
+
+                                <a asp-controller="Administration" asp-action="AdminLecturer"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            LECTURER
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Two" asp-action="AdminCoureseLecture"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            COURSE LECTURER
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Two" asp-action="AdminUserRole"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            USER ROLE 
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Two" asp-action="AdminPaymentByPassCode"> 
+                                    <figure class="item">
+                                            <div class="menu_link">
+                                                PAYMENTCODES
+                                            </div>
+                                    </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Two" asp-action="AdminStudentFeeToPay"> 
+                                    <figure class="item">
+                                            <div class="menu_link">
+                                                PAYMENTS
+                                            </div>
+                                    </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Three" asp-action="AdminComment"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            FORUM
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Three" asp-action="AdminUnregister"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            UNREGISTER
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Three" asp-action="AdminLogin"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            LOGINS
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Documentation" asp-action="Admin_Doc_Links"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            DOCUMENTATION
+                                        </div>
+                                </figure> 
+                                </a>
+
+
+                                <a asp-controller="Home" asp-action="Index"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            WEBSITE
+                                        </div>
+                                </figure> 
+                                </a>
+
+                            }
+
+                            @if(User.IsInRole(RoleName.Staff)){
+
+                                <a asp-controller="Administration" asp-action="AdminVideo"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            VIDEO
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration" asp-action="AdminProgramDocument"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            DOCUMENTS
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration" asp-action="AdminQuestion"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            EVALUATION
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Four" asp-action="AdminShareFile"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            SHARE
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Documentation" asp-action="Admin_Doc_Links"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            DOCUMENTATION
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Administration_Three" asp-action="AdminComment"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            FORUM
+                                        </div>
+                                </figure> 
+                                </a>
+
+                                <a asp-controller="Home" asp-action="Index"> 
+                                <figure class="item">
+                                        <div class="menu_link">
+                                            WEBSITE
+                                        </div>
+                                </figure> 
+                                </a>
+
+                            }
+
+                                <!-- end items area -->
+
+            </section>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration/admin.css" />
+}

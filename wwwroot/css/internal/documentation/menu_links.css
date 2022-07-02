@@ -1,0 +1,25 @@
+.documentation_page_wrapper{
+    width: 100%;
+    background-color: #e90172;
+    color: #fff;    
+}
+
+.documentation_page_wrapper .documentation_page_container{
+    width: 100%;
+    padding: 5% 10%;
+}
+
+.documentation_page_container .link_container{
+    width: 100%;
+    margin: 15px 0;
+}
+
+.link_container .number{
+    color: #ddd;
+    font: normal normal bold 20px/1.2em "Arial";
+}
+.link_container .link{
+    color: #fff;
+    font: italic normal normal 22px/1.2em "Arial";
+    font-variant: small-caps;
+}

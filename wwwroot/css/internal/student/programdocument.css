@@ -1,0 +1,72 @@
+.approved_page_wrapper{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.approved_page_wrapper .approved_page_container{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.approved_page_container .welcome_title{
+    font: normal normal bold 18px/1.2em "Arial";
+    background-color: #e90172;
+    text-align: center;
+    padding: 10px 0px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+
+/* 
+    begin document list display 
+*/
+
+.document_list_wrapper{
+    padding: 5% 10%;
+    box-sizing: border-box;
+}
+
+.document_list_wrapper .document_list_container{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.document_list_container .item{
+    width: 100%;
+    margin: 15px 10px;
+    background-color: #4b345d;
+    padding: 8px 5%;
+    box-sizing: border-box;
+}
+
+.item .left{
+    width: 70%;
+    float: left;
+    text-align: left;
+}
+
+.item .right{
+    width: 30%;
+    float: right;
+    text-align: center;
+}
+
+.item .title{
+    font:  normal normal bold 17px/1.2em "Helvetica";
+    box-sizing: border-box;
+    padding: 5px 15px;
+    color: #fff;
+}
+
+.item .button{
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* 
+    end document list display 
+*/

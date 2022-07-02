@@ -1,0 +1,63 @@
+.approved_page_wrapper{
+    width: 100%;
+}
+
+.approved_page_wrapper .approved_page_container{
+    width: 100%;
+}
+
+.approved_page_container .welcome_title{
+    padding: 10px 0px;
+    text-align: center;
+    background-color: #e90172;
+    color: #fff;
+}
+
+.approved_page_container .program_container{
+    padding: 2% 10% 10% 10%;
+    background-color: #4b345d;
+}
+
+.program_container .details_container{
+    margin: 3% 0;
+}
+
+.program_container .details_container .button{
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    transition: all .5s ease-in-out;
+}
+
+.program_container .details_container .button:hover{
+    background-color: #ddd;
+}
+
+.details_container .title{
+    color: #fff;
+    font: normal normal bold 18px/1.2em "Arial";
+}
+
+.details_container .details{
+    color: #ddd;
+    font: normal normal bold 15px/1.2em "Helvetica";
+}
+
+.details_container .table{
+    color: #fff;
+    margin-top: 15px;
+}
+
+.details_container thead th{
+    color: #ddd;
+    font-weight: bold;
+    padding-bottom: 5px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+.details_container table tbody tr td{
+    padding: 10px 10px;
+    text-align: center;
+}

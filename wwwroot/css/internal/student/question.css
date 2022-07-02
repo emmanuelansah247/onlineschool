@@ -1,0 +1,152 @@
+.approved_page_wrapper{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.approved_page_wrapper .approved_page_container{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.approved_page_container .welcome_title{
+    font: normal normal bold 18px/1.2em "Arial";
+    background-color: #e90172;
+    text-align: center;
+    padding: 10px 0px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+
+/*
+ begin document list display
+*/
+
+
+
+.document_list_wrapper{
+    padding: 5% 10%;
+    box-sizing: border-box;
+}
+
+.document_list_wrapper .document_list_container{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.document_list_container .item{
+    width: 100%;
+    margin: 50px 10px;
+    box-sizing: border-box;
+}
+
+.document_list_container .section{
+    padding: 8px 5%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.item .left{
+    width: 70%;
+    float: left;
+    text-align: left;
+}
+
+.item .right{
+    width: 30%;
+    float: right;
+    text-align: center;
+}
+
+.section .title{
+    box-sizing: border-box;
+    padding: 0px 15px;
+    color: #fff;
+}
+
+
+.section .button{
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* 
+    end document list display
+*/
+
+
+/* 
+    begin main question 
+*/
+
+.main_question{
+    background-color: #4b345d;
+    background-color: #4a4a4a;
+    width: 100%;
+    margin-left: 0%;
+    padding: 0px 5%;
+}
+
+.main_question .title{
+    font:  normal normal bold 15px/1.2em "Helvetica";
+}
+
+.main_question .button{
+    padding: 5px 20px;
+}
+
+
+/* 
+    end main question
+*/
+
+
+
+/* 
+    begin student upload section
+*/
+
+.lecturer_upload{
+    background-color: #4e4e4e;
+    width: 80%;
+    margin-left: 20%;
+}
+
+.lecturer_upload .title{
+    font:  normal normal bold 13px/1.2em "Helvetica";
+}
+
+.lecturer_upload .button{
+    padding: 5px 20px;
+}
+
+/* 
+    end student upload section 
+*/
+
+
+
+/* 
+    begin lecturer upload section
+*/
+
+.student_upload{
+    background-color: #5a4851;
+    width: 90%;
+    margin-left: 10%;
+}
+
+.student_upload .title{
+    font:  normal normal bold 13px/1.2em "Helvetica";
+}
+
+.student_upload .button{
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+
+/* 
+    end lecturer upload section 
+*/

@@ -1,0 +1,153 @@
+
+@{
+    Layout = "~/Views/Shared/_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Payment | Bim-Edu ";
+    ApplicationUser user = ViewData[GeneralStoredNames.Bim_Edu_Application_User] as ApplicationUser;
+    ProgrammeApplication activeProgrammeApplication = ViewData[GeneralStoredNames.Bim_Edu_Active_Programme_Application] as ProgrammeApplication;
+    
+}
+
+
+<section class="approved_page_wrapper">
+    
+    <div class="approved_page_container">
+
+            <div class="payment_intro">
+                <h2 class="payment_title"> PAIEMENTS DUS </h2>
+                <p class="payment_description"> 
+
+                    Bim-­‐Edu Institute Of Management est une institution qui promeut l’accès à un enseignement supérieur de 
+                    qualité et à moindres cout. Afin de s’inscrire dans la durabilité, nous facturons des frais minimes. 
+                    Pour toute question	ou information supplémentaire,contactez 
+
+                    <a class="change_color" href="mailto:registrar@bim-edu.us">
+                        payments@bim-edu.us
+                    </a>
+                </p>
+            </div>
+
+            <div class="payments_table">
+
+            @foreach(StudentFeeToPay studentFeeToPay in activeProgrammeApplication.StudentFeesToPay){
+
+                <table class="table">
+                    <tr class="heading">
+                        <td> Date de création </td>
+                        <td> Nature de la transaction </td>
+                        <td> Item </td>
+                        <td> Montant total  </td>
+                        <td> Montant versé  </td>
+                    </tr>
+                    <tr class="values">
+                        <td> 
+                            @studentFeeToPay.DateInitiated 
+                        </td>
+                        <td> 
+                            @studentFeeToPay.Type 
+                        </td>
+                        <td> 
+                            @activeProgrammeApplication.Programme.Name 
+                        </td>
+                        <td> 
+                            $ @studentFeeToPay.Amount 
+                        </td>
+                        <td> 
+                            $ @studentFeeToPay.Paid 
+                        </td>
+                    </tr>
+
+                </table>
+                @if(studentFeeToPay.Amount > studentFeeToPay.Paid){
+                    var amountowing = studentFeeToPay.Amount - studentFeeToPay.Paid;
+                    <div class="button_container clear_float">
+                        <input class="input" type="text"  value="@amountowing"/>
+                        <label class="label"> Entrez le montant à payer </label>
+                        <div class="makepayment_container clear_floating">
+                            <a studentfeetopayid="@studentFeeToPay.StudentFeeToPayId" type="@studentFeeToPay.Type" amountowing="@amountowing" 
+                            class="button cursor_pointer makepayment"> Faire un paiement  </a>
+                        </div>
+                    </div>
+                }
+
+                }
+
+            </div>
+    </div>
+
+</section>
+
+@section Scripts{
+
+    <link rel="stylesheet" href="~/css/internal/student/payment.css" />
+
+    <script> 
+        var makepayments = document.getElementsByClassName('makepayment');
+
+        for(var counter=0;counter<makepayments.length;counter++){
+            var makepayment = makepayments[counter];
+            makepayment.onclick = function(e){
+                var Id = e.target.getAttribute('studentfeetopayid');
+                var Name = e.target.getAttribute('type');
+                var Amount = Number.parseFloat(e.target.parentNode.previousElementSibling.previousElementSibling.value);
+                if(Amount > Number.parseFloat(e.target.getAttribute('amountowing'))){
+                    alert("Amount entered is more than what you are owing");
+                }else{
+                    e.target.innerText = "Rediriger...";
+                    ProcessPayment(Id,Name,Amount,e);
+                }
+                
+                
+            }
+        }
+
+        function ProcessPayment(Id,Name,Amount,e){
+            _Id = Id;
+            _Name = Name;
+            _Amount = Amount;
+
+            localStorage.setItem('paypaltotalamount',_Amount);
+            var getCredentials = $.ajax({
+                type: "GET",
+                url: baseUrl + "Payment/GetPaymentCredentials",
+                dataType: "json",
+                success: function(credentials){
+                    var param =  {
+                        RunEnvironment: credentials.runEnvironment,
+                        ClientId: credentials.clientId,
+                        ClientSecret: credentials.clientSecret,
+                        returnUrl: baseUrl + credentials.oldStudentPaymentSuccessUrl + "?totalAmount=" + _Amount,
+                        cancelUrl: baseUrl + credentials.oldStudentPaymentCancelUrl,
+                        name: _Name,
+                        sku: _Id,
+                        price:_Amount
+                    };
+
+                    var getPaymentLink = $.ajax({
+                            type: "POST",
+                            url: credentials.accessTokenUrl,
+                            data: param,
+                            dataType: "text",
+                            success: function(request_feedback){
+                                if(request_feedback != null){
+                                    location.href = request_feedback;
+                                }else{
+                                    console.log("Getting url for payment failed",request_feedback);
+                                    e.target.innerHTML = "Procesing failed";
+                                }
+                            },
+                            error: function(error) { 
+                                console.log("Error occured whiles getting url for payment",error.responseText);
+                                    e.target.innerHTML = "An error occured";
+                            }
+                        });
+                },
+                error: function() { 
+                    e.target.innerHTML = "Error";
+                    console.log("Failure getting payment credentials from asp.net failure");
+                }
+        });
+
+        }
+        
+    </script>
+}

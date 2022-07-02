@@ -1,0 +1,85 @@
+.approved_page_wrapper{
+    width: 100%;
+}
+
+.approved_page_wrapper .approved_page_container{
+    width: 100%;
+    box-sizing: border-box;
+    color: #ddd;
+}
+
+.approved_page_container .text_wrapper{
+    background-color: #4b345d;
+    padding: 2% 10%;
+}
+
+.approved_page_container .welcome_title{
+    font: normal normal normal 50px/1.2em "Arial";
+    margin: 20px 0px;
+    color: #fff;
+}
+
+.approved_page_container .sub_title{
+    font: normal normal normal 30px/1.2em "Arial";
+    margin: 20px 0px;
+    color: #fff;
+}
+
+.approved_page_container .details{
+    font: normal normal normal 18px/1.2em "Helvetica";
+    margin: 20px 0px;
+}
+
+.approved_page_container .details a{
+    color: #fff;
+}
+
+/* 
+begin policies link  
+*/
+
+.approved_page_container .policies_links{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.approved_page_container .policies_links .new_row{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.approved_page_container .policies_links .new_row .policy{
+    width: 300px;
+    margin: 20px;
+    padding: 25px 25px;
+    box-sizing: border-box;
+    background-color: #e90172;
+    background-color: #4e4e4e;
+    color: #fff;
+    display: inline-block;
+    transition: background-color .5s ease-in-out;
+}
+
+.approved_page_container .policies_links .new_row .policy:hover{
+    background-color: #000;
+}
+
+.approved_page_container .policies_links .new_row .policy .image_container{
+    width: 100%;
+}
+
+.approved_page_container .policies_links .new_row .image_container img{
+    width: 80%;
+    margin: 0 10%;
+}
+
+.approved_page_container .policies_links .new_row .policy_name{
+    color: #fff;
+    font: normal normal bold 17px/1.2em "sans-serif";
+    margin-top: 10px;
+}
+
+/* 
+end policies link 
+*/

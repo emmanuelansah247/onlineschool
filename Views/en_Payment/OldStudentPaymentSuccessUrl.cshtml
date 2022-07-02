@@ -1,0 +1,32 @@
+@inject SignInManager<ApplicationUser> signInManager;
+@using System.Security.Claims;
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = "Payment Succeeded | Bim-Edu";
+}
+
+
+<section class="page_wrapper">
+
+    <div class="page_container">
+
+                <div class="status_container">
+                         <input type="text" class="hide_it" id="UserId" value="@User.FindFirst(ClaimTypes.NameIdentifier).Value"> 
+                        <h1 class="heading"> Payment Completion In Progress </h1>
+                        <p class="description"> An Email Will Be Sent To You When Processing Is Fully Completed </p>
+                </div>
+
+        </div>
+
+</section>
+
+@section Scripts{
+    <script src="~/js/internal/payment/oldstudentpaymentsuccessurl.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="~/css/internal/payment/succeeded.css" />
+
+    <script>
+
+        ExecutePayment(paymentUrl="en_Payment/OldStudentPaymentSuccessUrl",message_alert="Email sent");
+
+    </script>
+}

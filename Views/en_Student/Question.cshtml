@@ -1,0 +1,135 @@
+
+@using System.Security.Claims;
+@{
+    Layout = "~/Views/Shared/_en_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Program Questions | Bim-Edu ";
+    Programme v_Program = ViewData["v_Program"] as Programme;
+    List<Course> v_Courses = ViewData["v_Courses"] as List<Course>;
+    
+}
+
+
+<section class="approved_page_wrapper">
+
+    <div class="approved_page_container">
+
+        <h1 class="welcome_title"> Questions And Assignment Upload Page </h1>
+
+
+        <section class="document_list_wrapper">
+            <div class="document_list_container clear_float">
+
+                @if(v_Program.Questions != null && v_Program.Questions.Count() > 0 ){
+                    foreach(Question item in v_Program.Questions){
+                        if(!item.isremoved){
+
+                            <figure class="item clear_float">
+
+                                <section class="main_question section clear_float">
+                                    <div class="left">
+                                        <div class="title">
+                                            @item.Description
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <form asp-controller="en_Student" asp-method="POST">
+                                            <input type="text" name="Id" class="hide_it" value="@item.QuestionId"/>
+                                            <a href="~/@GeneralStoredNames.Questions_Directory/@item.FilePath" 
+                                                    class="button cursor_pointer" target="_blank"> View </a>
+                                        </form>
+                                    </div>
+                                </section>
+                                    
+                                <section class="student_upload section clear_float">
+
+                                    @{
+                                        int n_count = 0;
+                                        string user_id = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+                                        QuestionStudentProvidedSolution activeQuestionStudentProvidedSolution = null;
+                                        foreach(QuestionStudentProvidedSolution item_count in item.QuestionStudentProvidedSolutions){
+                                            if(item_count.isremoved == false && item_count.ApplicationUserId == user_id){
+                                                n_count = n_count + 1;
+                                                activeQuestionStudentProvidedSolution = item_count;
+                                            }
+                                        }
+                                    }
+
+                                    @if(n_count < 1){
+
+                                            <figure class="top clear_float">
+                                                <form asp-controller="en_Student" enctype="multipart/form-data" asp-method="POST">
+                                                    <input type="hidden" name="QuestionId" 
+                                                        value="@item.QuestionId"/>
+                                                    <input type="hidden" name="ApplicatioinUserId" 
+                                                        value="@user_id"/>
+                                                    <input type="file" class="input" name="IFormFile"/>
+                                                    <input type="submit" asp-action="QuestionStudentProvidedSolutionAdd"  
+                                                        class="button cursor_pointer" value="UPLOAD SELECTED FILE AS SOLUTION"/>
+                                                </form>
+                                            </figure>
+
+                                    } else{
+
+                                        <figure class="down">
+                                            <div class="left">
+                                                <div class="title">
+                                                    @activeQuestionStudentProvidedSolution.ApplicationUser.FirstName
+                                                    @activeQuestionStudentProvidedSolution.ApplicationUser.LastName - 
+                                                    Solution
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <form asp-controller="en_Student" asp-method="POST">
+
+                                                    <input type="hidden" name="QuestionStudentProvidedSolutionId" 
+                                                        value="@activeQuestionStudentProvidedSolution.QuestionStudentProvidedSolutionId"/>
+
+                                                    <a href="~/@GeneralStoredNames.Questions_Directory/@activeQuestionStudentProvidedSolution.FilePath" 
+                                                    class="button cursor_pointer" target="_blank"> View </a>
+
+                                                    <input type="submit" asp-action="QuestionStudentProvidedSolutionDelete"  
+                                                            class="button cursor_pointer" value="Delete"/>
+
+                                                </form>
+                                            </div>
+                                        </figure>
+
+                                    }
+
+                                </section>
+
+                                    @if(activeQuestionStudentProvidedSolution != null){
+                                        @foreach(QuestionLecturerEvaluateStudentSolution activeQuestionLecturerEvaluateStudentSolution 
+                                                    in activeQuestionStudentProvidedSolution.QuestionLecturerEvaluateStudentSolutions){
+                                            @if(activeQuestionLecturerEvaluateStudentSolution.isremoved == false){
+                                            <section class="lecturer_upload section clear_float">
+                                                <div class="left">
+                                                    <div class="title">
+                                                        Lecturer Evaluation Of Your Solution
+                                                    </div>
+                                                </div>
+                                                <div class="right">
+                                                        <a href="~/@GeneralStoredNames.Questions_Directory/@activeQuestionLecturerEvaluateStudentSolution.FilePath" 
+                                                        target="_blank" class="button cursor_pointer"> View </a>
+                                                </div>                                    
+                                            </section>
+                                            }
+
+                                        }
+                                }
+
+                            </figure>
+                         }
+                    }
+                }
+
+            </div>
+        </section>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/student/question.css" />
+}

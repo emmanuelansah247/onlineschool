@@ -1,0 +1,87 @@
+
+@inject bim_edu.DataContect.Controllers.BimEduDataContext datacontext;
+@using Microsoft.EntityFrameworkCore;
+@model bim_edu.Models.Video;
+
+@{
+    Layout = "~/Views/Shared/_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Lecture Videos|  Bim-Edu Student";
+    var programmes = ViewData["programmes"] as List<Programme>;
+    var videos = ViewData["videos"] as List<Video>;
+    string errormessage = null;
+    if(programmes == null){
+        programmes = new List<Programme>();
+        videos = new List<Video>();
+        errormessage = ViewData["errormessage"] as string;
+    }
+}
+
+
+<section class="approved_page_wrapper">
+
+    <section class="approved_page_container">
+            @if(errormessage == null){
+            <h2 class="welcome_title"> Lecture Videos </h2>
+            }
+            else{
+                <h2 class="welcome_title"> @errormessage </h2>
+            }
+    </section>
+
+    <section class="programme_selection_wrapper"> 
+        <div class="programme_selection_container">
+            <h3 class="programme_selection_title"> Sélectionnez un programme  </h3>
+
+            <form class="programme_selection_form" asp-controller="Other" asp-method="POST"> 
+                    
+                    <div class="input_wrapper">
+                        <select class="input" name="ProgrammeId">
+                            @for(int n=0;n<programmes.Count(); n++){
+                            <option required value=@programmes[n].ProgrammeId >@programmes[n].Name</option>
+                                }
+                        </select>
+                    </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="Video" class="button cursor_pointer" value=" Voir toutes les videos "/>
+                    </div>
+
+            </form>
+        </div>
+    </section>
+
+    <section class="lectures_wrapper">
+
+        <div class="lectures_container">
+
+            @for(int video_counter=0,video_number=1;video_counter<videos.Count(); video_counter++,video_number++){
+                var video = videos[video_counter];
+                <figure class="lecture">
+                    <h4 class="lecture_title cursor_pointer"> Lecture @video_number - @video.Title </h4>
+                    <div class="video_player">
+                        <iframe width="100%" height="100%" src="@video.Url" frameborder="0" 
+                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </figure>
+
+            }
+
+        </div>
+
+    </section>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/other/video.css" />
+
+    <script> 
+        var lecture_titles = document.getElementsByClassName('lecture_title');
+        for(lecture_title_counter=0; lecture_title_counter<lecture_titles.length;lecture_title_counter++){
+            var current_lecture_title = lecture_titles[lecture_title_counter];
+            current_lecture_title.onclick = function(e){
+                e.target.nextElementSibling.classList.toggle('active');
+            }
+        }
+    </script>
+}

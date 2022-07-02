@@ -1,0 +1,146 @@
+/* 
+begin intro image 
+*/
+
+.intro_image_wrapper{
+    width: 100%;
+}
+
+.intro_image_wrapper .intro_image_container{
+    height: 300px;
+    position: relative;
+    background: url(../../../images/tuitionfree/tuitionfree.jpg) no-repeat center center /cover;
+    z-index: -1;
+}
+
+.intro_image_container .text_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text_container .heading{
+    font: normal normal bold 20px/1.2em "sans-serif";
+    color: #fff;
+    background-color: #e90172;
+    padding: 10px 10px;
+}
+
+@media screen and (max-width:768px){
+
+    .intro_image_container .text_container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    
+    .text_container .heading{
+        font: normal normal bold 17px/1.2em "sans-serif";
+        color: #fff;
+        background-color: #e90172;
+        padding: 10px 10px;
+        width: 250px;
+    }
+}
+
+/* 
+end intro image 
+*/
+
+/* 
+begin tuition_free  
+*/
+
+.tuition_free_wrapper{
+    width: 100%;
+}
+
+.tuition_free_wrapper .tuition_free_container{
+    padding: 5% 20%;
+}
+
+.tuition_free_container .button_container{
+    margin: 15px 0px;
+}
+
+.tuition_free_container .button_container .button{
+    float: right;
+    padding: 10px 20px;
+    background-color: #2d1938;
+    color: #fff;
+    font: normal normal bold 16px/1.2em "Georgia";
+    letter-spacing: 2px;
+}
+
+.tuition_free_container .fees_button_container{
+    margin: 15px 0px;
+}
+
+.tuition_free_container .fees_button_container .button{
+    padding: 10px 20px;
+    background-color: #9c5578;
+    color: #fff;
+    font: normal normal bold 16px/1.2em "Georgia";
+    letter-spacing: 2px;
+    margin: 10px 10px;
+    display: inline-block;
+}
+
+.tuition_free_container .fees_button_container .button:hover{
+    background-color: #e90172;
+}
+
+.tuition_free_container .make_it_stand_out{
+    margin: 4% 0%;
+}
+
+.tuition_free_container .make_it_stand_out .big_heading{
+    font: normal normal bold 30px/1.2em "sans-serif";
+    margin: 15px 0px;
+    color: #2d1938;
+}
+
+.tuition_free_container .make_it_stand_out .small_heading{
+    font: normal normal bold 22px/1.2em "Arial";
+    letter-spacing: 1px;
+    color: #2d1938;
+    margin: 10px 0px;
+}
+
+.tuition_free_container .make_it_stand_out .description{
+    font: normal normal normal 18px/1.7em "Helvetica";
+}
+
+@media screen and (max-width:768px){
+    .tuition_free_wrapper{
+        width: 100%;
+    }
+    
+    .tuition_free_wrapper .tuition_free_container{
+        padding: 5% 5%;
+    }
+    
+    .tuition_free_container .make_it_stand_out{
+        margin: 20% 0%;
+    }
+    
+    .tuition_free_container .make_it_stand_out .big_heading{
+        font-size: 18px;
+    }
+    
+    .tuition_free_container .make_it_stand_out .small_heading{
+        font-size: 16px;
+    }
+    
+    .tuition_free_container .make_it_stand_out .description{
+        font-size: 14px;
+    }
+}
+
+/* 
+end tuition_free  
+*/

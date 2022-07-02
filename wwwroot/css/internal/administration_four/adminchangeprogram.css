@@ -1,0 +1,92 @@
+.page_wrapper{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page_wrapper .page_container{
+    margin-bottom: 15%;
+}
+
+.page_container .title{
+    font: normal normal bold 20px/1.2em "Arial";
+    padding: 1% 10%;
+    background-color: #e90172;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.page_container .main_form{
+    background-color: #4b345d;
+    padding: 2% 10%;
+    box-sizing: border-box;
+}
+
+.main_form .input_wrapper{
+    margin: 0 0%;
+}
+
+.main_form .input_wrapper .label{
+    display: block;
+    color: #fff;
+}
+
+.main_form .input_wrapper .input{
+    font: normal normal normal 15px/1.2em "sans-serif";
+    padding: 10px 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.main_form .button{
+    padding: 10px 10px;
+    background-color: #fff;
+    color: #000;
+    margin: 1% 2%;
+    box-sizing: border-box;
+}
+
+
+/* 
+begin programs display 
+*/
+
+.programs_wrapper{
+    background-color: #4e4e4e;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.programs_wrapper .programs_container{
+    padding: 5% 10%;
+    box-sizing: border-box;
+}
+
+.programs_container .program{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.program .input_wrapper .label{
+    display: block;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.program .input_wrapper .input{
+    font: normal normal normal 15px/1.2em "sans-serif";
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.program .button{
+    padding: 10px 10px;
+    color: #000;
+    margin-right: 10px;
+}
+
+
+/* 
+end programs display 
+*/

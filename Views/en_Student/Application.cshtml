@@ -1,0 +1,45 @@
+
+
+
+@{
+    Layout = "~/Views/Shared/_en_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Application | Bim-Edu ";
+    ApplicationUser user = ViewData[GeneralStoredNames.Bim_Edu_Application_User] as ApplicationUser;
+    ProgrammeApplication activeProgrammeApplication = ViewData[GeneralStoredNames.Bim_Edu_Active_Programme_Application] as ProgrammeApplication;
+}
+
+
+<section class="approved_page_wrapper">
+
+    <div class="approved_page_container">
+            <h2 class="welcome_title"> Welcome @user.FirstName <br/>Congratulations!</h2>
+
+            <div class="application_details">
+
+                <p>
+                Your application for <span class="change_color">  
+                    @activeProgrammeApplication.Programme.Certification.Name
+                </span> in  <span class="change_color">  
+                    @activeProgrammeApplication.Programme.Name
+                </span> has been processed. <br/>
+                If accepted, you may start your studies <span class="change_color"> Bim-Edu Foundations </span> when your
+                <span class="change_color">application is approved </span>. If relevant, now is the time to apply 
+                for transfer credit or appeal the English Composition requirement. <br/>
+                Your Admissions Advisor is <span class="change_color">  M. Nakelintouba Nikiema.,PhD </span>, and can be 
+                reached at <a class="change_color" href="mailto:registrar@bim-edu.us">registrar@bim-edu.us</a>
+                </p>
+
+            </div>
+
+            <div class="application_approval">
+                <h2 class="approval"> Your Application Has Not Been Approved Yet! </h2>
+                <p class="action"> Please upload the supporting documents for the application at the page
+                    <a asp-controller="Student" asp-action="Foundation">  “Foundation”.</a> </p>
+            </div>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/student/application.css" />
+}

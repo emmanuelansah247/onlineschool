@@ -1,0 +1,41 @@
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = " Bim-Edu Crushing Agent Course";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="en_Account" asp-action="Register" class="apply_button"> APPLY </a>
+        </div>
+
+        <h1 class="main_heading"> Vocational Training  </h1>
+        <h2 class="sub_main_heading"> Available at the Center of Excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Crushing Agent </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    We've developed a comprehensive programme of tailored training courses to help operators and 
+                    maintenance technicians learn the ins and outs of a range of crushing and screening equipment. 
+                    The skills learned and knowledge gained will help optimize your operation and mitigate risks. Our 
+                    theoretical and practical courses will teach operators and technicians techniques to extend monthly 
+                    equipment uptime and overall lifetime and improve output. You'll learn how to reduce unexpected stoppages 
+                    that are costly and, more importantly, can create safety risks.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

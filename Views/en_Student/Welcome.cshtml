@@ -1,0 +1,252 @@
+@inject SignInManager<ApplicationUser> signInManager;
+@inject UserManager<ApplicationUser> _userManager;
+@using System.Security.Claims;
+@inject bim_edu.DataContect.Controllers.BimEduDataContext datacontext;
+@using bim_edu.Models;
+
+@{
+    Layout = "~/Views/Shared/_en_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Welcome Student | Bim-Edu ";
+    ApplicationUser user = ViewData[GeneralStoredNames.Bim_Edu_Application_User] as ApplicationUser;
+    ProgrammeApplication activeProgrammeApplication = ViewData[GeneralStoredNames.Bim_Edu_Active_Programme_Application] as ProgrammeApplication;
+    CourseLecturer activeCourseLecturer = ViewData[GeneralStoredNames.Bim_Edu_Active_Course_Lecturer] as CourseLecturer;
+    List<ProgrammeApplication> programmeapplications = user.ProgrammeApplications.ToList();
+}
+
+
+<section class="approved_page_wrapper">
+
+    <div class="approved_page_container">
+            <div class="form_container">
+
+                <form class="form" asp-controller="en_Student" asp-method="POST">
+
+                        <figure class="filter_programme_container clear_float">
+
+                            <div class="input_container">
+                                <label class="label"> Active Program </label>
+                                <select class="input" type="text" name="ProgrammeApplicationId">
+                                            @foreach(ProgrammeApplication programmeApplication in programmeapplications){
+                                                if(activeProgrammeApplication != null){
+                                                    if(programmeApplication.ProgrammeApplicationId == activeProgrammeApplication.ProgrammeApplicationId){
+
+                                                        <option selected value=@programmeApplication.ProgrammeApplicationId > @programmeApplication.Programme.Name </option>
+                                                    }else{
+
+                                                        <option value=@programmeApplication.ProgrammeApplicationId > @programmeApplication.Programme.Name </option>
+                                                    }
+                                                }
+                                                else{
+                                                <option value=@programmeApplication.ProgrammeApplicationId > @programmeApplication.Programme.Name </option>
+                                                 }
+                                            }
+                                </select>
+                            </div>
+
+                            <div class="input_container">
+                                    <input type="submit" asp-action="Welcome" value="Make Active" class="button cursor_pointer"/>
+                            </div>
+
+                            <div class="input_container">
+                                <label class="label"> Active Course </label>
+                                <select class="input" type="text" name="CourseLecturerId">
+                                                @if(activeProgrammeApplication != null && activeProgrammeApplication.Programme.CourseLecturers != null){
+                                                    
+                                                    @foreach(CourseLecturer courselecturer in activeProgrammeApplication.Programme.CourseLecturers){
+
+                                                        if(courselecturer.isremoved != true){
+
+                                                            if(activeCourseLecturer != null){
+                                                                if(courselecturer.CourseLecturerId == activeCourseLecturer.CourseLecturerId){
+
+                                                                    <option selected value=@courselecturer.CourseLecturerId > 
+                                                                        @courselecturer.Course.Name - 
+                                                                        @courselecturer.Lecturer.ApplicationUser.FirstName 
+                                                                        @courselecturer.Lecturer.ApplicationUser.LastName 
+                                                                    </option>
+
+                                                                }else{
+
+                                                                    <option value=@courselecturer.CourseLecturerId > 
+                                                                        @courselecturer.Course.Name - 
+                                                                        @courselecturer.Lecturer.ApplicationUser.FirstName 
+                                                                        @courselecturer.Lecturer.ApplicationUser.LastName 
+                                                                    </option>
+
+                                                                }
+                                                            }else{
+
+                                                                    <option value=@courselecturer.CourseLecturerId > 
+                                                                        @courselecturer.Course.Name - 
+                                                                        @courselecturer.Lecturer.ApplicationUser.FirstName 
+                                                                        @courselecturer.Lecturer.ApplicationUser.LastName 
+                                                                    </option>
+
+                                                            }
+
+                                                        }
+
+                                                    }
+                                                }
+                                </select>
+                            </div>
+
+                            <div class="input_container">
+                                    <input type="submit" asp-action="Welcome" value="Make Active" class="button cursor_pointer"/>
+                            </div>
+                </form>
+
+            </div>
+            
+            <section class="welcome_page">
+
+                    <h2 class="welcome_title"> Welcome @user.FirstName! </h2>
+  
+                    <div class="welcome_menu_items_wrapper">
+                        <div class="welcome_menu_items_contianer">
+                            <!-- begin items area -->
+                                <div class="new_row clear_float">
+                                <figure class="item">
+                                    <a asp-controller="en_Student" asp-action="Application"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/application.svg" alt="Bim-Edu Application LInk"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Application
+                                            </div>
+                                        </a>
+                                    </figure>
+                                <figure class="item">
+                                    <a asp-controller="en_Student" asp-action="Payment"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/payment.svg" alt="Bim-Edu Payments Link"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Payments
+                                            </div>
+                                        </a>
+                                    </figure>
+                                <figure class="item">
+                                    <a asp-controller="en_Student" asp-action="Foundation"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/foundation.svg" alt="Bim-Edu Foundation LInk"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Foundation
+                                            </div>
+                                        </a>
+                                    </figure>
+                                <figure class="item">  
+                                    <a asp-controller="en_Student" asp-action="Policy"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/policy.svg" alt="Bim-Edu Policy Link"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Policy
+                                            </div>
+                                        </a>
+                                    </figure>
+                                </div>
+
+                                <div class="new_row clear_float">
+                                <figure class="item">
+                                    <a asp-controller="en_Other" asp-action="Comment"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/discussion.svg" alt="Bim-Edu Instagram Link"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Forum
+                                            </div>
+                                        </a>
+                                    </figure>
+
+                                <figure class="item">
+                                    <a asp-controller="en_Other" asp-action="Video"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/video.svg" alt="Bim-Edu Youtube Link"/>
+                                            </div>
+                                            <div class="item_title">    
+                                                Videos
+                                            </div>
+                                        </a>
+                                    </figure>
+                                <figure class="item">
+                                    <a asp-controller="en_Student" asp-action="ProgramDocument"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/documentation.svg" alt="Bim-Edu Youtube Link"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Documents
+                                            </div>
+                                        </a>
+                                    </figure>
+                                <figure class="item">
+                                    <a asp-controller="en_Student" asp-action="Question"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/results.svg" alt="Bim-Edu Youtube Link"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Evaluation
+                                            </div>
+                                        </a>
+                                    </figure>
+                                </div>
+
+                                <div class="new_row clear_float">
+
+                                <figure class="item">
+                                    <a asp-controller="en_Student" asp-action="Program"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/program.svg" alt="Bim-Edu Youtube Link"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Program 
+                                            </div>
+                                        </a>
+                                    </figure>
+                                    
+                                <figure class="item">
+                                    <a asp-controller="en_Student" asp-action="Lecturer"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/lecturer.svg" alt="Bim-Edu LinkedIn Link"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Lecturer
+                                            </div>
+                                        </a>
+                                    </figure>
+
+                                <figure class="item">
+                                    <a asp-controller="en_Other" asp-action="ShareFile"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/share.svg" alt="Bim-Edu LinkedIn Link"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Share
+                                            </div>
+                                        </a>
+                                </figure>
+                                    
+                                <figure class="item">
+                                    <a asp-controller="en_Home" asp-action="Index"> 
+                                            <div class="menu_image_container">
+                                                <img src="~/images/Icons/menus/website.svg" alt="Bim-Edu LinkedIn Link"/>
+                                            </div>
+                                            <div class="item_title">
+                                                Website
+                                            </div>
+                                        </a>
+                                    </figure>
+
+                                <!-- end items area -->
+                        </div>
+                    </div>
+
+            </section>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/student/welcome.css" />
+}

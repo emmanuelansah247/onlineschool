@@ -1,0 +1,106 @@
+@model bim_edu.Models.Course;
+@{
+    ViewData["Title"] = "How To Use The BIM-EDU Student Portal FOUNDATION Page";
+}
+
+
+<section class="documentation_page_wrapper">
+
+    <div class="documentation_menu">
+        <a asp-controller="Documentation" asp-action="Menu"> Documentation Menu </a>
+    </div>
+
+    <div class="documentation_page_container clear_float">
+
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use The BIM-EDU Student Portal FOUNDATION Page. 
+                    This Section Is Basically Used To Upload Application Files. 
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> UPLOADING BIM-EDU APPLICATION FILES OR CERTIFICATES </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Foundation Page.
+                        <a class="link" asp-controller="en_Student" asp-action="Foundation" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        Scroll Down To The Section Written 'Upload Your Application Documents'
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On 'Choose The File' To Select File/Certificate To Upload. This Opens Window That Allows You To Select Your File From 
+                        Your Device.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Enter The Name Of The File In The Text Area
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Click On 'Upload' To Upload The File 
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> REMOVE APPLICATION FILE/CERTIFICATE </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Foundation Page.
+                        <a class="link" asp-controller="en_Student" asp-action="Foundation" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        Scroll Down To The Section Written 'Upload Your Application Documents'. 
+                        All Your Uploaded Files/Certificates Will Be Displayed Under The Heading 'Uploaded Files'.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Go To The File You Want To Remove And Click On 'Remove'.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/documentation/documentation.css" />
+}

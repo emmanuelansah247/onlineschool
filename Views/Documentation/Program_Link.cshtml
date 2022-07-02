@@ -1,0 +1,74 @@
+@model bim_edu.Models.Course;
+@{
+    ViewData["Title"] = "How To Use BIM-EDU Student Portal PROGRAM Page";
+}
+
+
+<section class="documentation_page_wrapper">
+
+    <div class="documentation_menu">
+        <a asp-controller="Documentation" asp-action="Menu"> Documentation Menu </a>
+    </div>
+
+    <div class="documentation_page_container clear_float">
+
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use BIM-EDU Student Portal PROGRAM Page.
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> VIEW PROGRAM DETAILS </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the PROGRAM Page.
+                        <a class="link" asp-controller="Student" asp-action="Program_Link" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        The Details Of The Program Will Be Displayed.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> VIEW PROGRAM CALENDER </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the PROGRAM Page.
+                        <a class="link" asp-controller="Student" asp-action="Program_Link" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        The Details Of The Program Will Be Displayed.Click On 'Click To View Program Calendar'.
+                    </span>
+                </p>
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/documentation/documentation.css" />
+}

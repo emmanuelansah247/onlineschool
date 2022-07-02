@@ -1,0 +1,181 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "How To Use Bim-Edu Course Page | Admin ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+
+        <figure class="item">
+            <h2 class="heading"> Adding A Course </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the course page.
+                        <a class="link" asp-controller="Administration_Three" asp-action="AdminCourse" target="_blank"> 
+                            Click here to go to course page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Enter the name for the course
+                    </span>
+                </p>
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                       Click on <strong> Add Course </strong>
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+        <figure class="item">
+            <h2 class="heading"> Deleting A Course </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the course page.
+                        <a class="link" asp-controller="Administration_Three" asp-action="AdminCourse" target="_blank"> 
+                            Click here to go to course page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Scroll down to see all the courses (by default all the courses will be displayed on the page)
+                    </span>
+                </p>
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                       click on delete (to every course there is a <strong> Delete </strong> option beside the name.) 
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+
+        <figure class="item">
+            <h2 class="heading"> Adding Course or Lecturer To A Program </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go To The Course/Lecturer Page. 
+                        <a class="link" asp-controller="Administration_Two" asp-action="AdminCoureseLecture" target="_blank"> 
+                            Click here to go to the page  
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select the Program you want to add a course or lecturer
+                    </span>
+                </p>
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Select a Lecturer to teach that course for the selected program
+                    </span>
+                </p>
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Select the course
+                    </span>
+                </p>
+                    <span class="number"> 5. </span>
+                    <span class="instruction"> 
+                        Click On <strong> Add Lecturer to Program </strong>
+                    </span>
+                </p>
+            </div>
+        </figure>
+
+
+        <figure class="item">
+            <h2 class="heading"> View Courses or Lecturers For A Program </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go To The Course/Lecturer Page. 
+                        <a class="link" asp-controller="Administration_Two" asp-action="AdminCoureseLecture" target="_blank"> 
+                            Click here to go to the page  
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                       Select Program (program you want to display the added courses or lecturers)
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On <strong> View Program Lecturers </strong>
+                    </span>
+                </p>
+            </div>
+        </figure>
+        
+        <figure class="item">
+            <h2 class="heading"> Deleting Course or Lecturer For A Program </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go To The Course/Lecturer Page. 
+                        <a class="link" asp-controller="Administration_Two" asp-action="AdminCoureseLecture" target="_blank"> 
+                            Click here to go to the page  
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select the Program you want to delete a course or lecturer
+                    </span>
+                </p>
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On <strong> View Program Lecturers </strong> (all the courses or lecturers added to the program will be displayed) 
+                    </span>
+                </p>
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        click remove (this option is displayed for every courses or lecturers added to the specified program )
+                    </span>
+                </p>
+            </div>
+        </figure>
+
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_documentation/admin_docs.css" />
+}

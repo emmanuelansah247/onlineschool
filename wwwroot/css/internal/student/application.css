@@ -1,0 +1,49 @@
+.approved_page_wrapper{
+    width: 100%;
+}
+
+.approved_page_wrapper .approved_page_container{
+    width: 100%;
+}
+
+.approved_page_container .welcome_title{
+    font: normal normal normal 50px/1.2em "Arial";
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5% 0% 5% 0%;
+    background: url(../../../images/student/welcome/bg.jpg);
+    background-size: cover;
+}
+
+.approved_page_container .application_details{
+    background-color: #4b345d;
+    padding: 2% 2%;
+    color: #f4f4ff;
+    width: 80%;
+    margin: 2% 10%;
+    font: normal normal normal 17px/1.4em "Georgia";
+}
+
+.approved_page_container .application_details .change_color{
+    color: #fff;
+    font-weight: bold;
+}
+
+.approved_page_container .application_approval{
+    background-color: #e90172;
+    padding: 2% 2%;
+    color: #fff;
+    width: 80%;
+    margin: 2% 10%;
+}
+
+.approved_page_container .application_approval .approval{
+    font: normal normal normal 30px/1.2em "sans-serif";
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.approved_page_container .application_approval .action{
+    font: italic normal normal 18px/1.2em "sans-serif";
+}
+

@@ -1,0 +1,305 @@
+
+@inject bim_edu.DataContect.Controllers.BimEduDataContext datacontext;
+@inject SignInManager<ApplicationUser> _signInManager;
+@using System.Security.Claims;
+@model bim_edu.Models.Comment
+
+@{
+    Layout = "~/Views/Shared/_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Forum de discussion  |  Bim-Edu Student";
+    Programme program = ViewData["program"] as Programme;
+    List<Comment> comments = ViewData["comments"] as List<Comment>;
+    CourseLecturer vCourseLecturer = ViewData["vCourseLecturer"] as CourseLecturer;
+}
+
+
+<section class="approved_page_wrapper">
+
+    <div class="approved_page_container">
+            <h2 class="welcome_title"> 
+                Forum de discussion 
+                @program.Name - 
+                @if(vCourseLecturer != null){
+                    @vCourseLecturer.Course.Name
+                }
+            </h2>
+
+            <form class="form" asp-controller="Other" asp-method="POST">
+                <section class="filter_comment_container clear_float">
+
+                    <figure class="add_comment_container clear_float">
+
+                        <div asp-validation-summary="All"></div>
+                        
+                        <input type="hidden" id="ProgrammeId" name="ProgrammeId" value=@program.ProgrammeId />
+
+                        @if(vCourseLecturer != null){
+                            <input type="hidden" id="CourseLecturerId" name="CourseLecturerId" value=@vCourseLecturer.CourseLecturerId />
+                        }else{
+                            <input type="hidden" id="CourseLecturerId" name="CourseLecturerId" value=0 />
+                        }
+
+                        <input type="hidden" id="ApplicationUserId" name="ApplicationUser.Id" value="@User.FindFirst(ClaimTypes.NameIdentifier).Value"/>
+                        
+                        <input type="hidden" id="date" name="date" value="@DateTime.Now"/>
+
+                        <div class="input_container">
+                            <label class="label" asp-for="message" > Votre commentaire ici </label>
+                            <textarea rows="3" class="input" type="text" name="message"></textarea>
+                            <span class="show_on_error" asp-validation-for="message"></span>
+                        </div>
+
+                        <div class="button_container">
+                            <input type="submit" asp-action="Comment"  class="button" value="Ajouter le commentaire "/>
+                        </div>
+
+                    </figure>
+
+                </section>
+
+            </form>
+
+                <div class="comment_wrapper">
+                    <div class="comment_container" id="comment_container">
+                         @foreach(Comment comment in comments){
+
+                            string user_class = comment.ApplicationUser.isStaff == true ? "staff" : "student";
+
+                            <figure class="comment @user_class">
+                                <div class="image_container">
+                                    @if(comment.ApplicationUser.photofilepath == null){
+                                        <img src="~/images/Icons/user.svg" alt="profile photo"/>
+                                    }
+                                    else{
+                                        <img src="~/@GeneralStoredNames.Profile_Picture_Path/@comment.ApplicationUser.photofilepath" alt="profile photo"/>
+                                    }
+                                </div>
+                                <div class="name"
+                                    >@comment.ApplicationUser.FirstName  
+                                    @comment.ApplicationUser.LastName
+                                </div>
+                                <div class="date">
+                                    @comment.date
+                                </div>
+                                <div class="message">
+                                   <pre>@comment.message </pre> 
+                                </div>
+
+                                @if(comment.ApplicationUser.Id == User.FindFirst(ClaimTypes.NameIdentifier).Value){
+
+                                 <form class="form" asp-controller="Other" asp-method="POST"> 
+
+                                 <span class="main_comment_edit comment_edit"> Edit </span>
+
+                                  <div class="edit_comment_container">
+                                        <div class="edit_input_container">
+                                            <input type="hidden" name="CommentId" value="@comment.CommentId"/>
+                                            <textarea rows="4" cols="30" class="edit_input" name="updated_message"> @comment.message </textarea>
+                                        </div>
+
+                                        <div class="button_container clear_float">
+                                            <input type="submit" asp-action="CommentUpdate"  class="button" value="Update"/>
+                                            <input type="submit" asp-action="CommentDelete"  class="button" value="Delete"/>
+                                        </div>
+                                    </div>
+
+                                 </form>
+
+                                 }else{
+
+                                 <span class="main_comment_edit comment_edit hide_it"> Edit </span>
+
+                                 }
+
+                                 <form class="form" asp-controller="Account" asp-method="POST">
+
+                                 <span class="comment_edit"> Reply </span>
+
+                                  <div class="edit_comment_container">
+                                        <div class="edit_input_container">
+                                            <input type="hidden" name="CommentId" value="@comment.CommentId"/>
+                                            <input type="hidden" name="ApplicationUserId" value="@User.FindFirst(ClaimTypes.NameIdentifier).Value"/>
+                                            <textarea rows="4" cols="30" class="edit_input" name="message">  </textarea>
+                                        </div>
+
+                                        <div class="button_container clear_float">
+                                            <input type="submit" asp-action="CommentReply"  class="button" value="Add Reply"/>
+                                        </div>
+                                    </div>
+
+                                 </form>
+
+
+                                @foreach (CommentReply commentreply in comment.CommentReplies.OrderBy(p=>p.date))
+                                {
+
+                                    if(commentreply.isremoved != true){
+
+                                    <figure class="comment commentreply @user_class">
+                                        <div class="image_container">
+                                            @if(commentreply.ApplicationUser.photofilepath == null){
+                                                <img src="~/images/Icons/user.svg" alt="profile photo"/>
+                                            }
+                                            else{
+                                                <img src="~/@GeneralStoredNames.Profile_Picture_Path/@commentreply.ApplicationUser.photofilepath" alt="profile photo"/>
+                                            }
+                                        </div>
+                                        <div class="name">
+                                            @commentreply.ApplicationUser.FirstName  
+                                            @commentreply.ApplicationUser.LastName
+                                        </div>
+                                        <div class="date">
+                                            @commentreply.date
+                                        </div>
+                                        <div class="message">
+                                            <pre>@commentreply.message </pre> 
+                                        </div>
+
+                                        @if(commentreply.ApplicationUser.Id == User.FindFirst(ClaimTypes.NameIdentifier).Value){
+
+                                        <form class="form" asp-controller="Account" asp-method="POST">
+
+                                        <span class="comment_edit"> Edit </span>
+
+                                        <div class="edit_comment_container">
+
+                                                <div class="edit_input_container">
+                                                    <input type="hidden" name="CommentReplyId" value="@commentreply.CommentReplyId"/>
+                                                    <textarea rows="4" cols="30" class="edit_input" name="updated_reply_message">@commentreply.message</textarea>
+                                                </div>
+
+                                                <div class="button_container clear_float">
+                                                    <input type="submit" asp-action="CommentReplyUpdate"  class="button" value="Update"/>
+                                                    <input type="submit" asp-action="CommentReplyDelete"  class="button" value="Delete"/>
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                        }
+
+                                    </figure>
+
+                                    }
+
+                                }
+
+
+                                <hr/>
+                            </figure>
+                            
+                            }
+                    </div>
+                </div>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/other/comment.css" />
+
+    <script>
+        var global_number_of_comments = 0;
+        var has_update_comments_been_called = false;
+        EditCommentEvent();
+
+        function EditCommentEvent(){
+            
+            var comment_edits = document.getElementsByClassName('comment_edit');
+            var main_comment_edit = document.getElementsByClassName('main_comment_edit');
+            global_number_of_comments = main_comment_edit.length;
+
+            if(has_update_comments_been_called == false){
+                has_update_comments_been_called = true;
+                UpdateComments(7200);
+            }
+
+            for(var item_counter=0;item_counter<comment_edits.length;item_counter++){
+                var comment_edit = comment_edits[item_counter];
+                comment_edit.onclick = function(e){
+                    var comment_element = e.target.nextElementSibling;
+                    var comment_element_height = comment_element.scrollHeight;
+
+                    if(comment_element.classList.contains('active') == false){
+                        comment_element.classList.add('active');
+                        for(var n_counter=0;n_counter<comment_element_height;n_counter++){
+                            comment_element.style.maxHeight = n_counter + "px";
+                        }
+                    }else{
+                        comment_element.classList.remove('active');
+                        for(var n_counter=comment_element_height;n_counter >0 ;n_counter--){
+                            comment_element.style.maxHeight = n_counter + "px";
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+
+
+       function UpdateComments(interval=7200){
+            
+                var ProgrammeId = document.getElementById('ProgrammeId');
+                var CourseLecturerId = document.getElementById('CourseLecturerId');
+                var comment_container= document.getElementById('comment_container');
+                
+                setInterval(function(){
+                    var getComments = $.ajax({
+                        type: "GET",
+                        url: baseUrl + "Other/CommentsGetAllUrlRequest?ProgramId=" + ProgrammeId.value + "&CourseLecturerId=" + CourseLecturerId.value,
+                        async:true,
+                        success: function(comments){
+                                if(comments.length > global_number_of_comments){
+                                    comment_container.append(createCommentElement(comments[global_number_of_comments]));
+                                    EditCommentEvent();
+                                    }
+
+                                },
+                        error: function(error) { 
+                            console.log("Something went wrong");
+                        }
+                    })
+
+                },interval);
+
+        }
+
+    function createCommentElement(new_comment){
+    var newly_added_comment =  document.createElement('div');
+    new_comment.date = new_comment.date.replace('T',' ');
+
+    if(new_comment.applicationUser.photofilepath == null){
+        new_comment.applicationUser.photofilepath = "/images/Icons/user.svg"
+    }else{
+        new_comment.applicationUser.photofilepath = '/images/profilephotos/' + new_comment.applicationUser.photofilepath;
+    }
+
+    newly_added_comment.innerHTML = 
+
+            '<figure class="comment">' +
+                    '<div class="image_container">' +
+                    '<img src="'+baseUrl + new_comment.applicationUser.photofilepath + '"alt="profile photo"/>' +
+                    '</div>' +
+                    '<div class="name">' +
+                        new_comment.applicationUser.firstName +  '  ' + 
+                        new_comment.applicationUser.lastName +
+                    '</div>' +
+                    '<div class="date">' +
+                        new_comment.date +
+                    '</div>' +
+                    '<div class="message"><pre>' +
+                        new_comment.message +
+                    '</pre></div>' +
+                    '<span class="main_comment_edit comment_edit hide_it"> Edit </span>' +
+                ' <hr/>' +
+            '</figure>';
+            
+    return newly_added_comment;
+
+    }
+
+
+    </script>
+}

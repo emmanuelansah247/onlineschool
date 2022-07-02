@@ -1,0 +1,55 @@
+@model bim_edu.Models.UserRoleViewModel
+
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Logins | Bim - Edu";
+    List<ApplicationUserLogin> _vApplicationUserLogin = ViewData["vApplicationUserLogin"] as List<ApplicationUserLogin>;
+        _vApplicationUserLogin = _vApplicationUserLogin.OrderByDescending(p=>p.date).ToList();
+}
+
+
+<section class="page_wrapper clear_float">
+
+    <div class="page_container clear_float">
+        <h1 class="page_title"> User Logins For The Past 24Hrs </h1>
+
+
+        <section class="page_content">
+
+                <div class="table">
+                    <table>
+                        <thead>
+                            <th> Name </th>
+                            <th> Email </th>
+                            <th> Date </th>
+                        </thead>
+                        <tbody>
+                            @foreach (ApplicationUserLogin item in _vApplicationUserLogin)
+                            {
+                                <tr>
+                                    <td> 
+                                        @item.ApplicationUser.FirstName
+                                        @item.ApplicationUser.LastName 
+                                    </td>
+                                    <td>                                        
+                                        @item.ApplicationUser.Email
+                                    </td>
+                                    <td>
+                                        @item.date
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_two/adminpaymentbypasscode.css" />
+}

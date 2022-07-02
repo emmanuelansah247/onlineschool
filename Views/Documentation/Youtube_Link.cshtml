@@ -1,0 +1,43 @@
+@model bim_edu.Models.Course;
+@{
+    ViewData["Title"] = "How To Go To BIM-EDU Youtube Link";
+}
+
+
+<section class="documentation_page_wrapper">
+
+    <div class="documentation_menu">
+        <a asp-controller="Documentation" asp-action="Menu"> Documentation Menu </a>
+    </div>
+
+    <div class="documentation_page_container clear_float">
+
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Go To BIM-EDU Youtube Link.
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> GO TO BIM-EDU YOUTUBE CHANNEL </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction">                         
+                        Click On The 'Youtube' Link
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/documentation/documentation.css" />
+}

@@ -1,0 +1,98 @@
+@model bim_edu.Models.TeachWithUsViewModel;
+
+@{
+    ViewData["Title"] = "Bim-Edu Business Intelligence Institute of Management Teach With Us ";
+    var message = ViewData["message"] as string;
+    var programmes = ViewData["programmes"] as List<Programme>;
+}
+
+<section class="intro_image_wrapper">
+    <div class="intro_image_container">
+        <div class="text_container">
+                <h1 class="heading"> Enseigner chez nous </h1>
+        </div>
+    </div>
+</section>
+
+<section class="teach_with_us_wrapper">
+    <div class="teach_with_us_container">
+
+        <figure class="make_it_stand_out">
+            <h2 class="big_heading">  Vous souhaitez enseigner chez BIM-­‐EDU?  </h2>
+            <h2 class="small_heading"> Enseigner chez nous </h2>
+            <p class="description"> 
+                Nous serons heureux de vous avoir parmi nos enseignants hautement	
+                qualifiés	Merci de votre intérêt à travailler auprès de la Business Intelligence Institute 
+                Of Management (Bim-­‐Edu). Veuillez compléter le processus d'inscription ci-­‐dessous afin que 
+                nous puissions	évaluer vos informations et votre	expérience à nos besoins actuels.
+            </p>
+        </figure>
+
+        <figure class="make_it_stand_out">
+
+            <form class="form" asp-controller="Home" asp-method="POST">
+
+                    @if(message !=null){
+                        <div class="applicaton_success">@message</div>
+                    }
+
+                    <div class="ValidationError" asp-validation-summary="All"></div>
+
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Name"> Nom et prénom (s) </label>
+                        <input class="input" type="text" name="name"/>
+                        <span class="show_on_error" asp-validation-for="Name"></span>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Email"></label>
+                        <input class="input" type="email" name="Email"/>
+                        <span class="show_on_error" asp-validation-for="Email"></span>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Phone"> Téléphone	</label>
+                        <input asp-for="Phone" class="input" name="Phone"/>
+                        <span class="show_on_error" asp-validation-for="Phone"></span>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="ProgrammeName"> Programme	ou vous souhaitez enseigner  </label>
+                        <select class="input" name="ProgrammeName">
+                                @for(int n=0;n<programmes.Count(); n++){
+                                    <option value=@programmes[n].Name >@programmes[n].Name</option>
+                                }
+                        </select>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="LevelOfEducation"> Niveau	d’étude </label>
+                        <select class="input" type="text"  name="LevelOfEducation">
+                            <option value="Diplôme bac 5" > Diplôme bac+5 </option>
+                            <option value="Master"> Master </option>
+                            <option value="PHD"> PHD </option>
+                            <option value="Doctorat" > Doctorat </option>
+                        </select>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="AboutYourself"> Parlez-­‐nous davantage	de vous </label>
+                        <textarea rows="5" class="input" type="text" name="AboutYourself"></textarea>
+                        <span class="show_on_error" asp-validation-for="AboutYourself"></span>
+                    </div>
+
+                    <div class="button_container clear_float">
+                            <input type="submit" asp-action="TeachWithUs" class="button cursor_pointer" value="Candidater"/>
+                    </div>
+
+            </form>
+        </figure>
+
+    </div>
+</section>
+
+
+
+@section scripts{
+    <link rel="stylesheet" href="~/css/internal/home/teachwithus.css"/>
+}

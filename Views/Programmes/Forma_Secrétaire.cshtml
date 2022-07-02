@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Bim-Edu Secrétaire";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="Account" asp-action="Register" class="apply_button"> CANDIDATURE </a>
+        </div>
+
+        <h1 class="main_heading"> PROGRAMMES DE FORMATION PROFESSIONNELLE DE BIM-EDU  </h1>
+        <h2 class="sub_main_heading"> Les programmes de formation professionnelle disponibles au Centre d'excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Secrétaire </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    Les secrétaires sont chargés de coordonner les activités administratives d'un bureau. À la base, ce travail 
+                    garantit le bon fonctionnement d'un bureau. Il y a une grande variété de tâches de bureau et administratives 
+                    que les secrétaires doivent accomplir pour y arriver. Ils planifient des rendez-vous, rédigent de la correspondance, 
+                    fournissent des informations à des tiers, gèrent l'inventaire du bureau et créent et conservent des fichiers sur 
+                    papier ou sous forme électronique. Ce cours développe les compétences nécessaires pour s'acquitter avec succès 
+                    des tâches administratives et de bureau les plus importantes.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

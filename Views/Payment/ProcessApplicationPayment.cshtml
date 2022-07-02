@@ -1,0 +1,119 @@
+
+@{
+    ViewData["Title"] = "Program Payment | Bim-Edu";
+    ApplicationUser _applicationuser = ViewData["vApplicationUser"] as ApplicationUser;
+    PaymentViewModel _paymentviewmodel = ViewData["vPaymentViewModel"] as PaymentViewModel;
+}
+
+<section class="page_wrapper">
+
+    <div class="page_container">
+
+                <div class="status_container">
+                        <h1 class="heading"> Processing Payment For Application Fee @_paymentviewmodel.ProgramName </h1>
+                        <p class="description"> Amount To Be Processed Is $ 
+                           @_paymentviewmodel.ApplicationFee
+                        </p> <br/>
+                        <h1 class="heading"> Incase you want to make part payment of your fees ($ @_paymentviewmodel.ProgramFee)  </h1>
+                        <p class="description"> Enter the amount in the box below 
+                           <input type="number" id="initialProgramFeeAmountToPay" step=".01" class="initialProgramFeeAmountToPay" value="0"/>
+                        </p>
+                </div>
+
+                    <div asp-validation-summary="All"></div>
+
+                    <div class="input_wrapper">
+
+                        <input type="hidden" id="ProgrammeId" name="ProgrammeId" value="@_paymentviewmodel.ProgrammeId"/>
+                        <input type="hidden" id="UserId" name="UserId" value="@_paymentviewmodel.UserId"/>
+                        <input type="hidden" id="ApplicationFee" name="ApplicationFee" value="@_paymentviewmodel.ApplicationFee"/>
+                        <input type="hidden" id="ProgramFee" name="ProgramFee" value="@_paymentviewmodel.ProgramFee"/>
+                        <input type="hidden" id="ProgramName" name="ProgramName" value="@_paymentviewmodel.ProgramName"/>
+                        <input type="hidden" id="UploadedCVFileName" name="UploadedCVFileName" value="@_paymentviewmodel.UploadedCVFileName"/>
+
+
+                    </div>
+                    
+                    <div class="button_wrapper">
+                        <button id="Payment" class="button cursor_pointer" > 
+                            Make Payment
+                        </button>
+                    </div>
+
+        </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/payment/processapplicationpayment.css" />
+
+    <script>
+
+        var payment_button = document.getElementById('Payment');
+
+        payment_button.onclick = function(e){
+            ProcessPayment(e);
+       }
+
+       function guid() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        function ProcessPayment(e){
+                    
+                    e.target.innerHTML = "Processing...";
+
+                        $.ajax({
+                        type: "GET",
+                        url: baseUrl + "Payment/GetPaymentCredentials",
+                        dataType: "json",
+                        success: function(credentials){
+                            var total_amount = Number.parseFloat(document.getElementById('ApplicationFee').value)  + Number.parseFloat(document.getElementById('initialProgramFeeAmountToPay').value);
+                            var param =  {
+                                        RunEnvironment: credentials.runEnvironment,
+                                        ClientId: credentials.clientId,
+                                        ClientSecret: credentials.clientSecret,
+                                        returnUrl: baseUrl + credentials.newStudentPaymentSuccessUrl + "?totalAmount=" + total_amount,
+                                        cancelUrl: baseUrl + credentials.newStudentPaymentCancelUrl,
+                                        name: document.getElementById('ProgramName').value,
+                                        sku: document.getElementById('ProgrammeId').value,
+                                        price:total_amount,
+                                        orderCode:guid()
+                                    };
+
+
+                            $.ajax({
+                                    type: "POST",
+                                    url: credentials.accessTokenUrl,
+                                    data: param,
+                                    dataType: "text",
+                                    success: function(request_feedback){
+                                        if(request_feedback != null){
+                                            location.href = request_feedback;
+                                        }else{
+                                            console.log("Getting url for payment failed",request_feedback);
+                                            e.target.innerHTML = "Procesing failed";
+                                        }
+                                    },
+                                    error: function(error) { 
+                                        console.log("Error occured whiles getting url for payment",error.responseText);
+                                            e.target.innerHTML = "An error occured";
+                                    }
+                            });
+
+                        },
+                        error:function(err){
+                            e.target.innerHTML = "Error";
+                            console.log("Failure getting payment credentials from asp.net failure");
+                        }
+
+                        });
+    }
+
+    </script>
+		
+}
+

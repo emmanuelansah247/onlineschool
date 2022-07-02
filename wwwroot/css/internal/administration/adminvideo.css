@@ -1,0 +1,121 @@
+.page_wrapper{
+    width: 100%;
+}
+
+.page_wrapper .page_container{
+    width: 100%;
+    margin-bottom: 15%;
+}
+
+.page_container .title{
+    font: normal normal bold 20px/1.2em "Arial";
+    padding: 1% 10%;
+    background-color: #e90172;
+    color: #fff;
+    text-align: center;
+}
+
+.page_container .main_form{
+    background-color: #4b345d;
+    background-color: #4e4e4e;
+    padding: 2% 10%;
+}
+
+.page_container .main_form .top_form{
+    width: 100%;
+}
+
+.main_form .top_form .input_wrapper{
+    width: 20%;
+    margin: 0 2.5%;
+    float: left;
+}
+
+.main_form .top_form .input_wrapper .label{
+    display: block;
+    color: #fff;
+}
+
+.main_form .top_form .input_wrapper .input{
+    width: 100%;
+    padding: 10px 10px;
+    font: normal normal normal 15px/1.2em "sans-serif";
+    margin-top: 5px;
+}
+
+.main_form .button_container{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.main_form .button_container .button{
+    padding: 10px 10px;
+    background-color: #fff;
+    color: #000;
+    margin: 1% 2%;
+}
+
+
+/* 
+begin videos 
+*/
+
+.videos_wrapper{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.videos_wrapper .videos_container{
+    width: 100%;
+    padding: 2% 5%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.videos_container .video{
+    width: 300px;
+    display: inline-block;
+    margin: 5%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.video .video_container{
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+}
+
+.video .input_wrapper{
+    margin-top: 10px;
+}
+
+.video .input_wrapper .label{
+    display: block;
+    text-align: left;
+}
+
+.video .input_wrapper .input{
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px 5px;
+    box-sizing: border-box;
+}
+
+.video .button_container{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.video .button_container .button{
+    padding: 5px 5px;
+    font: normal normal normal 12px/1.2em;
+    background-color: #4b345d;
+    color: #fff;
+    margin: 5px;
+}
+
+
+/* 
+end videos 
+*/

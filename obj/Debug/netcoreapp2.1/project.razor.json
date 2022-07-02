@@ -1,0 +1,3157 @@
+{
+  "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\bim-edu.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [
+      {
+        "HashCode": 637478596,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;a&gt; elements.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-action"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-controller"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-area"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-page"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-page-handler"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-fragment"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-host"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-protocol"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-route"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-all-route-data"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "asp-route-",
+                "NameComparison": 1
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-action",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the action method.\n            </summary>\n            <remarks>\n            Must be <c>null</c> if <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Route\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Page\" /> is non-<c>null</c>.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Action"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-controller",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the controller.\n            </summary>\n            <remarks>\n            Must be <c>null</c> if <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Route\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Page\" /> is non-<c>null</c>.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Controller"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-area",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the area.\n            </summary>\n            <remarks>\n            Must be <c>null</c> if <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Route\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Page\" /> is non-<c>null</c>.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Area"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-page",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the page.\n            </summary>\n            <remarks>\n            Must be <c>null</c> if <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Route\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Action\" />, <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Controller\" />\n            or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Area\" /> is non-<c>null</c>.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Page"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-page-handler",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the page handler.\n            </summary>\n            <remarks>\n            Must be <c>null</c> if <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Route\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Action\" />, or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Controller\" />\n            is non-<c>null</c>.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "PageHandler"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-protocol",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The protocol for the URL, such as \"http\" or \"https\".\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Protocol"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-host",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The host name.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Host"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fragment",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The URL fragment name.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Fragment"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-route",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Name of the route.\n            </summary>\n            <remarks>\n            Must be <c>null</c> if one of <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Action\" />, <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Controller\" />, <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Area\" /> \n            or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Page\" /> is non-<c>null</c>.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Route"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-all-route-data",
+            "TypeName": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "IndexerNamePrefix": "asp-route-",
+            "IndexerTypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Additional parameters for the route.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "RouteValues"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper"
+        }
+      },
+      {
+        "HashCode": 551534729,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.CacheTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.TagHelper\" /> implementation targeting &lt;cache&gt; elements.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "cache"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "priority",
+            "TypeName": "Microsoft.Extensions.Caching.Memory.CacheItemPriority?",
+            "Documentation": "\n            <summary>\n            Gets or sets the <see cref=\"T:Microsoft.Extensions.Caching.Memory.CacheItemPriority\" /> policy for the cache entry.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Priority"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a <see cref=\"T:System.String\" /> to vary the cached result by.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryBy"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by-header",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a comma-delimited set of HTTP request headers to vary the cached result by.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryByHeader"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by-query",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a comma-delimited set of query parameters to vary the cached result by.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryByQuery"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by-route",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a comma-delimited set of route data parameters to vary the cached result by.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryByRoute"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by-cookie",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a comma-delimited set of cookie names to vary the cached result by.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryByCookie"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by-user",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets a value that determines if the cached result is to be varied by the Identity for the logged in\n            <see cref=\"P:Microsoft.AspNetCore.Http.HttpContext.User\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryByUser"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "expires-on",
+            "TypeName": "System.DateTimeOffset?",
+            "Documentation": "\n            <summary>\n            Gets or sets the exact <see cref=\"T:System.DateTimeOffset\" /> the cache entry should be evicted.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ExpiresOn"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "expires-after",
+            "TypeName": "System.TimeSpan?",
+            "Documentation": "\n            <summary>\n            Gets or sets the duration, from the time the cache entry was added, when it should be evicted.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ExpiresAfter"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "expires-sliding",
+            "TypeName": "System.TimeSpan?",
+            "Documentation": "\n            <summary>\n            Gets or sets the duration from last access that the cache entry should be evicted.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ExpiresSliding"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "enabled",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets the value which determines if the tag helper is enabled or not.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Enabled"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.CacheTagHelper"
+        }
+      },
+      {
+        "HashCode": 1728308833,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.DistributedCacheTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.TagHelper\" /> implementation targeting &lt;distributed-cache&gt; elements.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "distributed-cache",
+            "Attributes": [
+              {
+                "Name": "name"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "name",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a unique name to discriminate cached entries.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a <see cref=\"T:System.String\" /> to vary the cached result by.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryBy"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by-header",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a comma-delimited set of HTTP request headers to vary the cached result by.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryByHeader"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by-query",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a comma-delimited set of query parameters to vary the cached result by.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryByQuery"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by-route",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a comma-delimited set of route data parameters to vary the cached result by.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryByRoute"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by-cookie",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets a comma-delimited set of cookie names to vary the cached result by.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryByCookie"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "vary-by-user",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets a value that determines if the cached result is to be varied by the Identity for the logged in\n            <see cref=\"P:Microsoft.AspNetCore.Http.HttpContext.User\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VaryByUser"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "expires-on",
+            "TypeName": "System.DateTimeOffset?",
+            "Documentation": "\n            <summary>\n            Gets or sets the exact <see cref=\"T:System.DateTimeOffset\" /> the cache entry should be evicted.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ExpiresOn"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "expires-after",
+            "TypeName": "System.TimeSpan?",
+            "Documentation": "\n            <summary>\n            Gets or sets the duration, from the time the cache entry was added, when it should be evicted.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ExpiresAfter"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "expires-sliding",
+            "TypeName": "System.TimeSpan?",
+            "Documentation": "\n            <summary>\n            Gets or sets the duration from last access that the cache entry should be evicted.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ExpiresSliding"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "enabled",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets the value which determines if the tag helper is enabled or not.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Enabled"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.DistributedCacheTagHelper"
+        }
+      },
+      {
+        "HashCode": 533164141,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;environment&gt; elements that conditionally renders\n            content based on the current value of <see cref=\"P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.EnvironmentName\" />.\n            If the environment is not listed in the specified <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper.Names\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper.Include\" />, \n            or if it is in <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper.Exclude\" />, the content will not be rendered.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "environment"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "names",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of environment names in which the content should be rendered.\n            If the current environment is also in the <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper.Exclude\" /> list, the content will not be rendered.\n            </summary>\n            <remarks>\n            The specified environment names are compared case insensitively to the current value of\n            <see cref=\"P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.EnvironmentName\" />.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Names"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "include",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of environment names in which the content should be rendered.\n            If the current environment is also in the <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper.Exclude\" /> list, the content will not be rendered.\n            </summary>\n            <remarks>\n            The specified environment names are compared case insensitively to the current value of\n            <see cref=\"P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.EnvironmentName\" />.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Include"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "exclude",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of environment names in which the content will not be rendered.\n            </summary>\n            <remarks>\n            The specified environment names are compared case insensitively to the current value of\n            <see cref=\"P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.EnvironmentName\" />.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Exclude"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper"
+        }
+      },
+      {
+        "HashCode": -1307284340,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.FormActionTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;button&gt; elements and &lt;input&gt; elements with\n            their <c>type</c> attribute set to <c>image</c> or <c>submit</c>.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "button",
+            "Attributes": [
+              {
+                "Name": "asp-action"
+              }
+            ]
+          },
+          {
+            "TagName": "button",
+            "Attributes": [
+              {
+                "Name": "asp-controller"
+              }
+            ]
+          },
+          {
+            "TagName": "button",
+            "Attributes": [
+              {
+                "Name": "asp-area"
+              }
+            ]
+          },
+          {
+            "TagName": "button",
+            "Attributes": [
+              {
+                "Name": "asp-page"
+              }
+            ]
+          },
+          {
+            "TagName": "button",
+            "Attributes": [
+              {
+                "Name": "asp-page-handler"
+              }
+            ]
+          },
+          {
+            "TagName": "button",
+            "Attributes": [
+              {
+                "Name": "asp-fragment"
+              }
+            ]
+          },
+          {
+            "TagName": "button",
+            "Attributes": [
+              {
+                "Name": "asp-route"
+              }
+            ]
+          },
+          {
+            "TagName": "button",
+            "Attributes": [
+              {
+                "Name": "asp-all-route-data"
+              }
+            ]
+          },
+          {
+            "TagName": "button",
+            "Attributes": [
+              {
+                "Name": "asp-route-",
+                "NameComparison": 1
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "image",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-action"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "image",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-controller"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "image",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-area"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "image",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-page"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "image",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-page-handler"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "image",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-fragment"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "image",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-route"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "image",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-all-route-data"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "image",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-route-",
+                "NameComparison": 1
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "submit",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-action"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "submit",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-controller"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "submit",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-area"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "submit",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-page"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "submit",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-page-handler"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "submit",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-fragment"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "submit",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-route"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "submit",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-all-route-data"
+              }
+            ]
+          },
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "type",
+                "Value": "submit",
+                "ValueComparison": 1
+              },
+              {
+                "Name": "asp-route-",
+                "NameComparison": 1
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-action",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the action method.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Action"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-controller",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the controller.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Controller"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-area",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the area.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Area"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-page",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the page.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Page"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-page-handler",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the page handler.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "PageHandler"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fragment",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets the URL fragment.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Fragment"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-route",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Name of the route.\n            </summary>\n            <remarks>\n            Must be <c>null</c> if <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.FormActionTagHelper.Action\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.FormActionTagHelper.Controller\" /> is non-<c>null</c>.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Route"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-all-route-data",
+            "TypeName": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "IndexerNamePrefix": "asp-route-",
+            "IndexerTypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Additional parameters for the route.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "RouteValues"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.FormActionTagHelper"
+        }
+      },
+      {
+        "HashCode": 1809230714,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;form&gt; elements.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "form"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-action",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the action method.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Action"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-controller",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the controller.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Controller"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-area",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the area.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Area"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-page",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the page.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Page"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-page-handler",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the page handler.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "PageHandler"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-antiforgery",
+            "TypeName": "System.Boolean?",
+            "Documentation": "\n            <summary>\n            Whether the antiforgery token should be generated.\n            </summary>\n            <value>Defaults to <c>false</c> if user provides an <c>action</c> attribute\n            or if the <c>method</c> is <see cref=\"F:Microsoft.AspNetCore.Mvc.Rendering.FormMethod.Get\" />; <c>true</c> otherwise.</value>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Antiforgery"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fragment",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Gets or sets the URL fragment.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Fragment"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-route",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Name of the route.\n            </summary>\n            <remarks>\n            Must be <c>null</c> if <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper.Action\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper.Controller\" /> is non-<c>null</c>.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Route"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-all-route-data",
+            "TypeName": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "IndexerNamePrefix": "asp-route-",
+            "IndexerTypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Additional parameters for the route.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "RouteValues"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper"
+        }
+      },
+      {
+        "HashCode": -1233636377,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;img&gt; elements that supports file versioning.\n            </summary>\n            <remarks>\n            The tag helper won't process for cases with just the 'src' attribute.\n            </remarks>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "img",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-append-version"
+              },
+              {
+                "Name": "src"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "src",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Source of the image.\n            </summary>\n            <remarks>\n            Passed through to the generated HTML in all cases.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Src"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-append-version",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Value indicating if file version should be appended to the src urls.\n            </summary>\n            <remarks>\n            If <c>true</c> then a query string \"v\" with the encoded content of the file is added.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "AppendVersion"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper"
+        }
+      },
+      {
+        "HashCode": 925814313,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;input&gt; elements with an <c>asp-for</c> attribute.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "input",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-for"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-for",
+            "TypeName": "Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExpression",
+            "Documentation": "\n            <summary>\n            An expression to be evaluated against the current model.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "For"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-format",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The format string (see https://msdn.microsoft.com/en-us/library/txafckwd.aspx) used to format the\n            <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.For\" /> result. Sets the generated \"value\" attribute to that formatted string.\n            </summary>\n            <remarks>\n            Not used if the provided (see <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.InputTypeName\" />) or calculated \"type\" attribute value is\n            <c>checkbox</c>, <c>password</c>, or <c>radio</c>. That is, <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Format\" /> is used when calling\n            <see cref=\"M:Microsoft.AspNetCore.Mvc.ViewFeatures.IHtmlGenerator.GenerateTextBox(Microsoft.AspNetCore.Mvc.Rendering.ViewContext,Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExplorer,System.String,System.Object,System.String,System.Object)\" />.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Format"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "type",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The type of the &lt;input&gt; element.\n            </summary>\n            <remarks>\n            Passed through to the generated HTML in all cases. Also used to determine the <see cref=\"T:Microsoft.AspNetCore.Mvc.ViewFeatures.IHtmlGenerator\" />\n            helper to call and the default <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Format\" /> value. A default <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Format\" /> is not calculated\n            if the provided (see <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.InputTypeName\" />) or calculated \"type\" attribute value is <c>checkbox</c>,\n            <c>hidden</c>, <c>password</c>, or <c>radio</c>.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "InputTypeName"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "name",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the &lt;input&gt; element.\n            </summary>\n            <remarks>\n            Passed through to the generated HTML in all cases. Also used to determine whether <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.For\" /> is\n            valid with an empty <see cref=\"P:Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExpression.Name\" />.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "value",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The value of the &lt;input&gt; element.\n            </summary>\n            <remarks>\n            Passed through to the generated HTML in all cases. Also used to determine the generated \"checked\" attribute\n            if <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.InputTypeName\" /> is \"radio\". Must not be <c>null</c> in that case.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Value"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper"
+        }
+      },
+      {
+        "HashCode": -1097278362,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;label&gt; elements with an <c>asp-for</c> attribute.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "label",
+            "Attributes": [
+              {
+                "Name": "asp-for"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-for",
+            "TypeName": "Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExpression",
+            "Documentation": "\n            <summary>\n            An expression to be evaluated against the current model.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "For"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper"
+        }
+      },
+      {
+        "HashCode": -1601201522,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;link&gt; elements that supports fallback href paths.\n            </summary>\n            <remarks>\n            The tag helper won't process for cases with just the 'href' attribute.\n            </remarks>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "link",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-href-include"
+              }
+            ]
+          },
+          {
+            "TagName": "link",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-href-exclude"
+              }
+            ]
+          },
+          {
+            "TagName": "link",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-fallback-href"
+              }
+            ]
+          },
+          {
+            "TagName": "link",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-fallback-href-include"
+              }
+            ]
+          },
+          {
+            "TagName": "link",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-fallback-href-exclude"
+              }
+            ]
+          },
+          {
+            "TagName": "link",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-fallback-test-class"
+              }
+            ]
+          },
+          {
+            "TagName": "link",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-fallback-test-property"
+              }
+            ]
+          },
+          {
+            "TagName": "link",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-fallback-test-value"
+              }
+            ]
+          },
+          {
+            "TagName": "link",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "asp-append-version"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "href",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Address of the linked resource.\n            </summary>\n            <remarks>\n            Passed through to the generated HTML in all cases.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Href"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-href-include",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of globbed file patterns of CSS stylesheets to load.\n            The glob patterns are assessed relative to the application's 'webroot' setting.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "HrefInclude"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-href-exclude",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of globbed file patterns of CSS stylesheets to exclude from loading.\n            The glob patterns are assessed relative to the application's 'webroot' setting.\n            Must be used in conjunction with <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.HrefInclude\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "HrefExclude"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fallback-href",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The URL of a CSS stylesheet to fallback to in the case the primary one fails.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "FallbackHref"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-append-version",
+            "TypeName": "System.Boolean?",
+            "Documentation": "\n            <summary>\n            Value indicating if file version should be appended to the href urls.\n            </summary>\n            <remarks>\n            If <c>true</c> then a query string \"v\" with the encoded content of the file is added.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "AppendVersion"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fallback-href-include",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of globbed file patterns of CSS stylesheets to fallback to in the case the primary\n            one fails.\n            The glob patterns are assessed relative to the application's 'webroot' setting.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "FallbackHrefInclude"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fallback-href-exclude",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of globbed file patterns of CSS stylesheets to exclude from the fallback list, in\n            the case the primary one fails.\n            The glob patterns are assessed relative to the application's 'webroot' setting.\n            Must be used in conjunction with <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackHrefInclude\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "FallbackHrefExclude"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fallback-test-class",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The class name defined in the stylesheet to use for the fallback test.\n            Must be used in conjunction with <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackTestProperty\" /> and <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackTestValue\" />,\n            and either <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackHref\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackHrefInclude\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "FallbackTestClass"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fallback-test-property",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The CSS property name to use for the fallback test.\n            Must be used in conjunction with <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackTestClass\" /> and <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackTestValue\" />,\n            and either <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackHref\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackHrefInclude\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "FallbackTestProperty"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fallback-test-value",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The CSS property value to use for the fallback test.\n            Must be used in conjunction with <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackTestClass\" /> and <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackTestProperty\" />,\n            and either <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackHref\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper.FallbackHrefInclude\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "FallbackTestValue"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper"
+        }
+      },
+      {
+        "HashCode": 986643801,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;option&gt; elements.\n            </summary>\n            <remarks>\n            This <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> works in conjunction with <see cref=\"T:Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper\" />. It reads elements\n            content but does not modify that content. The only modification it makes is to add a <c>selected</c> attribute\n            in some cases.\n            </remarks>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "option"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "value",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Specifies a value for the &lt;option&gt; element.\n            </summary>\n            <remarks>\n            Passed through to the generated HTML in all cases.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Value"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper"
+        }
+      },
+      {
+        "HashCode": 30267490,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            Renders a partial view.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "partial",
+            "TagStructure": 2,
+            "Attributes": [
+              {
+                "Name": "name"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "name",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name or path of the partial view that is rendered to the response.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "for",
+            "TypeName": "Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExpression",
+            "Documentation": "\n            <summary>\n            An expression to be evaluated against the current model. Cannot be used together with <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper.Model\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "For"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "model",
+            "TypeName": "System.Object",
+            "Documentation": "\n            <summary>\n            The model to pass into the partial view. Cannot be used together with <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper.For\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Model"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "view-data",
+            "TypeName": "Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary",
+            "IndexerNamePrefix": "view-data-",
+            "IndexerTypeName": "System.Object",
+            "Documentation": "\n            <summary>\n            A <see cref=\"T:Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary\" /> to pass into the partial view.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ViewData"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper"
+        }
+      },
+      {
+        "HashCode": -2057167892,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;script&gt; elements that supports fallback src paths.\n            </summary>\n            <remarks>\n            The tag helper won't process for cases with just the 'src' attribute.\n            </remarks>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "script",
+            "Attributes": [
+              {
+                "Name": "asp-src-include"
+              }
+            ]
+          },
+          {
+            "TagName": "script",
+            "Attributes": [
+              {
+                "Name": "asp-src-exclude"
+              }
+            ]
+          },
+          {
+            "TagName": "script",
+            "Attributes": [
+              {
+                "Name": "asp-fallback-src"
+              }
+            ]
+          },
+          {
+            "TagName": "script",
+            "Attributes": [
+              {
+                "Name": "asp-fallback-src-include"
+              }
+            ]
+          },
+          {
+            "TagName": "script",
+            "Attributes": [
+              {
+                "Name": "asp-fallback-src-exclude"
+              }
+            ]
+          },
+          {
+            "TagName": "script",
+            "Attributes": [
+              {
+                "Name": "asp-fallback-test"
+              }
+            ]
+          },
+          {
+            "TagName": "script",
+            "Attributes": [
+              {
+                "Name": "asp-append-version"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "src",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Address of the external script to use.\n            </summary>\n            <remarks>\n            Passed through to the generated HTML in all cases.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Src"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-src-include",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of globbed file patterns of JavaScript scripts to load.\n            The glob patterns are assessed relative to the application's 'webroot' setting.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "SrcInclude"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-src-exclude",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of globbed file patterns of JavaScript scripts to exclude from loading.\n            The glob patterns are assessed relative to the application's 'webroot' setting.\n            Must be used in conjunction with <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.SrcInclude\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "SrcExclude"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fallback-src",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The URL of a Script tag to fallback to in the case the primary one fails.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "FallbackSrc"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-append-version",
+            "TypeName": "System.Boolean?",
+            "Documentation": "\n            <summary>\n            Value indicating if file version should be appended to src urls.\n            </summary>\n            <remarks>\n            A query string \"v\" with the encoded content of the file is added.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "AppendVersion"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fallback-src-include",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of globbed file patterns of JavaScript scripts to fallback to in the case the\n            primary one fails.\n            The glob patterns are assessed relative to the application's 'webroot' setting.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "FallbackSrcInclude"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fallback-src-exclude",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            A comma separated list of globbed file patterns of JavaScript scripts to exclude from the fallback list, in\n            the case the primary one fails.\n            The glob patterns are assessed relative to the application's 'webroot' setting.\n            Must be used in conjunction with <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.FallbackSrcInclude\" />.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "FallbackSrcExclude"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-fallback-test",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The script method defined in the primary script to use for the fallback test.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "FallbackTestExpression"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper"
+        }
+      },
+      {
+        "HashCode": 362108633,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;select&gt; elements with <c>asp-for</c> and/or\n            <c>asp-items</c> attribute(s).\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "select",
+            "Attributes": [
+              {
+                "Name": "asp-for"
+              }
+            ]
+          },
+          {
+            "TagName": "select",
+            "Attributes": [
+              {
+                "Name": "asp-items"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-for",
+            "TypeName": "Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExpression",
+            "Documentation": "\n            <summary>\n            An expression to be evaluated against the current model.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "For"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-items",
+            "TypeName": "System.Collections.Generic.IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem>",
+            "Documentation": "\n            <summary>\n            A collection of <see cref=\"T:Microsoft.AspNetCore.Mvc.Rendering.SelectListItem\" /> objects used to populate the &lt;select&gt; element with\n            &lt;optgroup&gt; and &lt;option&gt; elements.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Items"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "name",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the &lt;input&gt; element.\n            </summary>\n            <remarks>\n            Passed through to the generated HTML in all cases. Also used to determine whether <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper.For\" /> is\n            valid with an empty <see cref=\"P:Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExpression.Name\" />.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper"
+        }
+      },
+      {
+        "HashCode": 1353673274,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.TextAreaTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting &lt;textarea&gt; elements with an <c>asp-for</c> attribute.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "textarea",
+            "Attributes": [
+              {
+                "Name": "asp-for"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-for",
+            "TypeName": "Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExpression",
+            "Documentation": "\n            <summary>\n            An expression to be evaluated against the current model.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "For"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "name",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            The name of the &lt;input&gt; element.\n            </summary>\n            <remarks>\n            Passed through to the generated HTML in all cases. Also used to determine whether <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.TextAreaTagHelper.For\" /> is\n            valid with an empty <see cref=\"P:Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExpression.Name\" />.\n            </remarks>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.TextAreaTagHelper"
+        }
+      },
+      {
+        "HashCode": -1581629460,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting any HTML element with an <c>asp-validation-for</c>\n            attribute.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "span",
+            "Attributes": [
+              {
+                "Name": "asp-validation-for"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-validation-for",
+            "TypeName": "Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExpression",
+            "Metadata": {
+              "Common.PropertyName": "For"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper"
+        }
+      },
+      {
+        "HashCode": 2141031877,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "Documentation": "\n            <summary>\n            <see cref=\"T:Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper\" /> implementation targeting any HTML element with an <c>asp-validation-summary</c>\n            attribute.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "div",
+            "Attributes": [
+              {
+                "Name": "asp-validation-summary"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-validation-summary",
+            "TypeName": "Microsoft.AspNetCore.Mvc.Rendering.ValidationSummary",
+            "IsEnum": true,
+            "Documentation": "\n            <summary>\n            If <see cref=\"F:Microsoft.AspNetCore.Mvc.Rendering.ValidationSummary.All\" /> or <see cref=\"F:Microsoft.AspNetCore.Mvc.Rendering.ValidationSummary.ModelOnly\" />, appends a validation\n            summary. Otherwise (<see cref=\"F:Microsoft.AspNetCore.Mvc.Rendering.ValidationSummary.None\" />, the default), this tag helper does nothing.\n            </summary>\n            <exception cref=\"T:System.ArgumentException\">\n            Thrown if setter is called with an undefined <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper.ValidationSummary\" /> value e.g.\n            <c>(ValidationSummary)23</c>.\n            </exception>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ValidationSummary"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper"
+        }
+      },
+      {
+        "HashCode": 558258125,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.SpaServices.Prerendering.PrerenderTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.SpaServices",
+        "Documentation": "\n            <summary>\n            A tag helper for prerendering JavaScript applications on the server.\n            </summary>\n        ",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "*",
+            "Attributes": [
+              {
+                "Name": "asp-prerender-module"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-prerender-module",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Specifies the path to the JavaScript module containing prerendering code.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ModuleName"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-prerender-export",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            If set, specifies the name of the CommonJS export that is the prerendering function to execute.\n            If not set, the JavaScript module's default CommonJS export must itself be the prerendering function.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ExportName"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-prerender-data",
+            "TypeName": "System.Object",
+            "Documentation": "\n            <summary>\n            An optional JSON-serializable parameter to be supplied to the prerendering code.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "CustomDataParameter"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-prerender-timeout",
+            "TypeName": "System.Int32",
+            "Documentation": "\n            <summary>\n            The maximum duration to wait for prerendering to complete.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "TimeoutMillisecondsParameter"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.SpaServices.Prerendering.PrerenderTagHelper"
+        }
+      }
+    ],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": "bim-edu",
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_ComputerProgramming.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_ComputerProgramming.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_DigitalMarketing.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_DigitalMarketing.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\BusinessAdministration.cshtml",
+      "TargetPath": "Views\\Programmes\\BusinessAdministration.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Programmeur.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Programmeur.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Shared\\_ApprovedLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_ApprovedLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Menuisiermétallique.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Menuisiermétallique.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Student\\ProgramDocument.cshtml",
+      "TargetPath": "Views\\en_Student\\ProgramDocument.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_TravelAgency.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_TravelAgency.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Other\\Comment.cshtml",
+      "TargetPath": "Views\\en_Other\\Comment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\AssistantDeDirectionBilingue.cshtml",
+      "TargetPath": "Views\\Programmes\\AssistantDeDirectionBilingue.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorProjectManagement.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorProjectManagement.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Three\\AdminLogin.cshtml",
+      "TargetPath": "Views\\Administration_Three\\AdminLogin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Application.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Application.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_PharmacyAssistant.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_PharmacyAssistant.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Student\\Foundation.cshtml",
+      "TargetPath": "Views\\Student\\Foundation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Account\\ActivateEmail.cshtml",
+      "TargetPath": "Views\\Account\\ActivateEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_CommunicationInternationalDevelopment.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_CommunicationInternationalDevelopment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_OfficeSecretary.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_OfficeSecretary.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Student\\ProgramDocument.cshtml",
+      "TargetPath": "Views\\Student\\ProgramDocument.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Caissier.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Caissier.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Welcome_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Welcome_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Électromécanicien.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Électromécanicien.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_CivilEngineeringSustainableMiningManagement.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_CivilEngineeringSustainableMiningManagement.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_TourismandHospitality.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_TourismandHospitality.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Two\\AdminCoureseLecture.cshtml",
+      "TargetPath": "Views\\Administration_Two\\AdminCoureseLecture.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_BanquesInstitutionsDeMicrofinances.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_BanquesInstitutionsDeMicrofinances.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_Industrialmechanics.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_Industrialmechanics.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_GenieCivilGestionDurableDesMines.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_GenieCivilGestionDurableDesMines.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_ElectricityOrSolarenergy.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_ElectricityOrSolarenergy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\IntelligenceEconomiqueManagementDesConnaissances.cshtml",
+      "TargetPath": "Views\\Programmes\\IntelligenceEconomiqueManagementDesConnaissances.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Agentdecomptoir.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Agentdecomptoir.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Phd_Psychology.cshtml",
+      "TargetPath": "Views\\Programmes\\Phd_Psychology.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Home\\teachwithus.cshtml",
+      "TargetPath": "Views\\Home\\teachwithus.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_DevelopmentInternational.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_DevelopmentInternational.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Home\\about.cshtml",
+      "TargetPath": "Views\\Home\\about.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\GestionDesResources.cshtml",
+      "TargetPath": "Views\\Programmes\\GestionDesResources.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Course.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Course.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration\\AdminStaff.cshtml",
+      "TargetPath": "Views\\Administration\\AdminStaff.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration\\AdminCertification.cshtml",
+      "TargetPath": "Views\\Administration\\AdminCertification.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Student\\Foundation.cshtml",
+      "TargetPath": "Views\\en_Student\\Foundation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorBilingualExecutiveAssistant.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorBilingualExecutiveAssistant.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_CivilIngeneeringBuildingConstructions.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_CivilIngeneeringBuildingConstructions.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Auxiliaire.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Auxiliaire.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_CrushingAgent.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_CrushingAgent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Agentdebureau.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Agentdebureau.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Four\\AdminShareFile.cshtml",
+      "TargetPath": "Views\\Administration_Four\\AdminShareFile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_Cashier.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_Cashier.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_PublicHealthBiim.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_PublicHealthBiim.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Account\\PasswordResetEmail.cshtml",
+      "TargetPath": "Views\\Account\\PasswordResetEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Automatiste.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Automatiste.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Payment\\OldStudentPaymentCancelUrl.cshtml",
+      "TargetPath": "Views\\Payment\\OldStudentPaymentCancelUrl.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_TicketandCounter.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_TicketandCounter.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Student\\Program.cshtml",
+      "TargetPath": "Views\\en_Student\\Program.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Two\\AdminUserRole.cshtml",
+      "TargetPath": "Views\\Administration_Two\\AdminUserRole.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_GenieCivilIngenieurDeConceptionBtps.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_GenieCivilIngenieurDeConceptionBtps.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_BreedingandAnimal.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_BreedingandAnimal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_TransportsLogisticsManagement.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_TransportsLogisticsManagement.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\TechnologieDesReseaux.cshtml",
+      "TargetPath": "Views\\Programmes\\TechnologieDesReseaux.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_FrontDeskClerk.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_FrontDeskClerk.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\TraductionInterpretation.cshtml",
+      "TargetPath": "Views\\Programmes\\TraductionInterpretation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Technicienenbâtiment.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Technicienenbâtiment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Website_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Website_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Links.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Links.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Phd_OrganizationalLeadership.cshtml",
+      "TargetPath": "Views\\Programmes\\Phd_OrganizationalLeadership.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Home\\studentexperience.cshtml",
+      "TargetPath": "Views\\Home\\studentexperience.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_IngenierieConstructionDeLaPaixAndGestionDesConflits.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_IngenierieConstructionDeLaPaixAndGestionDesConflits.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Other\\Comment.cshtml",
+      "TargetPath": "Views\\Other\\Comment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_CommunicationDevelopmentInternational.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_CommunicationDevelopmentInternational.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_InfographicandVideo.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_InfographicandVideo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_AccountingSecretary.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_AccountingSecretary.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration\\AdminVideo.cshtml",
+      "TargetPath": "Views\\Administration\\AdminVideo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Assistantenélevage.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Assistantenélevage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\TransportLogistique.cshtml",
+      "TargetPath": "Views\\Programmes\\TransportLogistique.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Three\\AdminUnregister.cshtml",
+      "TargetPath": "Views\\Administration_Three\\AdminUnregister.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Payment\\OldStudentPaymentSuccessUrl.cshtml",
+      "TargetPath": "Views\\Payment\\OldStudentPaymentSuccessUrl.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Forum_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Forum_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_IndustrialAutomation.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_IndustrialAutomation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_ConstructionEngineering.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_ConstructionEngineering.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration\\AdminProgramDocument.cshtml",
+      "TargetPath": "Views\\Administration\\AdminProgramDocument.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Home\\Feedback.cshtml",
+      "TargetPath": "Views\\Home\\Feedback.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\CommunicationDEntreprise.cshtml",
+      "TargetPath": "Views\\Programmes\\CommunicationDEntreprise.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_Plumbing.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_Plumbing.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Payment\\ProcessApplicationPayment.cshtml",
+      "TargetPath": "Views\\en_Payment\\ProcessApplicationPayment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Doc_BusinessAdministration.cshtml",
+      "TargetPath": "Views\\Programmes\\Doc_BusinessAdministration.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_ConferenceInterpreting.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_ConferenceInterpreting.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorBusinessIntelligenceKnowledgeManagement.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorBusinessIntelligenceKnowledgeManagement.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Account\\ResetPassword.cshtml",
+      "TargetPath": "Views\\en_Account\\ResetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_ComptabiliteControlAudit.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_ComptabiliteControlAudit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Account\\Login.cshtml",
+      "TargetPath": "Views\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_Logistics.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_Logistics.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\SciencePoRelationsInternationales.cshtml",
+      "TargetPath": "Views\\Programmes\\SciencePoRelationsInternationales.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Account\\AccessDenied.cshtml",
+      "TargetPath": "Views\\en_Account\\AccessDenied.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Lecturer_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Lecturer_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_InfographisteMonteur.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_InfographisteMonteur.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_AutoMechanics.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_AutoMechanics.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_WeldingandMetalwork.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_WeldingandMetalwork.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Doc_BusinessAdministration.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Doc_BusinessAdministration.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Agentdeservice.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Agentdeservice.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Payment\\NewStudentPaymentSuccessUrl.cshtml",
+      "TargetPath": "Views\\Payment\\NewStudentPaymentSuccessUrl.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\FinanceComptabilite.cshtml",
+      "TargetPath": "Views\\Programmes\\FinanceComptabilite.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_ProjectManagementEvaluation.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_ProjectManagementEvaluation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration\\AdminStudent.cshtml",
+      "TargetPath": "Views\\Administration\\AdminStudent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Student\\Policy.cshtml",
+      "TargetPath": "Views\\Student\\Policy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Account\\Login.cshtml",
+      "TargetPath": "Views\\en_Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_MarketingInternationalManagement.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_MarketingInternationalManagement.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Account\\ActivateEmail.cshtml",
+      "TargetPath": "Views\\en_Account\\ActivateEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_MedicalAssistant.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_MedicalAssistant.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Marketiste.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Marketiste.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Agentdetransit.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Agentdetransit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\ScienceEducation.cshtml",
+      "TargetPath": "Views\\Programmes\\ScienceEducation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Phd_PoliticalScience.cshtml",
+      "TargetPath": "Views\\Programmes\\Phd_PoliticalScience.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Other\\Video.cshtml",
+      "TargetPath": "Views\\Other\\Video.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Three\\AdminCourse.cshtml",
+      "TargetPath": "Views\\Administration_Three\\AdminCourse.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Video_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Video_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Phd_Education.cshtml",
+      "TargetPath": "Views\\Programmes\\Phd_Education.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Menu.cshtml",
+      "TargetPath": "Views\\Documentation\\Menu.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorMarketingManagement.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorMarketingManagement.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_AgentdeTourisme.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_AgentdeTourisme.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Payment\\NewStudentPaymentCancelUrl.cshtml",
+      "TargetPath": "Views\\en_Payment\\NewStudentPaymentCancelUrl.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Three\\AdminComment.cshtml",
+      "TargetPath": "Views\\Administration_Three\\AdminComment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Student\\Question.cshtml",
+      "TargetPath": "Views\\Student\\Question.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Home\\Index.cshtml",
+      "TargetPath": "Views\\en_Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Lecture.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Lecture.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Account\\PasswordResetEmail.cshtml",
+      "TargetPath": "Views\\en_Account\\PasswordResetEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_Electromechanics.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_Electromechanics.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Document_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Document_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_ComptabiliteControlAudit.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_ComptabiliteControlAudit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Payment\\NewStudentPaymentSuccessUrl.cshtml",
+      "TargetPath": "Views\\en_Payment\\NewStudentPaymentSuccessUrl.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Account\\Register.cshtml",
+      "TargetPath": "Views\\en_Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_AssistantenLogistique.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_AssistantenLogistique.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorLogisticsTransportManagement.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorLogisticsTransportManagement.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorNetworkingTechnologyComputerSystems.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorNetworkingTechnologyComputerSystems.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration\\AdminQuestion.cshtml",
+      "TargetPath": "Views\\Administration\\AdminQuestion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_PreschoolTeacher.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_PreschoolTeacher.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Account\\Search.cshtml",
+      "TargetPath": "Views\\en_Account\\Search.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Décorateurprofessionnel.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Décorateurprofessionnel.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Électricienautomobile.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Électricienautomobile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Shared\\_en_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_en_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Account\\Apply.cshtml",
+      "TargetPath": "Views\\en_Account\\Apply.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_UserRole.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_UserRole.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Shared\\_en_ApprovedLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_en_ApprovedLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Agentconcasseur.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Agentconcasseur.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Account\\Register.cshtml",
+      "TargetPath": "Views\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorBankingMicrofinance.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorBankingMicrofinance.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\GenieCiviBtp.cshtml",
+      "TargetPath": "Views\\Programmes\\GenieCiviBtp.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Payment\\NewStudentPaymentCancelUrl.cshtml",
+      "TargetPath": "Views\\Payment\\NewStudentPaymentCancelUrl.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Menuisierbois.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Menuisierbois.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Opérateurs.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Opérateurs.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Shared\\_AdminLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_AdminLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Student\\Lecturer.cshtml",
+      "TargetPath": "Views\\en_Student\\Lecturer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorHumanResourceManagement.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorHumanResourceManagement.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_EngineeringTelecomNetworkingSystemsBiim.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_EngineeringTelecomNetworkingSystemsBiim.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Four\\AdminChangeProgram.cshtml",
+      "TargetPath": "Views\\Administration_Four\\AdminChangeProgram.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_AssistantSecrétairemédical.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_AssistantSecrétairemédical.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Home\\tuitionfee.cshtml",
+      "TargetPath": "Views\\en_Home\\tuitionfee.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_BankingMicrofinance.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_BankingMicrofinance.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_MedicalDelegate.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_MedicalDelegate.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Youtube_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Youtube_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Student\\Question.cshtml",
+      "TargetPath": "Views\\en_Student\\Question.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Payment_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Payment_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_MinesandQuarryAgent.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_MinesandQuarryAgent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_PastryAgent.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_PastryAgent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Account\\AccessDenied.cshtml",
+      "TargetPath": "Views\\Account\\AccessDenied.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorBusinessAdministration.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorBusinessAdministration.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_GenieCivilEvaluationGestionDesResourcesHumaines.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_GenieCivilEvaluationGestionDesResourcesHumaines.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Other\\ShareFile.cshtml",
+      "TargetPath": "Views\\en_Other\\ShareFile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Account\\ResetPassword.cshtml",
+      "TargetPath": "Views\\Account\\ResetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Student\\Lecturer.cshtml",
+      "TargetPath": "Views\\Student\\Lecturer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Payment\\ProcessApplicationPayment.cshtml",
+      "TargetPath": "Views\\Payment\\ProcessApplicationPayment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_EntrepreneurshiporBusiness.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_EntrepreneurshiporBusiness.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Plombier.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Plombier.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_MBA.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_MBA.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Student\\Welcome.cshtml",
+      "TargetPath": "Views\\en_Student\\Welcome.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\BanquesMicroFinances.cshtml",
+      "TargetPath": "Views\\Programmes\\BanquesMicroFinances.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Agentpâtissier.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Agentpâtissier.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_BusinessIntelligenceInternationalDevelopment.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_BusinessIntelligenceInternationalDevelopment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_Carpentry.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_Carpentry.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Home\\Feedback.cshtml",
+      "TargetPath": "Views\\en_Home\\Feedback.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_InterpretationDeConferences.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_InterpretationDeConferences.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Three\\AdminStaffRegister.cshtml",
+      "TargetPath": "Views\\Administration_Three\\AdminStaffRegister.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Student\\Application.cshtml",
+      "TargetPath": "Views\\en_Student\\Application.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Account\\Search.cshtml",
+      "TargetPath": "Views\\Account\\Search.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Program_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Program_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Other\\Video.cshtml",
+      "TargetPath": "Views\\en_Other\\Video.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Student\\Payment.cshtml",
+      "TargetPath": "Views\\en_Student\\Payment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Documents.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Documents.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Two\\AdminRole.cshtml",
+      "TargetPath": "Views\\Administration_Two\\AdminRole.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_CatererServiceAgent.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_CatererServiceAgent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Two\\AdminStudentFeeToPay.cshtml",
+      "TargetPath": "Views\\Administration_Two\\AdminStudentFeeToPay.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_ExplosiveBlast.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_ExplosiveBlast.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Secrétaire.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Secrétaire.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_MarketingManagementInternational.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_MarketingManagementInternational.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_EducationSciences.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_EducationSciences.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_SciencesDeLeducation.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_SciencesDeLeducation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorEducationSciences.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorEducationSciences.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorCivilEngineeringBuildingConstructions.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorCivilEngineeringBuildingConstructions.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorTranslationInterpretation.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorTranslationInterpretation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Home\\studentexperience.cshtml",
+      "TargetPath": "Views\\en_Home\\studentexperience.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Home\\teachwithus.cshtml",
+      "TargetPath": "Views\\en_Home\\teachwithus.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Phd_InternationalRelations.cshtml",
+      "TargetPath": "Views\\Programmes\\Phd_InternationalRelations.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorPoliticalScienceInternationalRelations.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorPoliticalScienceInternationalRelations.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration\\Admin.cshtml",
+      "TargetPath": "Views\\Administration\\Admin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_AutoElectricity.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_AutoElectricity.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_AssistantSecrétairecomptable.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_AssistantSecrétairecomptable.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Mécanicienindustriel.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Mécanicienindustriel.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Foundation_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Foundation_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_ManagementDesTransportsAndDeLaLogistique.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_ManagementDesTransportsAndDeLaLogistique.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Student\\Program.cshtml",
+      "TargetPath": "Views\\Student\\Program.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_HrManagement.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_HrManagement.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_SantePublique.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_SantePublique.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Home\\tuitionfee.cshtml",
+      "TargetPath": "Views\\Home\\tuitionfee.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Account\\Apply.cshtml",
+      "TargetPath": "Views\\Account\\Apply.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Administrateur.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Administrateur.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Program.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Program.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_PaymentCodes.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_PaymentCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorFinanceAccounting.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorFinanceAccounting.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_ProfessionalDecoration.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_ProfessionalDecoration.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Application_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Application_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Mécanicienautomobile.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Mécanicienautomobile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Certificate.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Certificate.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Student\\Policy.cshtml",
+      "TargetPath": "Views\\en_Student\\Policy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_AssistantAgentdes.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_AssistantAgentdes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Staff.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Staff.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Agentforeur.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Agentforeur.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_ÉlectricienAgent.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_ÉlectricienAgent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_EvaluationGestionDeProjects.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_EvaluationGestionDeProjects.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Student\\Welcome.cshtml",
+      "TargetPath": "Views\\Student\\Welcome.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration\\AdminProgramme.cshtml",
+      "TargetPath": "Views\\Administration\\AdminProgramme.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_DrillingAgent.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_DrillingAgent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Student\\Payment.cshtml",
+      "TargetPath": "Views\\Student\\Payment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\MarketingGestionCommercial.cshtml",
+      "TargetPath": "Views\\Programmes\\MarketingGestionCommercial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Student\\Profile.cshtml",
+      "TargetPath": "Views\\en_Student\\Profile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Policy_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Policy_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Voc_FreightForwarder.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Voc_FreightForwarder.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_BusinessAdministration.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_BusinessAdministration.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Phd_Communications.cshtml",
+      "TargetPath": "Views\\Programmes\\Phd_Communications.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration\\AdminLecturer.cshtml",
+      "TargetPath": "Views\\Administration\\AdminLecturer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Déléguémédical.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Déléguémédical.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Enseignant.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Enseignant.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Results.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Results.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Other\\ShareFile.cshtml",
+      "TargetPath": "Views\\Other\\ShareFile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Two\\AdminProgramCalender.cshtml",
+      "TargetPath": "Views\\Administration_Two\\AdminProgramCalender.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\Msc_IngeneeringPeaceBuildingConflictManagement.cshtml",
+      "TargetPath": "Views\\en_Programmes\\Msc_IngeneeringPeaceBuildingConflictManagement.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Payments.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Payments.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Msc_GenieCivilIngeniereSystTelcomsReseaux.cshtml",
+      "TargetPath": "Views\\Programmes\\Msc_GenieCivilIngeniereSystTelcomsReseaux.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Student\\Application.cshtml",
+      "TargetPath": "Views\\Student\\Application.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Home\\about.cshtml",
+      "TargetPath": "Views\\en_Home\\about.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Documentation\\Question_Link.cshtml",
+      "TargetPath": "Views\\Documentation\\Question_Link.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Two\\AdminPaymentByPassCode.cshtml",
+      "TargetPath": "Views\\Administration_Two\\AdminPaymentByPassCode.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\GestionPilotageDeProjets.cshtml",
+      "TargetPath": "Views\\Programmes\\GestionPilotageDeProjets.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Shared\\_CookieConsentPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Calender.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Calender.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Payment\\OldStudentPaymentCancelUrl.cshtml",
+      "TargetPath": "Views\\en_Payment\\OldStudentPaymentCancelUrl.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration\\AdminApproval.cshtml",
+      "TargetPath": "Views\\Administration\\AdminApproval.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Payment\\OldStudentPaymentSuccessUrl.cshtml",
+      "TargetPath": "Views\\en_Payment\\OldStudentPaymentSuccessUrl.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Administration_Documentation\\Admin_Doc_Video.cshtml",
+      "TargetPath": "Views\\Administration_Documentation\\Admin_Doc_Video.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorCivilEngineeringMinesQuarries.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorCivilEngineeringMinesQuarries.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Student\\Profile.cshtml",
+      "TargetPath": "Views\\Student\\Profile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\Forma_Entreprenariat.cshtml",
+      "TargetPath": "Views\\Programmes\\Forma_Entreprenariat.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\en_Programmes\\BachelorCorporateCommunication.cshtml",
+      "TargetPath": "Views\\en_Programmes\\BachelorCorporateCommunication.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\pc\\Desktop\\Lehn\\Projects\\onlineschool\\Views\\Programmes\\GenieCivilMinesCarrieres.cshtml",
+      "TargetPath": "Views\\Programmes\\GenieCivilMinesCarrieres.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

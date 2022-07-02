@@ -1,0 +1,50 @@
+.page_wrapper{
+    width: 100%;
+}
+
+.page_wrapper .page_container{
+    width: 100%;
+}
+
+.page_container .payment_container .top{
+    width: 100%;
+    padding:  2% 0;
+    background-color: #e90172;
+    text-align: center;
+    color: #fff;
+}
+
+.page_container .payment_container .top .title{
+    font: normal normal bold 30px/1.2em "Arial";
+    margin-bottom: 10px;
+}
+
+.page_container .payment_container .top .description{
+    font: normal normal bold 18px/1.2em "Helvetica";
+    margin-bottom: 10px;
+}
+
+.page_container .payment_container .top .program_name{
+    font: normal normal bold 25px/1.2em "Arial";
+    margin-bottom: 10px;
+}
+
+.page_container .payment_container .bottom{
+    margin: 2% 10% 10% 10%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.page_container .payment_container .bottom .button{
+    padding: 10px 20px;
+    background-color: #e90172;
+    color: #fff;
+    font: normal normal normal 18px/1.2em "sans-serif";
+    display: inline-block;
+    margin-top: 30px;
+    transition: all .5s ease-in-out;
+}
+
+.page_container .payment_container .bottom .button:hover{
+    background-color: #9c2961;
+}

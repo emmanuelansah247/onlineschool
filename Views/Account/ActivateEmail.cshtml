@@ -1,0 +1,26 @@
+
+@{
+    ViewData["Title"] = "Activation Email | Bim-Edu ";
+    var Id = ViewData["Id"] as string;
+}
+
+
+<section class="page_wrapper">
+
+    @if(Id == null || Id == ""){
+    <div class="page_container">
+            <h1 class="heading"> Activation du compte requise </h1>
+            <p class="description"> Un e-mail de confirmation a été envoyé à votre compte. Veuillez cliquer sur le lien requis pour activer votre compte. </p>
+    </div>
+    }else{
+        <div class="page_container">
+                <h1 class="heading"> Compte activé </h1>
+                <p class="description"> Votre compte a été activé avec succès </p>
+        </div>
+    }
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/account/activateemail.css" />
+}

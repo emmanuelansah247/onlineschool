@@ -1,0 +1,173 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "How To Use Bim-Edu Payments Page | Admin ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use The PAYMENTS Page.
+                    Payments Are Mostly Fees.
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> ADD NEW PAYMENT FOR A STUDENT </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Payment Page.
+                        <a class="link" asp-controller="Administration_Two" asp-action="AdminStudentFeeToPay" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select The Student From The 'Student Name' Dropdown List
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Select The Payment Type From The 'Payment Type' Dropdown List
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Enter The Amount (Total Amount That Is Associated With This Payment) In The 'Amount' Section
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 5. </span>
+                    <span class="instruction"> 
+                        Enter The Amount Paid (Amount The Student Has Paid Concerning This Payment) In The 'Paid' Section
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 6. </span>
+                    <span class="instruction"> 
+                       Click On 'Add Payment' To Add The New Payment
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> UPDATE PAYMENT FOR A STUDENT </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Payment Page.
+                        <a class="link" asp-controller="Administration_Two" asp-action="AdminStudentFeeToPay" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select The Student From The 'Student Name' Dropdown List
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Click On 'View Payments To Pay' To List All The Payments For The Student
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Go To Any Of The Listed Payments
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Update The Necessary Information For A Specific Payment
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 5. </span>
+                    <span class="instruction"> 
+                       Click On 'Update' To Update The Specificied Payment
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> DELETE PAYMENT FOR A STUDENT </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Payment Page.
+                        <a class="link" asp-controller="Administration_Two" asp-action="AdminStudentFeeToPay" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select The Student From The 'Student Name' Dropdown List
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Click On 'View Payments To Pay' To List All The Payments For The Student
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Go To Any Of The Listed Payments
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Click On 'Delete' To Delete A Specific Payment
+                    </span>
+                </p>
+                
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_documentation/admin_docs.css" />
+}

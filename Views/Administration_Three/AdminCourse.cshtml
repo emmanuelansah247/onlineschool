@@ -1,0 +1,56 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Course | Bim-Edu ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+    courses = courses.OrderBy(p=> p.Name).ToList();
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+        <h1 class="page_title"> Course Page </h1>
+        <form class="form clear_float" enctype="multipart/form-data" asp-controller="Administration_Three" asp-method="POST">
+
+                    <div asp-validation-summary="All"></div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Name"> Name </label>
+                        <input class="input" asp-for="Name" name="Name"/>
+                        <span class="show_on_error" asp-validation-for="Name"></span>
+                    </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="AdminCourse" class="button cursor_pointer" value="Add Course"/>
+                    </div>
+        </form>
+
+        <section class="document_list_wrapper">
+            <div class="document_list_container">
+
+                @foreach(Course item in courses){
+                <figure class="item clear_float">
+                    <div class="left">
+                        <div class="title">
+                            @item.Name
+                        </div>
+                    </div>
+                    <div class="right">
+                        <form asp-controller="Administration_Three" asp-method="POST">
+                            <input type="hidden" name="CourseId" value="@item.CourseId"/>
+                            <input type="submit" asp-action="AdminCourseRemove"  class="button cursor_pointer" value="Delete"/>
+                        </form>
+                    </div>
+                </figure>
+                }
+
+            </div>
+        </section>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration/adminprogramdocument.css" />
+}

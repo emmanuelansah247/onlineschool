@@ -1,0 +1,106 @@
+
+@inject bim_edu.DataContect.Controllers.BimEduDataContext datacontext;
+@model bim_edu.Models.VideoViewModel;
+
+
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Video | Bim-Edu";
+    
+    Programme v_Program =ViewData["v_Program"] as Programme;
+    List<Video> v_Videos = ViewData["v_Videos"] as List<Video>;
+
+}
+
+
+<section class="page_wrapper clear_float">
+
+    <div class="page_container clear_float">
+
+        <h1 class="title"> Lecture Videos </h1>
+
+            <form class="main_form clear_float" asp-controller="Administration" asp-method="POST">
+
+                <div class="top_form clear_float">
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Programme.ProgrammeId"></label>
+                        <select class="input" type="text" id="ProgrammeId" name="Programme.ProgrammeId">
+                                    <option value=@v_Program.ProgrammeId > 
+                                        @v_Program.Name
+                                    </option>
+                        </select>
+                        <span class="show_on_error" asp-validation-for="Programme.ProgrammeId"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Url"> Url </label>
+                        <input class="input" type="text" name="Url"/>
+                        <span class="show_on_error" asp-validation-for="Url"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Title"> Title </label>
+                        <input class="input" type="text" name="Title"/>
+                        <span class="show_on_error" asp-validation-for="Title"></span>
+                    </div>
+
+                </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="AdminVideo" class="button cursor_pointer" value="Add Video"/>
+                    </div>
+
+            </form>
+
+            <section class="videos_wrapper">
+                <div class="videos_container">
+
+                        @for(int n=0;n<v_Videos.Count(); n++){
+                            var video = v_Videos[n];
+                            var video_url = @video.Url;
+
+                            <figure class="video">
+                            <form  asp-controller="Administration">
+                                <div class="video_container">
+                                    <iframe class="video_player"
+                                            width="100%" height="100%" 
+                                            src="@video_url" 
+                                            frameborder="0" 
+                                            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+
+                                <div class="input_wrapper hide_it">
+                                    <input class="input hide_it" type="text" name="VideoId" value="@video.VideoId"/>
+                                </div>
+                        
+                                <div class="input_wrapper">
+                                    <label class="label" asp-for="Url"> Url  </label>
+                                    <input class="input" type="text" name="Url" value="@video.Url"/>
+                                </div>
+                                
+                                <div class="input_wrapper">
+                                    <label class="label" asp-for="Title"> Title </label>
+                                    <input class="input" type="text" name="Title" value="@video.Title"/>
+                                </div>
+
+                                <div class="button_container">
+                                    <input type="submit" asp-action="UpdateVideo" asp-method="POST" class="button cursor_pointer" value="Update"/>
+                                    <input type="submit" asp-action="DeleteVideo" asp-method="POST" class="button cursor_pointer" value="Delete"/>
+                                </div>
+                            </form>
+                                
+                            </figure>
+                        }
+                </div>
+            </section>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration/adminvideo.css" />
+}

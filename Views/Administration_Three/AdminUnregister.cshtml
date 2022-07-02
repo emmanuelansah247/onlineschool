@@ -1,0 +1,47 @@
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Unregister Student/Staff | Bim-Edu ";
+    List<ApplicationUser> vUser = ViewData["vUser"] as List<ApplicationUser>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container">
+
+            <h2 class="page_title"> Remove Student/Staff </h2>
+
+            <form class="form" asp-controller="Administration_Three" asp-method="POST">
+
+                    <figure class="user_section">
+
+                        <div class="input_wrapper">
+                            <label class="label"> Student/Staff </label>
+                            <select class="input" name="StudentId">
+                                    @foreach (ApplicationUser item in vUser)
+                                    {
+                                        <option value="@item.Id"> 
+                                            @item.FirstName 
+                                            @item.LastName 
+                                            ( 
+                                                @item.Email 
+                                            )
+                                        </option>
+                                    }
+                            </select>
+                        </div>
+
+                        <div class="button_container">
+                            <input type="submit" asp-action="AdminUnregsiterStudent" class="button" value="Remove User"/>
+                        </div>
+
+                    </figure>
+
+            </form>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_three/adminunregister.css" />
+}

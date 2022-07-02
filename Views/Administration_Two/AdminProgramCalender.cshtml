@@ -1,0 +1,73 @@
+@model bim_edu.Models.ProgramCalenderViewModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Program Calender | Bim-Edu ";
+    Programme v_Program = ViewData["v_Program"] as Programme;
+    string programId = ViewData["ProgramId"] as string;
+    ProgramCalender programcalender = v_Program.ProgramCalender;
+    
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container">
+        <h1 class="page_title" Id="page_title"> Program Calender Uploading Page </h1>
+        <form class="form clear_float" enctype="multipart/form-data" asp-controller="Administration_Two" asp-method="POST">
+                    
+                    <div class="input_wrapper">
+                        <label class="label"> Program </label>
+                        <select class="input" id="ProgramId" type="text" name="ProgramId">
+                                <option 
+                                    value=@v_Program.ProgrammeId 
+                                    certificatename=@v_Program.Certification.Name > 
+                                        @v_Program.Name
+                                </option>
+                        </select>
+                        <span class="show_on_error" asp-validation-for="ProgramId"></span>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="IFormFile"> Upload Calender </label>
+                        <input class="input" asp-for="IFormFile" name="IFormFile">
+                        <span class="show_on_error" asp-validation-for="IFormFile"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Description"> Title </label>
+                        <input class="input" type="text" name="Description">
+                        <span class="show_on_error" asp-validation-for="Description"></span>
+                    </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="AdminProgramCalender" class="button cursor_pointer"  value="Add Calender"/>
+                    </div>
+        </form>
+
+        <section class="document_list_wrapper">
+            <div class="document_list_container clear_float">
+
+                @if(programcalender != null){
+                <figure class="item clear_float">
+                    <div class="left">
+                        <div class="title">
+                            @programcalender.Description
+                        </div>
+                    </div>
+                    <div class="right">
+                            @if(programcalender.PathToCalender != null){
+                            <a href="~/@GeneralStoredNames.Program_Calender_Path/@programcalender.PathToCalender" target="_blank" class="button cursor_pointer"> View </a>
+                            }
+                    </div>
+                </figure>
+                }
+
+            </div>
+        </section>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration/adminprogramdocument.css" />
+}

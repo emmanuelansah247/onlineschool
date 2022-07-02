@@ -1,0 +1,134 @@
+@model bim_edu.Models.UpdateRegisterViewModel
+
+
+@{
+    Layout = "~/Views/Shared/_en_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Student Profile | Bim-Edu";
+    List<string> _countries = CountryList.Countries();
+    ApplicationUser _user =  ViewData[GeneralStoredNames.Bim_Edu_Application_User] as ApplicationUser;
+    List<string> _levelofeducation = EducationLevels.Levels();
+}
+
+
+<section class="page_wrapper clear_float">
+
+    <div class="page_container clear_float">
+
+
+            <form class="form" enctype="multipart/form-data" asp-controller="en_Student" asp-method="POST">
+
+                    <div asp-validation-summary="All"></div>
+
+                    <div class="one_sided_wrapper clear_float">
+
+                        <figure class="one_sided">
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="Id" > Student Id </label>
+                                <input readonly class="input" type="text" name="Id" value="@_user.Id" />
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="FirstName" > First Name </label>
+                                <input class="input" type="text" id="FirstName" name="FirstName" value="@_user.FirstName"/>
+                                <span class="show_on_error" asp-validation-for="FirstName"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="LastName"> Last Name </label>
+                                <input class="input" type="text" id="LastName" name="LastName" value="@_user.LastName"/>
+                                <span class="show_on_error" asp-validation-for="LastName"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="PhoneNumber"> Phone </label>
+                                <input class="input" type="text" id="PhoneNumber" name="PhoneNumber" value="@_user.PhoneNumber"/>
+                                <span class="show_on_error" asp-validation-for="PhoneNumber"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="Country"> Country </label>
+                                <select class="input" type="text" id="Country" name="Country">
+                                        @foreach (string item in _countries)
+                                        {
+                                            if(item.ToLower() == _user.Country.ToLower()){
+                                                 <option selected value="@item"> @item </option>
+                                            }else{
+                                                 <option value="@item"> @item </option>
+                                            }
+                                        }
+                                </select>
+                                <span class="show_on_error" asp-validation-for="Country"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="PostalAddress"> Postal Address </label>
+                                <input class="input" type="text" id="PostalAddress" name="PostalAddress" value="@_user.PostalAddress"/>
+                                <span class="show_on_error" asp-validation-for="PostalAddress"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="LevelOfEducation"> Level Of Education </label>
+                                <select class="input" type="text" id="LevelOfEducation" name="LevelOfEducation">
+                                        @foreach (string item in _levelofeducation)
+                                        {
+                                            if(item.ToLower() == _user.LevelOfEducation.ToLower()){
+                                                 <option selected value="@item"> @item </option>
+                                            }else{
+                                                 <option value="@item"> @item </option>
+                                            }
+                                        }
+                                </select>
+                                <span class="show_on_error" asp-validation-for="LevelOfEducation"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="Email"></label>
+                                <input class="input" type="email" id="Email" value="@_user.Email" name="Email"/>
+                                <span class="show_on_error" asp-validation-for="Email"></span>
+                            </div>
+
+                        </figure>
+
+                        <figure class="one_sided">
+
+                            <div class="input_wrapper profile_photo_container">
+                                @if(_user.photofilepath != null){
+                                    <img class="profile_photo" id="profile_photo" src="~/images/profilephotos/@_user.photofilepath" alt="Profile Photo"/>
+                                }else{
+                                    <img class="profile_photo" id="profile_photo" src="~/images/Icons/user.svg" alt="Profile Photo"/>
+                                }
+                                <label class="label cursor_pointer" for="IFormFile"> Upload Profile Photo </label>
+                                <input asp-for="IFormFile" class="hide_it"  id="IFormFile" name="IFormFile"/>
+                                <span class="show_on_error" asp-validation-for="IFormFile"></span>
+                            </div>
+
+                        </figure>
+
+                    </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="ProfileUpdate" id="update" class="button" value="UPDATE"/>
+                    </div>
+
+            </form>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/account/register.css" />
+    <script>
+        var IFormFile = document.getElementById('IFormFile');
+        var profile_photo = document.getElementById('profile_photo');
+            IFormFile.onchange = function(event){
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        var dataURL = reader.result;
+                        profile_photo.src = dataURL;
+                    };
+                reader.readAsDataURL(IFormFile.files[0]);
+            }
+        
+    </script>
+}

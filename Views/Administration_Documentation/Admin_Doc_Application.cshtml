@@ -1,0 +1,128 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "How To Use Bim-Edu Application Page | Admin ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use The APPLICATION Page. 
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> VIEW APPLICATION FILES </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Application Page.
+                        <a class="link" asp-controller="Administration" asp-action="AdminApproval" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        All The Applications Will Be Shown( Application Shown Here Are Those That Have Been Applied Through The Bim-Edu Website ).
+                        Go To Your Desire Application
+                        
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On View Files (All Files With The Specific Application Will Be Shown)
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Click On View Any File From The Available Files To View It Content
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> APPROVE APPLICATION </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Application Page.
+                        <a class="link" asp-controller="Administration" asp-action="AdminApproval" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        All The Application Will Be Shown( Application Shown Here Are Those That Have Been Applied Through The Bim-Edu Website ).
+                        Go To Your Desire Application
+                        
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On 'Approve' To Approve An Application
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+        <figure class="item">
+            <h2 class="heading"> REJECT APPLICATION </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Application Page.
+                        <a class="link" asp-controller="Administration" asp-action="AdminApproval" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        All The Application Will Be Shown( Application Shown Here Are Those That Have Been Applied Through The Bim-Edu Website ).
+                        Go To Your Desire Application
+                        
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On 'Reject' To Reject An Application 
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_documentation/admin_docs.css" />
+}

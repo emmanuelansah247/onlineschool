@@ -1,0 +1,38 @@
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = " Bim-Edu Cashier Course";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="en_Account" asp-action="Register" class="apply_button"> APPLY </a>
+        </div>
+
+        <h1 class="main_heading"> Vocational Training  </h1>
+        <h2 class="sub_main_heading"> Available at the Center of Excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Cashier </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    The Cashier Training Program is a 40 to 100 hour course emphasizing training as a cashier/checker.  This training is 
+                    designed to include classroom, hands-on instruction, and real-time practicum experience. Students will be trained in a 
+                    work related setting/environment that will put into practice the skills and knowledge they acquire.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

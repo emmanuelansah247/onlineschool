@@ -1,0 +1,167 @@
+.page_wrapper{
+    width: 100%;
+}
+
+.page_wrapper .page_container{
+    margin: 5% 20%;
+}
+
+/* 
+begin success container 
+*/
+.page_container .status_container{
+    padding: 5% 0%;
+    background-color: #e90172;
+    color: #fff;
+    margin-bottom: 20%;
+    margin-top: 20px;
+}
+
+.page_container .status_container .heading{
+    font: normal normal bold 30px/1.2em "Arial";
+    text-align: center;
+}
+
+.page_container .status_container .description{
+    font: normal normal normal 18px/1.2em "Helvetica";
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* end success container */
+
+
+.page_container .form{
+    width: 100%;
+    background-color: #e90172;
+    box-sizing: border-box;
+    padding: 5% 5%;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+
+.page_container .form.unactive{
+    height: 0px;
+    width: 0%;
+    overflow: hidden;
+    padding: 0% 5%;
+    transition: all .5s ease-in-out;
+}
+
+.page_container .form .input_wrapper{
+    margin-top: 15px;
+}
+
+.page_container .input_wrapper .label{
+    display: block;
+    margin-bottom: 3px;
+    color: #fff;
+    font: normal normal bold 14px/1.2em "Arial";
+}
+
+.page_container .input_wrapper .input{
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font: normal normal bold 16px/1.2em "Georgia";
+}
+
+.page_container .button_container{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page_container .button_container .button{
+    padding: 10px 20px;
+    font: normal normal normal 17px/1.2em "Helvetica";
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.page_container .button_container .button:hover{
+    background-color: #ddd;
+}
+
+/* 
+begin program summary 
+*/
+
+.programme_summary_wrapper{
+    width: 0%;
+    height: 0px;
+    visibility: hidden;
+}
+
+.programme_summary_wrapper.active{
+    width: 100%;
+    margin-top: 0%;
+    height: auto;
+    visibility: visible;
+    transition: all .5s ease-in-out;
+}
+
+.programme_summary_wrapper .programme_summary_container{
+    width: 100%;
+}
+
+.programme_summary_container .programme_button_container{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.programme_summary_container .programme_button_container .button{
+    float: right;
+    background-color: #4b345d;
+    color: #fff;
+    padding: 10px 20px;
+    font: normal normal normal 17px/1.2em "Helvetica";
+    cursor: pointer;
+}
+
+.programme_summary_container .programme_button_container.active .button{
+    transition: all .5s ease-in-out;
+}
+
+.programme_summary_container .programme_button_container .button:hover{
+    background-color: #8923d6;
+}
+
+.programme_summary_container .programme_summary_heading{
+    font: normal normal normal 25px/1.2em "Arial";
+    font-weight: normal;
+    margin: 50px 0px;
+    text-align: center;
+}
+
+.programme_summary_container .image_container{
+    height: 200px;
+    background: url(../../../images/tuitionfree/tuitionfree.jpg) no-repeat center center /cover;
+    position: relative;
+    text-align: center;
+}
+
+.programme_summary_container .image_container .text_container{
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #e90172;
+    color: #fff;
+    display: inline-block;
+    padding: 15px 15px;
+    font: normal normal bold 17px/1.2em "Arial";
+}
+
+.programme_summary_container .description_container{
+    margin-top: 50px;
+    font: normal normal normal 20px/1.4em "Helvetica";
+}
+
+
+/* 
+end program summary 
+*/

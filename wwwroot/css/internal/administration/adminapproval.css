@@ -1,0 +1,89 @@
+.admin_page_wrapper{
+    width: 100%;
+}
+
+.admin_page_wrapper .admin_page_container{
+    width: 100%;
+    background-color: #ddd;
+    padding-bottom: 10%;
+}
+
+.admin_page_container .admin_page_title{
+    font: normal normal bold 18px/1.2em "Arial";
+    background-color: #e90172;
+    background-color: #4b345d;
+    padding: 10px 0px;
+    text-align: center;
+    color: #fff;
+}
+
+.admin_page_wrapper .applications_wrapper{
+    width: 100%;
+}
+
+.applications_wrapper .applications_container{
+    margin: 5% 20%;
+    box-sizing: border-box;
+}
+
+/* 
+begin application  
+*/
+
+.admin_page_container .application{
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0px;
+    margin: 20px 0px;
+}
+
+.admin_page_container .application .user_name_and_program_name{
+    text-align: center;
+    font:  normal normal normal 17px/1.2em "sans-serif";
+}
+
+.application .user_name_and_program_name .program_name{
+    font-weight: bold;
+}
+
+.admin_page_container .application .button_container{
+    width: 100%;
+    text-align: center;
+}
+
+.button_container .button{
+    display: inline-block;
+    margin: 10px 10px;
+    background-color: #4e4e4e;
+    color: #fff;
+    padding: 10px 10px;
+    font:  normal normal bold 14px/1.2em "Georgia";
+    letter-spacing: 2px;
+}
+
+    /* begin files display div */
+
+.files_displayed_container{
+    max-height: 0px;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.files_displayed_container .file{
+    display: block;
+    margin: 10px 0px;
+    background-color: #e90172;
+    color: #fff;
+    padding: 15px 15px;
+}
+
+
+    /* end files display div */
+
+
+/*
+ end applicaiton  
+*/

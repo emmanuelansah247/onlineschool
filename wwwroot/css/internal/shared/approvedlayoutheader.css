@@ -1,0 +1,238 @@
+
+.header{
+    height: 70px;
+    background-color: #f2f1e4;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 2% 2%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.header .menu_name_wrapper{
+    height: 100%;
+    float: left;
+}
+
+.header .menu_name_wrapper .menu_name_container{
+    height: 100%;
+    margin-right: 10px;
+    position: relative;
+    width: 50px;
+}
+
+.header .menu_name_wrapper .menu_name_container .menu_name{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    font: normal normal bold 17px/1.2em "Arial";
+}
+
+
+.header .left_side_wrapper{
+    height: 100%;
+    float: left;
+}
+
+.header .left_side_wrapper .left_side_container{
+    height: 100%;
+}
+
+.header .left_side_wrapper .caret_wrapper{
+    float: left;
+    height: 100%;
+    margin-right: 10px;
+    position: relative;
+    width: 50px;
+}
+
+.header .left_side_wrapper .caret_wrapper .caret_container{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+.header .left_side_container .caret_container .divider{
+    height: 2px;
+    background-color: #000;
+    width: 35px;
+    margin-bottom: 5px;
+}
+
+.header .left_side_wrapper .company_logo_container{
+    height: 100%;
+    position: relative;
+    float: left;
+    width: 100px;
+}
+
+.header .left_side_wrapper .company_logo_container .company_logo{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+.header .left_side_wrapper .company_logo_container .company_logo img{
+    height: 50px;
+}
+
+/* 
+begin right side 
+*/
+.header .right_side_wrapper{
+    height: 100%;
+    float: right;
+    box-sizing: border-box;
+}
+
+.header .right_side_wrapper .right_side_container{
+    height: 100%;
+    position: relative;
+}
+
+.header .right_side_container .logout_image_container{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-5%,-50%);
+}
+
+.header .logout_image_container .logout_image{
+    height: 100%;
+    position: relative;
+}
+
+.header .logout_image_container .logout_image img{
+    height: 50px;
+    width: auto;
+}
+
+.header .username_and_logout_link{
+    position: absolute;
+    top: 100%;
+    right: 0.5%;
+    transform: translate(0.5%,0%);
+    background-color: #000;
+    width: auto;
+    height: 0px;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    text-align: center;
+}
+
+.header .logout_image.active .username_and_logout_link{
+    height: 50px;
+    padding: 10px 10px;
+    transition: height .5s ease-in-out;
+}
+
+
+.header .username_and_logout_link .username{
+    font: normal normal normal 14px/1.2em "Helvetica";
+    color: #ddd;
+    margin-bottom: 10px;
+    cursor: default;
+}
+.header .username_and_logout_link .logout_link a{
+    font: normal normal normal 14px/1.2em "Helvetica";
+    color: #fff;
+}
+
+/* 
+end right side 
+*/
+
+
+/* 
+begin side bar 
+*/
+.side_bar_wrapper{
+    position: fixed;
+    left: 0;
+    width: 0px;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #4b345d;
+    top: 0;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.side_bar_wrapper.active{
+    position: fixed;
+    left: 0;
+    width: 200px;
+    padding: 30px 5px 0 15px;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #4b345d;
+    top: 0;
+    z-index: 1000;
+    transition: all .5s ease-in-out;
+    box-shadow: 1px 2px 2px 3px #f2f1e4;
+}
+
+.side_bar_wrapper .side_bar_container{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.side_bar_container .close_arrow{
+    width: 90%;
+    margin: 5%;
+}
+
+.side_bar_container .close_arrow .arrow{
+    width: 20px;
+    height: 30px;
+    position: relative;
+}
+
+.side_bar_container .close_arrow .arrow::after{
+    content: "";
+    position: absolute;
+    right: 18px;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+    transform: rotate(-40deg);
+}
+
+.side_bar_container .close_arrow .arrow::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+    transform: rotate(40deg);
+}
+
+.side_bar_container .close_arrow .arrow{
+    float: right;
+}
+
+.side_bar_container .link_items{
+    margin-top: 30px;
+}
+
+.side_bar_container .link_items .link{
+    list-style-type: none;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+}
+
+.side_bar_container .link_items .link a{
+    color: #fff;
+    font: normal normal normal 15px/1.2em "Arial";
+}
+
+
+/* 
+end side bar 
+*/

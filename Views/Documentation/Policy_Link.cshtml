@@ -1,0 +1,60 @@
+@model bim_edu.Models.Course;
+@{
+    ViewData["Title"] = "How To Use BIM-EDU Student Portal POLICY Page";
+}
+
+
+<section class="documentation_page_wrapper">
+
+    <div class="documentation_menu">
+        <a asp-controller="Documentation" asp-action="Menu"> Documentation Menu </a>
+    </div>
+
+    <div class="documentation_page_container clear_float">
+
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use BIM-EDU Student Portal POLICY Page. 
+                    This sections contains documents that can be read. 
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> READING A POLICY </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the POLICY Page.
+                        <a class="link" asp-controller="en_Student" asp-action="Policy" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        Go To Any Policy You Want To Read
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On It. The Document Will Open In A New Tab.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/documentation/documentation.css" />
+}

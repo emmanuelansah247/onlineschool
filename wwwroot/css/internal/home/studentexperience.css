@@ -1,0 +1,77 @@
+.experience_wrapper{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.experience_wrapper .experience_container{
+    width: 100%;
+}
+
+.experience_container .experience{
+    height: 500px;
+    background-color: #e90172;
+    position: relative;
+    margin: 5%;
+    z-index: -1;
+}
+
+.experience_container .experience .overlay{
+    height: 100%;
+    width: 100%;
+    padding: 10% 20%;
+    box-sizing: border-box;
+}
+
+.experience_container .overlay .description{
+    font: normal normal bold 30px/1.2em "Georgia";
+    color: #fff;
+}
+
+.experience_container .overlay .image_container{
+    margin-top: 30px;
+}
+
+.experience_container .overlay .image_container .student_name{
+    font: italic normal bold 20px/1.2em "Georgia";
+    color: #fff;
+}
+
+
+.experience_container .overlay .image_container img{
+    width: auto;
+    height: 100px;
+}
+
+
+
+@media screen and (max-width:768px){
+
+    .experience_container .experience{
+        height: auto;
+        position: static;
+        margin: 20% 5%;
+    }
+
+    .experience_container .experience .overlay{
+        padding: 10% 5%;
+    }
+    .experience_container .overlay .description{
+        font-size: 16px;
+    }
+
+    .experience_container .overlay .image_container{
+        position: static;
+        margin-top: 20px;
+        transform: none;
+    }
+
+    .experience_container .overlay .image_container .student_name{
+        font-size: 14px;
+    }
+
+    .experience_container .overlay .image_container img{
+        width: auto;
+        height: 80px;
+    }
+
+}

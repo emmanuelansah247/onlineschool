@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Bim-Edu Enseignant du préscolaire";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="Account" asp-action="Register" class="apply_button"> CANDIDATURE </a>
+        </div>
+
+        <h1 class="main_heading"> PROGRAMMES DE FORMATION PROFESSIONNELLE DE BIM-EDU  </h1>
+        <h2 class="sub_main_heading"> Les programmes de formation professionnelle disponibles au Centre d'excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Enseignant du préscolaire </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    Un enseignant préscolaire, également appelé enseignant pré-maternelle (pré-maternelle), fournit 
+                    l'éducation, les soins et l'éducation dans un cadre scolaire pour les enfants qui ne sont pas encore 
+                    assez vieux pour entrer à la maternelle. Ils travaillent dans des écoles publiques ou privées et pour 
+                    des institutions religieuses ainsi que dans des programmes similaires axés sur les enfants mal desservis. 
+                    Ce cours forme des agents qui pourraient créer leur propre entreprise après avoir atteint un bon niveau 
+                    d'expérience dans l'industrie.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

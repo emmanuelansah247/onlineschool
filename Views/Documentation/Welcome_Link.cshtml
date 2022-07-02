@@ -1,0 +1,103 @@
+@model bim_edu.Models.Course;
+@{
+    ViewData["Title"] = "How To Use BIM-EDU Student Portal WELCOME Page";
+}
+
+
+<section class="documentation_page_wrapper">
+
+    <div class="documentation_menu">
+        <a asp-controller="Documentation" asp-action="Menu"> Documentation Menu </a>
+    </div>
+
+    <div class="documentation_page_container clear_float">
+
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use BIM-EDU Student Portal WELCOME Page.
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> SET ACTIVE PROGRAM OR SET PROGRAM IN CONTEXT FOR THE DASHBOARD </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Welcome Page.
+                        <a class="link" asp-controller="en_Student" asp-action="Welcome" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">  
+                        Look At The Top Of The Page. You Will See A Label Name 'Active Program'.                      
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction">  
+                        Select The Program You Want To Make Active (This Is When You Are Doing 2 or More Programs).
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction">  
+                        Click On 'Make Active'. This Is Located Directly Beside The Program.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> SET ACTIVE COURSE OR SET COURSE IN CONTEXT FOR THE DASHBOARD </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Welcome Page.
+                        <a class="link" asp-controller="en_Student" asp-action="Welcome" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">  
+                        Look At The Top Of The Page. You Will See A Label Name 'Active Course'.                      
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction">  
+                        Select The Course You Want To Make Active.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction">  
+                        Click On 'Make Active'. This Is Located Directly Beside The Course.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/documentation/documentation.css" />
+}

@@ -1,0 +1,42 @@
+
+@{
+    Layout = "~/Views/Shared/_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Student Results | Bim-Edu ";
+    List<ProgramDocument> programdocuments = ViewData["programdocuments"] as List<ProgramDocument>;
+    
+}
+
+
+<section class="approved_page_wrapper">
+
+    <div class="approved_page_container">
+
+        <h1 class="welcome_title"> Documents téléchargeables </h1>
+
+
+        <section class="document_list_wrapper">
+            <div class="document_list_container clear_float">
+
+                @foreach(ProgramDocument programdocument in programdocuments){
+                <figure class="item clear_float">
+                    <div class="left">
+                        <div class="title">
+                            @programdocument.Description
+                        </div>
+                    </div>
+                    <div class="right">
+                            <a href="~/@GeneralStoredNames.Program_Document_Directory/@programdocument.FilePath" target="_blank"  class="button"> View </a>
+                    </div>
+                </figure>
+                }
+
+            </div>
+        </section>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/student/programdocument.css" />
+}

@@ -1,0 +1,100 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "How To Use Bim-Edu Documents Page | Admin ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use The DOCUMENTS Page.
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> ADD A DOCUMENT/FILE FOR A PROGRAM </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Document Page.
+                        <a class="link" asp-controller="Administration" asp-action="AdminProgramDocument" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select The Program To Add The Document From The 'Program' Dropdown List
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On 'Choose File' To Upload The Document
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Enter The Title/Name For The Document In 'Title' Section
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 5. </span>
+                    <span class="instruction"> 
+                        Click On 'Add Docuemt' To Save The Document For The Program
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> VIEW DOCUMENTS FOR A PROGRAM </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the Document Page.
+                        <a class="link" asp-controller="Administration" asp-action="AdminProgramDocument" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select The Program From The 'Program' Dropdown List
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On 'View Documents' To List All Documents For A Program
+                    </span>
+                </p>
+                
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_documentation/admin_docs.css" />
+}

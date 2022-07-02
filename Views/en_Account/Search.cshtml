@@ -1,0 +1,54 @@
+@model bim_edu.Models.LoginViewModel
+
+
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = "Login | Bim-Edu";
+    List<SearchViewModel> result = ViewData["Vresult"] as List<SearchViewModel>;
+}
+
+
+<section class="entity_page clear_float">
+
+    <div class="entity_page_container clear_float">
+
+        @if(result.Count() < 1){
+
+            <figure class="item">
+                <h3>
+                    <a class="title">
+                       SORRY! NO RESULTS FOUND
+                     </a> 
+                </h3>
+                <p class="description">
+                    Try using shorter and fewer words during search
+                </p>
+
+            </figure>
+
+        }
+
+        @foreach(SearchViewModel item in result){
+            <figure class="item">
+                <h3>
+                    <a class="title" asp-controller="@item.Controller" asp-action="@item.Action" target="_blank">
+                       @item.Title
+                     </a> 
+                </h3>
+                <h5 class="subtitle"> Bim-Edu School Programs > 
+                     @item.Action 
+                </h5>
+                <p class="description">
+                     @item.Desscription
+                </p>
+
+            </figure>
+        }
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/account/search.css" />
+}

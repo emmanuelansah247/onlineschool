@@ -1,0 +1,40 @@
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = " Bim-Edu Industrial Automation Courses";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="en_Account" asp-action="Register" class="apply_button"> APPLY </a>
+        </div>
+
+        <h1 class="main_heading"> Vocational Training  </h1>
+        <h2 class="sub_main_heading"> Available at the Center of Excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Industrial Automation </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    Industrial automation is the use of control systems, such as computers or robots, and information 
+                    technologies for handling different processes and machineries in an industry to replace a human being. 
+                    It is the second step beyond mechanization in the scope of industrialization. This course trains Assistants 
+                    that could set up their own business after achieving a good level of experience in the industry or  they may 
+                    choose to work under supervision of Engineers.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

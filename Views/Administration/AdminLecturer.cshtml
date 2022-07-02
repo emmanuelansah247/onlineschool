@@ -1,0 +1,59 @@
+@model bim_edu.Models.Lecturer
+
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Lecturer | Bim - Edu";
+    List<ApplicationUser> _staffs = ViewData["vUserStaffs"] as List<ApplicationUser>;
+}
+
+
+<section class="page_wrapper clear_float">
+
+    <div class="page_container clear_float">
+        <h1 class="page_title"> Admin Lecturer </h1>
+
+
+            <form class="form" asp-controller="Administration" asp-method="POST">
+
+                   
+                    <div class="ValidationError" asp-validation-summary="All"></div>
+                    
+                    <div class="input_wrapper">
+
+                            <label class="label"> Stafff </label>
+                            <select class="input" name="ApplicationUserId">
+                                        @foreach(ApplicationUser item in _staffs){
+                                                <option value=@item.Id > 
+                                                    @item.FirstName 
+                                                    @item.LastName
+                                                </option>
+                                        }
+                            </select>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label"> Qualifications </label>
+                        <textarea rows="3" class="input" type="text" name="Qualifications"></textarea>
+                        <span class="show_on_error" asp-validation-for="Qualifications"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" > More Biography </label>
+                        <textarea rows="10" class="input" type="text" name="MoreBiography"></textarea>
+                        <span class="show_on_error" asp-validation-for="MoreBiography"></span>
+                    </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="AdminLecturer" class="button" value="Add Lecturer"/>
+                    </div>
+
+            </form>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration/adminsimpleform.css" />
+}

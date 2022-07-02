@@ -1,0 +1,174 @@
+/* 
+begin intro image 
+*/
+
+.intro_image_wrapper{
+    width: 100%;
+}
+
+.intro_image_wrapper .intro_image_container{
+    height: 300px;
+    position: relative;
+    background: url(../../../images/tuitionfree/tuitionfree.jpg) no-repeat center center /cover;
+    z-index: -1;
+}
+
+.intro_image_container .text_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text_container .heading{
+    font: normal normal bold 20px/1.2em "sans-serif";
+    color: #fff;
+    background-color: #e90172;
+    padding: 10px 10px;
+}
+
+@media screen and (max-width:768px){
+
+    .intro_image_container .text_container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    
+    .text_container .heading{
+        font: normal normal bold 17px/1.2em "sans-serif";
+        color: #fff;
+        background-color: #e90172;
+        padding: 10px 10px;
+        width: 250px;
+    }
+}
+
+/* 
+end intro image 
+*/
+
+/* 
+begin teach_with_us  
+*/
+
+.teach_with_us_wrapper{
+    width: 100%;
+}
+
+.teach_with_us_wrapper .teach_with_us_container{
+    padding: 5% 20%;
+}
+
+.teach_with_us_container .make_it_stand_out{
+    margin: 4% 0%;
+}
+
+.teach_with_us_container .make_it_stand_out .big_heading{
+    font: normal normal bold 30px/1.2em "sans-serif";
+    margin: 15px 0px;
+    color: #2d1938;
+}
+
+.teach_with_us_container .make_it_stand_out .small_heading{
+    font: normal normal bold 22px/1.2em "Arial";
+    letter-spacing: 1px;
+    color: #2d1938;
+    margin: 10px 0px;
+}
+
+.teach_with_us_container .make_it_stand_out .description{
+    font: normal normal normal 18px/1.7em "Helvetica";
+}
+
+@media screen and (max-width:768px){
+    .teach_with_us_wrapper{
+        width: 100%;
+    }
+    
+    .teach_with_us_wrapper .teach_with_us_container{
+        padding: 5% 5%;
+    }
+    
+    .teach_with_us_container .make_it_stand_out{
+        margin: 20% 0%;
+    }
+    
+    .teach_with_us_container .make_it_stand_out .big_heading{
+        font-size: 18px;
+    }
+    
+    .teach_with_us_container .make_it_stand_out .small_heading{
+        font-size: 16px;
+    }
+    
+    .teach_with_us_container .make_it_stand_out .description{
+        font-size: 14px;
+    }
+}
+
+/* 
+end teach_with_us  
+*/
+
+
+/* 
+begin form 
+*/
+
+.make_it_stand_out .form{
+    background-color: #e90172;
+    padding: 5% 5%;
+    box-sizing: border-box;
+}
+
+.form .applicaton_success{
+    font: normal normal bold 17px/1.2em "Arial";
+    color: #fff;
+}
+
+.form .input_wrapper{
+    margin: 20px 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form .input_wrapper .label{
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font: normal normal bold 14px/1.2em "Arial";
+}
+
+.form .input_wrapper .input{
+    width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    font: normal normal normal 14px/1.2em "Helvetica";
+}
+
+.form .input_wrapper .show_on_error{
+    display: block;
+}
+
+.form .button_container{
+    margin: 15px 0px;
+}
+
+.form .button_container .button{
+    float: right;
+    padding: 10px 20px;
+    background-color: #2d1938;
+    color: #fff;
+    font: normal normal bold 16px/1.2em "Georgia";
+    letter-spacing: 2px;
+}
+
+
+
+/* 
+end form 
+*/

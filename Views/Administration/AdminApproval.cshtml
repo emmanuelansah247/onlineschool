@@ -1,0 +1,81 @@
+@model bim_edu.Models.ProgramDocumentViewModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Application Approval Action | Bim-Edu ";
+    List<ApplicationUser> _applicationusers = ViewData["applicationusers"] as List<ApplicationUser>;
+    
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container">
+
+        <h1 class="admin_page_title" > Student Application Approval Action </h1>
+
+        <div class="applications_wrapper">
+            <div class="applications_container">
+                
+           @foreach(ApplicationUser appuser in _applicationusers){
+               @foreach(ProgrammeApplication progapp in appuser.ProgrammeApplications){
+                   @if(progapp.isApproved == false && progapp.isRejected == false){
+
+                <figure class="application">
+                        <div class="user_name_and_program_name">
+                            @appuser.FirstName  @appuser.LastName - 
+                            <span class="program_name"> 
+                                @progapp.Programme.Name 
+                            </span> 
+                        </div>
+                        <form asp-controller="Administration" asp-method="POST">
+                            <div class="button_container clear_float">
+                                <a class="button cursor_pointer viewfiles"> View Files </a>
+                                <input type="hidden" name="PorgramApplicationId"  value=@progapp.ProgrammeApplicationId />
+                                <input type="hidden" name="ApplicationUserId"  value=@appuser.Id />
+                                <input type="submit" class="button cursor_pointer" asp-action="ApprovalReject"  value="Reject"/>
+                                <input type="submit" class="button cursor_pointer" asp-method="POST" asp-action="ApprovalAccept"  value="Accept"/>
+                            </div>
+
+                            <div class="files_displayed_container">
+
+                            @foreach(UploadedDocument progdoc in progapp.UploadedDocuments){
+                                <a class="file" href="~/images/uploadeddocuments/@progdoc.FilePath" target="_blank"> @progdoc.Description </a>
+                             }
+                                
+                            </div>
+                        </form>
+                </figure>
+                   }
+                }
+               }
+
+            </div>
+        </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration/adminapproval.css" />
+
+    <script>
+        var viewfiles = document.getElementsByClassName('viewfiles');
+        for(counter=0;counter<viewfiles.length;counter++){
+            var viewfile = viewfiles[counter];
+            viewfile.onclick = function(e){
+                var sliding_div = e.target.parentElement.nextElementSibling;
+                var height = sliding_div.scrollHeight;
+                if(sliding_div.classList.contains("active")){
+                    sliding_div.classList.remove('active');
+                    for(var n=height;n>0;n--){
+                        sliding_div.style.maxHeight = n + "px";
+                    }
+                }else{
+                    sliding_div.classList.add('active');
+                    for(var n=0;n<height;n++){
+                        sliding_div.style.maxHeight = n + "px";
+                    }
+                }
+            }
+        }
+    </script>
+}

@@ -1,0 +1,243 @@
+@inject SignInManager<ApplicationUser> signInManager;
+@model bim_edu.Models.ApplyPaymentByPassCodeViewModel;
+@inject UserManager<ApplicationUser> userManager;
+@using System.Security.Claims;
+@{
+    ViewData["Title"] = "Apply | Bim-Edu ";
+    var certifications = TempData["certifications"] as List<Certification>;
+    var programmes = TempData["programmes"] as List<Programme>;
+}
+
+
+<section class="page_wrapper">
+
+    <div class="page_container">
+                
+            @if(signInManager.IsSignedIn(User) == false){
+                <figure class="apply_notification">
+                    <h3 class="notifcation_title"> You Have To Login Or Register Before You Can Apply </h3>
+
+                    <p class="notification_description">
+                        Before You Can Apply For A Program, You Should Login Or Register With Bim-Edu.
+                        After Login Or Registration, You Can Come Back To This Page To Apply
+                    </p>
+
+                    <div class="notification_button_container">
+                        <a class="notification_button" asp-controller="Account" asp-action="Login"> LOGIN </a>
+                        <a class="notification_button" asp-controller="Account" asp-action="Register"> REGISTER </a>
+                    </div>
+                    
+                </figure>
+            }
+            else{
+
+            <form id="form" class="form"> 
+
+                    <div class="input_wrapper">
+                        <label class="label" for="CertificateType"> Degree Type </label>
+                        <select class="input" type="text" id="CertificateType" name="CertificateType">
+                                    @for(int n=0;n<certifications.Count(); n++){
+                                        <option value=@certifications[n].CertificationId >
+                                            @certifications[n].Name
+                                        </option>
+                                     }
+                        </select>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label" for="ProgrammeId"> Programme  </label>
+                        <select class="input" type="text" id="ProgrammeId" name="ProgrammeId">
+                                    @for(int n=0;n<programmes.Count(); n++){
+                            <option 
+                                value=@programmes[n].ProgrammeId 
+                                fee=@programmes[n].ApplicationFee 
+                                programfee=@programmes[n].Fee 
+                                programname=@programmes[n].Name
+                                certificateid=@programmes[n].CertificationId 
+                                description=@programmes[n].Description >
+                                @programmes[n].Name
+                            </option>
+                                     }
+                        </select>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label"> Télécharger un CV  </label>
+                        <input type="file" class="input" id="uploadcv"/>
+                        <span class="show_on_error" id="uploadcv_span"></span>
+                    </div>
+
+                    <div class="button_container">
+                        <a id="apply" class="button"> Candidature </a>
+                    </div>
+
+            </form>
+
+            <section class="programme_summary_wrapper" id="programme_summary_wrapper">
+
+                <div class="programme_summary_container">
+
+                        <div class="programme_button_container clear_float">
+
+                            <form class="already_registered_container" asp-asp-controller="Apply" asp-method="POST" >
+
+                                <a class="button cursor_pointer paid" id="alreadypaid"> Déjà payé ? </a>
+                                <div class="input_values_container">
+
+                                    <input class="input" type="hidden" id="uploadedcvfilename" name="UploadedCVFileName"/>
+                                    <input class="input" type="hidden" id="ProgramIdForPaymentPass" name="ProgramId"/>
+                                    <input class="input" type="hidden" id="UserId" name="ApplicationUserId" value="@User.FindFirst(ClaimTypes.NameIdentifier).Value"/>
+                                    <input class="input" type="text" name="Code" placeholder="Enter Code" required/>
+                                    <span class="show_on_error" asp-valaidation-for="Code"></span>
+
+                                    <div class="button_wrapper">
+                                        <input type="submit" asp-action="ApplyPaymentByPassCode" class="button submit" value="Candidature"/>
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+                           <label class="cursor_pointer continuetoapply_container" for="submitapplication"> 
+                               <a class="button" id="continuetoapply"> Continuer à faire le paiement </a>
+                            </label>
+
+                        </div>
+
+                        <div class="">
+                            <h3 class="programme_summary_heading"> Résumé du programme </h3>
+
+                            <div class="image_container">
+                                <div id="programme_summary_title" class="text_container">
+                                    BSC HUMAN SCIENCE
+                                </div>
+                            </div>
+
+                            <div id="programme_summary_description" class="description_container"> 
+
+                                Description
+
+                            </div>
+
+                        </div>
+                </div>
+
+            </section>
+            }
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/account/apply.css" />
+
+    @if(signInManager.IsSignedIn(User)){
+
+    <script> 
+        
+        var apply= document.getElementById('apply');
+        var continuetoapply = document.getElementById('continuetoapply');
+        var programme = document.getElementById('ProgrammeId');
+        var programidforpaymentpass = document.getElementById('ProgramIdForPaymentPass');
+        apply.onclick = function(){
+            var form = document.getElementById('form');
+            var programme_summary_wrapper = document.getElementById('programme_summary_wrapper');
+            var programme_summary_description = document.getElementById('programme_summary_description');
+            var programme_summary_title = document.getElementById('programme_summary_title');
+            var selected_programme_option = programme.options[programme.selectedIndex];
+
+            programme_summary_description.innerText = selected_programme_option.getAttribute('description');
+            programme_summary_title.innerText = selected_programme_option.innerText;
+            programidforpaymentpass.value = programme.value;
+
+                var formData = new FormData();
+                var file = document.getElementById('uploadcv');
+                formData.append("Description", "Uploaded CV");
+                formData.append("IFormFile", file.files[0]);
+
+                if(file.files[0] == null){
+                    document.getElementById('uploadcv_span').innerHTML = "<h1> S'il vous plaît télécharger votre CV </h1>";
+                    return;
+                }
+            
+                $.ajax({
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+                        dataType: "text",
+                        async:true,
+                        data: formData,
+                        url: baseUrl + "Account/ApplyDocuments",
+                        enctype: 'multipart/form-data',
+                        success: function(result){
+                            localStorage.setItem('uploadedcvfilename',result);
+                            document.getElementById('uploadedcvfilename').value = localStorage.getItem('uploadedcvfilename');
+                            form.classList.add('unactive');
+                            programme_summary_wrapper.classList.add('active');
+                        },
+                        error: function() { 
+                            alert("Something went wrong");
+                        }
+                })
+            
+        }
+
+
+        continuetoapply.onclick = function(){
+
+            var selected_programme_option = programme.options[programme.selectedIndex];
+            continuetoapply.innerText = "Processing...";
+            location.href = baseUrl + "Payment/ProcessApplicationPayment?ProgrammeId="+
+                            programme.value + "&UserId="+ document.getElementById('UserId').value +
+                            "&ApplicationFee=" + selected_programme_option.getAttribute('fee') +
+                            "&ProgramFee=" + selected_programme_option.getAttribute('programfee') +
+                            "&ProgramName=" + selected_programme_option.getAttribute('programname') +
+                            "&UploadedCVFileName=" + localStorage.getItem('uploadedcvfilename');
+           // MakePaypalPayment();
+        }
+
+        var alreadypaid = document.getElementById('alreadypaid');
+        alreadypaid.onclick = function(){
+            var alreadypaidform = alreadypaid.nextElementSibling;
+            var height = alreadypaidform.scrollHeight;
+            if(alreadypaidform.classList.contains("active")){
+                alreadypaidform.classList.remove('active');
+                for(var n=height;n>0;n--){
+                    alreadypaidform.style.maxHeight = n + "px";
+                }
+            }else{
+                alreadypaidform.classList.add('active');
+                for(var n=0;n<height;n++){
+                    alreadypaidform.style.maxHeight = n + "px";
+                }
+            }
+
+        }
+
+
+
+        var CertificateType = document.getElementById('CertificateType');
+        ChangeProgramList(CertificateType.value);
+        CertificateType.onchange = function(){  
+            ChangeProgramList(CertificateType.value) 
+        }
+
+        function ChangeProgramList(selected_certificate_value){
+
+           
+            for(var prog_count=0;prog_count<programme.options.length;prog_count++){
+                var current_option = programme.options[prog_count];
+                var selected_program_certificateid = current_option.getAttribute('certificateid');
+                if(selected_program_certificateid == selected_certificate_value){
+                    current_option.style.display= "block";
+                     programme.value = selected_program_certificateid
+                }else{
+                    current_option.style.display= "none";
+                }
+            }
+        }
+        
+    </script>
+
+    }
+}

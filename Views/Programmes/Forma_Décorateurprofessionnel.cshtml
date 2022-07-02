@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Bim-Edu Décorateur professionnel";
+}
+
+<section class="programme_wrapper">
+    <div class="programme_container">
+
+        <div class="apply_button_container">
+            <a asp-controller="Account" asp-action="Register" class="apply_button"> CANDIDATURE </a>
+        </div>
+
+        <h1 class="main_heading"> PROGRAMMES DE FORMATION PROFESSIONNELLE DE BIM-EDU  </h1>
+        <h2 class="sub_main_heading"> Les programmes de formation professionnelle disponibles au Centre d'excellence </h1>
+
+        <figure class="stand_out">
+
+            <h3 class="medium_heading"> Décorateur professionnel </h3>
+            <div class="sub_stand_out">
+                <p class="description"> 
+                    Le programme est un cours complet de décoration intérieure avec certification. Notre programme de 
+                    certification exclusif est enseigné de manière simple, informative et concise grâce à l'utilisation 
+                    de l'éducation EN LIGNE ou de notre programme de correspondance. Les enseignements comprennent: la 
+                    fonction des espaces intérieurs, l'histoire du mobilier, les salles d'exposition, l'utilisation de 
+                    la couleur, l'éclairage, l'échelle et comment facturer vos services en tant que décorateur d'intérieur certifié.
+                </p>
+            </div>
+
+        </figure>
+
+
+    </div>
+</section>
+
+
+@section scripts{
+
+    <link rel="stylesheet" href="~/css/internal/programmes/voc_training.css"/>
+
+}

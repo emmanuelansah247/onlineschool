@@ -1,0 +1,120 @@
+@model bim_edu.Models.RegisterViewModel
+
+
+@{
+    Layout = "~/Views/Shared/_en_Layout.cshtml";
+    ViewData["Title"] = "Register | Bim-Edu";
+    List<string> _countries = CountryList.Countries();
+    List<string> _levelofeducation = EducationLevels.en_Levels();
+}
+
+
+<section class="page_wrapper clear_float">
+
+    <div class="page_container clear_float">
+
+
+            <form class="form" enctype="multipart/form-data" asp-controller="en_Account" asp-method="POST">
+
+                    <div asp-validation-summary="All"></div>
+
+                    <div class="one_sided_wrapper clear_float">
+
+                        <figure class="one_sided">
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="FirstName" > First Name </label>
+                                <input class="input" type="text" id="FirstName" name="FirstName"/>
+                                <span class="show_on_error" asp-validation-for="FirstName"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="LastName"> Last Name </label>
+                                <input class="input" type="text" id="LastName" name="LastName"/>
+                                <span class="show_on_error" asp-validation-for="LastName"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="PhoneNumber"> Phone </label>
+                                <input class="input" type="text" id="PhoneNumber" name="PhoneNumber"/>
+                                <span class="show_on_error" asp-validation-for="PhoneNumber"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="Country"> Country </label>
+                                <select class="input" type="text" id="Country" name="Country">
+                                        @foreach (string item in _countries)
+                                        {
+                                            <option value="@item"> @item </option>
+                                        }
+                                </select>
+                                <span class="show_on_error" asp-validation-for="Country"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="PostalAddress"> Postal Address </label>
+                                <input class="input" type="text" id="PostalAddress" name="PostalAddress"/>
+                                <span class="show_on_error" asp-validation-for="PostalAddress"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="LevelOfEducation"> Level Of Education </label>
+                                <select class="input" type="text" id="LevelOfEducation" name="LevelOfEducation">
+                                        @foreach (string item in _levelofeducation)
+                                        {
+                                            <option value="@item"> @item </option>
+                                        }
+                                </select>
+                                <span class="show_on_error" asp-validation-for="LevelOfEducation"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="Email"></label>
+                                <input class="input" type="email" id="Email" name="Email"/>
+                                <span class="show_on_error" asp-validation-for="Email"></span>
+                            </div>
+
+                        </figure>
+
+                        <figure class="one_sided">
+
+                            <div class="input_wrapper profile_photo_container">
+                                <img class="profile_photo" id="profile_photo" src="~/images/Icons/user.svg" alt="Profile Photo"/>
+                                <label class="label cursor_pointer" for="IFormFile"> Upload Profile Photo </label>
+                                <input asp-for="IFormFile" class="hide_it"  id="IFormFile" name="IFormFile"/>
+                                <span class="show_on_error" asp-validation-for="IFormFile"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="Password"> Password </label>
+                                <input class="input" type="password" id="Password" name="Password"/>
+                                <span class="show_on_error" asp-validation-for="Password"></span>
+                            </div>
+
+                            <div class="input_wrapper">
+                                <label class="label" asp-for="ConfirmPassword"> Confirm Password </label>
+                                <input class="input" type="password" id="confirmpassword" name="confirmPassword"/>
+                                <span class="show_on_error" asp-validation-for="ConfirmPassword"></span>
+                            </div>
+
+                        </figure>
+
+                    </div>
+
+                    <div class="button_container">
+                        <input type="submit" asp-action="Register" id="register" class="button" value="NEXT STEP"/>
+                    </div>
+
+            </form>
+    </div>
+
+</section>
+
+@section Scripts{
+
+    <script>
+    
+    </script>
+    
+    <link rel="stylesheet" href="~/css/internal/account/register.css" />
+}

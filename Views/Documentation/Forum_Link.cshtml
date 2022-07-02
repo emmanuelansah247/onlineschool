@@ -1,0 +1,211 @@
+@model bim_edu.Models.Course;
+@{
+    ViewData["Title"] = "How To Use BIM-EDU Student Portal FORUM Page";
+}
+
+
+<section class="documentation_page_wrapper">
+
+    <div class="documentation_menu">
+        <a asp-controller="Documentation" asp-action="Menu"> Documentation Menu </a>
+    </div>
+
+    <div class="documentation_page_container clear_float">
+
+
+        <div class="note">
+                <span class="title"> NOTE: </span> 
+                <p class="message">
+                    This Section Shows How To Use BIM-EDU Student Portal FORUM Page. 
+                    This Is Where Student And Lecturers Interact.
+                </p>
+        </div>
+
+        <figure class="item">
+            <h2 class="heading"> WRITING A COMMENT </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the FORUM Page.
+                        <a class="link" asp-controller="en_Other" asp-action="Comment" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction">                         
+                        Check Below The Page. You Will Notice A TextBox Where You Can Enter Comment. Enter Your Comment/Message
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On 'Add Comment' To Add Your Comment To The Forum.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> EDIT COMMENT </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the FORUM Page.
+                        <a class="link" asp-controller="en_Other" asp-action="Comment" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Go To The Comment You Want To Edit (It Should Be Comment You Wrote Yourself).
+                        Click On Edit (You Will See 'Edit' Below The Comment).                        
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Edit Your Comment/Message.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Click On Update.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> ADD COMMENT REPLY </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the FORUM Page.
+                        <a class="link" asp-controller="en_Other" asp-action="Comment" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Go To The Comment You Want To Reply.                       
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On 'Reply'. This Is Located Below The Comment.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Write Your Reply Comment/Message.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 5. </span>
+                    <span class="instruction"> 
+                        Click On 'Add Reply'.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> EDIT COMMENT REPLY </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the FORUM Page.
+                        <a class="link" asp-controller="en_Other" asp-action="Comment" target="_blank"> 
+                            Click here to go to the page.
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Go To The Comment Reply You Want To Edit (It Should Be Reply You Wrote Yourself).
+                        Click On Edit (You Will See 'Edit' Below The Comment).                        
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Edit Your Comment Reply.
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Click On Update.
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+        <figure class="item">
+            <h2 class="heading"> DELETE COMMENT REPLY </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go to the FORUM Page.
+                        <a class="link" asp-controller="en_Other" asp-action="Comment" target="_blank"> 
+                            Click here to go to the page 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Go To The Comment Reply You Want To Delete (It Should Be Reply You Wrote Yourself).
+                        Click On Edit (You Will See 'Edit' Below The Comment).                        
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On 'Delete'
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/documentation/documentation.css" />
+}

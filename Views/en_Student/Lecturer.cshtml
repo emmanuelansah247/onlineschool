@@ -1,0 +1,65 @@
+
+@{
+    Layout = "~/Views/Shared/_en_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Lecturer |  Bim-Edu ";
+    ProgrammeApplication activeProgrammeApplication = ViewData[GeneralStoredNames.Bim_Edu_Active_Programme_Application] as ProgrammeApplication;
+    List<CourseLecturer> CourseLecturers = activeProgrammeApplication.Programme.CourseLecturers.ToList();   
+}
+
+
+<section class="approved_page_wrapper">
+
+    <div class="approved_page_container">
+
+        <h1 class="welcome_title"> Lecturer Info </h1>
+
+        <section class="program_container">
+
+            @foreach(CourseLecturer courselecturer in CourseLecturers){
+                
+                <div class="lecturer_item">
+
+
+                        <figure class="details_container">
+                            <h4 class="title"> Name </h4>
+                            <div class="details">
+                                @courselecturer.Lecturer.ApplicationUser.FirstName
+                                @courselecturer.Lecturer.ApplicationUser.LastName
+                            </div>
+                        </figure>
+
+                        <figure class="details_container">
+                            <h4 class="title"> Qualifications </h4>
+                            <div class="details">
+                            @courselecturer.Lecturer.Qualifications
+                            </div>
+                        </figure>
+
+                        <figure class="details_container">
+                            <h4 class="title"> Course Teaching </h4>
+                            <div class="details">
+                            @courselecturer.Course.Name
+                            </div>
+                        </figure>
+
+                        <figure class="details_container">
+                            <h4 class="title"> More Biography </h4>
+                            <div class="details">
+                                @courselecturer.Lecturer.MoreBiography
+                            </div>
+                        </figure>
+
+
+                </div>
+                <hr/>
+            }
+
+        </section>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/student/lecturer.css" />
+}

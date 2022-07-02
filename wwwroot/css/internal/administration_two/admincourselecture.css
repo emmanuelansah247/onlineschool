@@ -1,0 +1,109 @@
+.page_wrapper{
+    width: 100%;
+}
+
+.page_wrapper .page_container{
+    width: 100%;
+    margin-bottom: 15%;
+    box-sizing: border-box;
+}
+
+.page_container .title{
+    font: normal normal bold 20px/1.2em "Arial";
+    padding: 1% 10%;
+    background-color: #4b345d;
+    color: #fff;
+    text-align: center;
+}
+
+.page_container .main_form{
+    background-color: #4b345d;
+    background-color: #4e4e4e;
+    padding: 2% 5%;
+    box-sizing: border-box;
+}
+
+.page_container .main_form .top_form{
+    width: 100%;
+}
+
+.main_form .top_form .input_wrapper{
+    width: 20%;
+    margin: 0 2.5%;
+    float: left;
+}
+
+.main_form .top_form .input_wrapper .label{
+    display: block;
+    color: #fff;
+}
+
+.main_form .top_form .input_wrapper .input{
+    width: 100%;
+    padding: 10px 10px;
+    font: normal normal normal 15px/1.2em "sans-serif";
+    margin-top: 5px;
+}
+
+.main_form .button_container{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.main_form .button_container .button{
+    padding: 10px 10px;
+    background-color: #fff;
+    color: #000;
+    margin: 1% 2%;
+}
+
+
+/* 
+begin lecturers being displayed 
+*/
+
+.lecturers_wrapper{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.lecturers_wrapper .lecturers_container{
+    margin: 2% 10%;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.lecturers_container .heading{
+    font: normal normal bold 30px/1.2em "Arial";
+    margin-bottom: 15px;
+}
+
+.lecturers_container .lecturers{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.lecturers .lecturer{
+    display: inline-block;
+    margin: 10px 20px;
+    background-color: #e90172;
+    padding: 20px 20px;
+}
+
+.lecturers .lecturer .lecturer_name{
+    font: normal normal bold 20px/1.2em "Helvetica";
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.lecturers .button{
+    color: #fff;
+    padding: 4px 4px;
+    font: normal normal normal 15px/1.2em "sans-serif";
+    background-color: #000;
+}
+
+
+/* 
+end lecturers being displayed 
+*/

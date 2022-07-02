@@ -1,0 +1,93 @@
+
+@{
+    Layout = "~/Views/Shared/_en_ApprovedLayout.cshtml";
+    ViewData["Title"] = "Program |  Bim-Edu ";
+    ProgrammeApplication activeProgrammeApplication = ViewData[GeneralStoredNames.Bim_Edu_Active_Programme_Application] as ProgrammeApplication;
+    Programme program = activeProgrammeApplication.Programme;
+    
+}
+
+
+<section class="approved_page_wrapper">
+
+    <div class="approved_page_container">
+
+        <h1 class="welcome_title"> Program Info </h1>
+
+        <section class="program_container">
+
+            <figure class="details_container">
+                <div class="details">
+                    <a href="~/@GeneralStoredNames.Program_Calender_Path/@program.ProgramCalender.PathToCalender" target="_blank" class="button cursor_pointer"> Click To View Program Calendar </a>
+                </div>
+            </figure>
+
+            <figure class="details_container">
+                <h4 class="title"> Name </h4>
+                <div class="details">
+                    @program.Name
+                </div>
+            </figure>
+
+            <figure class="details_container">
+                <h4 class="title"> Application Fee </h4>
+                <div class="details">
+                    @program.ApplicationFee
+                </div>
+            </figure>
+
+            <figure class="details_container">
+                <h4 class="title"> Fees </h4>
+                <div class="details">
+                    @program.Fee
+                </div>
+            </figure>
+
+            <figure class="details_container">
+                <h4 class="title"> Certification </h4>
+                <div class="details">
+                    @program.Certification.Name
+                </div>
+            </figure>
+
+            <figure class="details_container">
+                <h4 class="title"> Description </h4>
+                <div class="details">
+                    @program.Description
+                </div>
+            </figure>
+
+            <figure class="details_container">
+                <h4 class="title"> Lecturers </h4>
+                <table class="table">
+                    <thead>
+                        <th> Lecturer Name</th>
+                        <th> Course Teaching</th>
+                    </thead>
+
+                    <tbody>
+                        @foreach(CourseLecturer courseLecturer in program.CourseLecturers){
+                        <tr>
+                            <td> 
+                                @courseLecturer.Lecturer.ApplicationUser.FirstName
+                                @courseLecturer.Lecturer.ApplicationUser.LastName 
+                            </td>
+                            <td> 
+                                @courseLecturer.Course.Name 
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </figure>
+
+        </section>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/student/program.css" />
+}

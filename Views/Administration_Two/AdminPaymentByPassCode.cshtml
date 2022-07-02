@@ -1,0 +1,57 @@
+@model bim_edu.Models.UserRoleViewModel
+
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Payment By Pass Code | Bim-Edu";
+    List<PaymentByPassCode> _paymentbypasscode = ViewData["paymentbypasscode"] as List<PaymentByPassCode>;
+}
+
+
+<section class="page_wrapper clear_float">
+
+    <div class="page_container clear_float">
+        <h1 class="page_title"> Admin Payment Pass Codes </h1>
+
+
+        <section class="page_content">
+            
+                <form class="form" asp-controller="Administration_Two" asp-method="POST">
+
+                        <div class="button_container">
+                            <input type="submit" asp-action="AdminPaymentByPassCodeGenerate" class="button" value="Generate Code"/>
+                        </div>
+
+                </form>
+
+                <div class="table">
+                    <table>
+                        <thead>
+                            <th> Payment By Pass Code </th>
+                            <th> User </th>
+                            <th> Date </th>
+                        </thead>
+                        <tbody>
+                            @foreach (PaymentByPassCode paymentbypasscode in _paymentbypasscode)
+                            {
+                                <tr>
+                                    <td> 
+                                        @paymentbypasscode.Code 
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_two/adminpaymentbypasscode.css" />
+}

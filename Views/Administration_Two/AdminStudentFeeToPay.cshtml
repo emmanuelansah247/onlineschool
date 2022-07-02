@@ -1,0 +1,130 @@
+@model bim_edu.Models.StudentFeeToPayViewModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Student Fee To Pay | Bim-Edu ";
+    List<ApplicationUser> applicationusers = ViewData["application_users"] as List<ApplicationUser>;
+    ProgrammeApplication program_applications = ViewData["program_application"] as ProgrammeApplication;
+    string program_application_id = ViewData["program_application_id"] as string;
+    
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container">
+        <h1 class="page_title" Id="page_title"> Student Fees To Pay Page </h1>
+        <form class="form clear_float" enctype="multipart/form-data" asp-controller="Administration" asp-method="POST">
+
+                    <div class="input_wrapper">
+                        <label class="label"> Student Name </label>
+                        <select Id="ProgrammeApplicationId" class="input" type="text" name="ProgrammeApplicationId">
+                                    @foreach (ApplicationUser applicationUser in applicationusers)
+                                    {
+                                        foreach(ProgrammeApplication programmeApplication in applicationUser.ProgrammeApplications.ToList()){
+                                                if(programmeApplication.ProgrammeApplicationId == Convert.ToInt32(program_application_id)){
+                                                    <option selected value=@programmeApplication.ProgrammeApplicationId > 
+                                                        @applicationUser.FirstName  @applicationUser.LastName 
+                                                    </option>
+                                                }else{
+                                                    <option value=@programmeApplication.ProgrammeApplicationId > 
+                                                        @applicationUser.FirstName  @applicationUser.LastName 
+                                                    </option>
+                                                }
+                                            }
+                                     }
+                        </select>
+                        <span class="show_on_error" asp-validation-for="ProgrammeApplicationId"></span>
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="label"> Payment Type </label>
+                        <select Id="Type" class="input" type="text" name="Type">
+                            @foreach(string item in PaymentType.GetAllTypes()){
+                                <option value="@item"> @item </option>
+                            }
+                        </select>
+                        <span class="show_on_error" asp-validation-for="Type"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Amount"> Amount </label>
+                        <input class="input" type="number" name="Amount">
+                        <span class="show_on_error" asp-validation-for="Amount"></span>
+                    </div>
+                    
+                    <div class="input_wrapper">
+                        <label class="label" asp-for="Paid"> Paid </label>
+                        <input class="input" type="number" name="Paid">
+                        <span class="show_on_error" asp-validation-for="Paid"></span>
+                    </div>
+
+                    <div class="button_container">
+                        <input type="submit"  class="button cursor_pointer" asp-action="AdminStudentFeeToPayView" value="View Payments To Pay"/>
+                        <input type="submit" class="button cursor_pointer" asp-action="AdminStudentFeeToPayAdd" value="Add Payment"/>
+                    </div>
+        </form>
+
+        <section class="document_list_wrapper">
+            <div class="document_list_container clear_float">
+
+                @if(program_applications != null){
+                @foreach(StudentFeeToPay item in program_applications.StudentFeesToPay){
+                 if(item.isremoved != true){
+                <figure class="item clear_float">
+                    <form asp-controller="Administration_Two" asp-method="POST">
+                        
+                        <div class="top clear_float">
+
+                        <div class="input_wrapper">
+                            <label class="label"> Program Name </label>
+                            <input class="input" type="text" value="@program_applications.Programme.Name" readonly/>
+                        </div>
+
+                        <div class="input_wrapper">
+                            <label class="label"> Payment Type </label>
+                            <select class="input" type="text" name="Type">
+                                @foreach(string itemtype in PaymentType.GetAllTypes()){
+                                    @if(itemtype == item.Type){
+                                        <option selected value="@itemtype"> @itemtype </option>
+                                    }else{
+                                        <option value="@itemtype"> @itemtype </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        
+                        <div class="input_wrapper">
+                            <label class="label" asp-for="Amount"> Amount </label>
+                            <input class="input" value="@item.Amount" type="number" name="Amount">
+                        </div>
+                        
+                        <div class="input_wrapper">
+                            <label class="label" asp-for="Paid"> Paid </label>
+                            <input class="input" value="@item.Paid" type="number" name="Paid">
+                        </div>
+                        
+                        </div>
+                            
+                        <input type="hidden" name="StudentFeeToPayId" class="hide_it" value="@item.StudentFeeToPayId"/>
+
+                        <div class="bottom">
+                                <input type="submit" asp-action="AdminStudentFeeToPayUpdate"  class="button cursor_pointer" value="Update"/>
+                                <input type="submit" asp-action="AdminStudentFeeToPayDelete"  class="button cursor_pointer" value="Delete"/>
+                        </div>
+
+                    </form>
+                </figure>
+                }
+            }
+
+            }
+
+            </div>
+        </section>
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_two/adminstudentfeetopay.css" />
+}

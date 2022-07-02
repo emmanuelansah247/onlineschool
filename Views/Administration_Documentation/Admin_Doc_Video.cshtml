@@ -1,0 +1,123 @@
+@model bim_edu.Models.Course;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "How To Use Bim-Edu Video Page | Admin ";
+    List<Course> courses = ViewData["vCourse"] as List<Course>;
+}
+
+
+<section class="admin_page_wrapper">
+
+    <div class="admin_page_container clear_float">
+
+        <figure class="item">
+            <h2 class="heading"> Uploading Video To Youtube And Copying Url </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Upload Your Desire Video To Youtube (upload it as a private video)
+                        <a class="link" href="https://www.youtube.com/upload" target="_blank"> 
+                            Click here to go to youtube upload 
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Watch The Video To See If It Is Really Streaming 
+                    </span>
+                </p>
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Copy The Url To The Video <br/>
+                        eg: Video Url usually looks like 
+                        <small>
+                             https://www.youtube.com/embed/IrqSErElxmI
+                        </small>
+                    </span>
+                </p>
+
+            </div>
+        </figure>
+
+
+        <figure class="item">
+            <h2 class="heading"> Adding A Video </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> Go To The Vide Page. 
+                        <a class="link" asp-controller="Administration" asp-action="AdminVideo" target="_blank"> 
+                            Click here to go to the video page  
+                        </a>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select Program from the program list (the video will be added to selected program). 
+                    </span>
+                </p>
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Enter the youtube video Url as specified in <strong> Uploading Video To Youtube And Copying Url </strong>
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 4. </span>
+                    <span class="instruction"> 
+                        Enter the title for the video the french version.
+                    </span>
+                </p>
+                <p>
+                    <span class="number"> 5. </span>
+                    <span class="instruction"> 
+                        Click On <strong> Add Video </strong>
+                    </span>
+                </p>
+            </div>
+        </figure>
+
+
+        <figure class="item">
+            <h2 class="heading"> View Videos For A Program </h2>
+            <div class="instructions">
+
+                <p>
+                    <span class="number"> 1. </span>
+                    <span class="instruction"> 
+                       Select Program from the program list
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 2. </span>
+                    <span class="instruction"> 
+                        Select Language to view the video 
+                        (if you select french the video displayed will only be the french version and english otherwise)
+                    </span>
+                </p>
+
+                <p>
+                    <span class="number"> 3. </span>
+                    <span class="instruction"> 
+                        Click On <strong> View All Videos </strong>
+                    </span>
+                </p>
+            </div>
+        </figure>
+    
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_documentation/admin_docs.css" />
+}

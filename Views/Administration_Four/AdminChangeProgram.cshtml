@@ -1,0 +1,109 @@
+
+@using bim_edu.Models;
+
+
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Bim-Edu Change Program | Admin";
+    
+    List<Programme> vPrograms =ViewData["vPrograms"] as List<Programme>;
+    ApplicationUser vActiveUser =ViewData["vActiveUser"] as ApplicationUser;
+    List<ApplicationUser> vUsers = ViewData["vUsers"] as List<ApplicationUser>;
+
+}
+
+
+<section class="page_wrapper clear_float">
+
+    <div class="page_container clear_float">
+
+        <h1 class="title"> Student Programs </h1>
+
+            <form class="main_form clear_float" asp-controller="Administration_Four" asp-method="POST">
+
+                    <div class="input_wrapper">
+                        <label class="label"> Select Student </label>
+                        <select class="input" type="text" name="ApplicationUserId">
+                                    @foreach(ApplicationUser item in vUsers)
+                                    {
+                                        if(item.Id == vActiveUser.Id){
+
+                                        <option selected value=@item.Id > 
+                                            @item.FirstName
+                                            @item.LastName
+                                        </option>   
+
+                                        }else{
+                                            <option value=@item.Id > 
+                                                @item.FirstName
+                                                @item.LastName
+                                            </option>   
+                                        }                                     
+                                    }
+                        </select>
+
+                        <input type="submit" asp-action="AdminViewStudentPrograms" class="button cursor_pointer" value="View Programs"/>
+
+                    </div>
+
+            </form>
+
+            <section class="programs_wrapper">
+                <div class="programs_container">
+
+                        @for(int p_counter=0,n_number=1;p_counter< vActiveUser.ProgrammeApplications.Count();p_counter++,n_number++){
+
+                            ProgrammeApplication main_item = vActiveUser.ProgrammeApplications.ToList()[p_counter];
+
+                            if(main_item.isremoved == false){
+                            
+                            <figure class="program clear_float">
+
+                                <form  asp-controller="Administration_Four" asp-method="POST">
+
+                                    <div class="input_wrapper">
+                                        <label class="label"> Program @n_number </label>
+                                        <select class="input" type="text" name="ProgramId">
+                                                    @foreach (Programme sub_item in vPrograms)
+                                                    {
+                                                        if(sub_item.ProgrammeId == main_item.Programme.ProgrammeId){
+                                                            <option selected value=@sub_item.ProgrammeId > 
+                                                                @sub_item.Name
+                                                            </option>    
+                                                        }else{
+                                                            <option value=@sub_item.ProgrammeId > 
+                                                                @sub_item.Name
+                                                            </option>    
+                                                        }                                    
+                                                    }
+                                        </select>
+
+                                        <input type="hidden" value="@main_item.ProgrammeApplicationId" name="ProgramApplicationId" />
+
+                                    </div>
+
+
+                                    <div class="button_container">
+                                        <input type="submit" asp-action="AdminUpdateStudentProgram" class="button cursor_pointer" value="Change"/>
+                                        <input type="submit" asp-action="AdminRemoveStudentProgram" class="button cursor_pointer" value="Remove"/>
+                                    </div>
+
+                                </form>
+                                
+                            </figure>
+
+                            }
+
+                        }
+
+                </div>
+            </section>
+
+    </div>
+
+</section>
+
+@section Scripts{
+    <link rel="stylesheet" href="~/css/internal/administration_four/adminchangeprogram.css" />
+}

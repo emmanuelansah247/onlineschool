@@ -1,0 +1,275 @@
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\account\activateemail.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\account\apply.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\account\applytuitionfree.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\account\login.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\account\passwordresetemail.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\account\register.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\account\search.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration\admin.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration\adminapproval.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration\adminprogramdocument.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration\adminquestion.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration\adminsimpleform.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration\adminvideo.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration_documentation\admin_docs.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration_documentation\admin_doc_links.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration_four\adminchangeprogram.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration_four\adminsharefile.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration_three\admincomment.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration_three\adminstaffregister.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration_three\adminunregister.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration_two\admincourselecture.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration_two\adminpaymentbypasscode.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\administration_two\adminstudentfeetopay.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\documentation\documentation.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\documentation\menu_links.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\home\about.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\home\index.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\home\studentexperience.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\home\teachwithus.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\home\tuitionfee.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\other\comment.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\other\sharefile.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\other\video.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\payment\cancelled.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\payment\payment.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\payment\processapplicationpayment.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\payment\succeeded.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\programmes\programme.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\programmes\voc_training.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\shared\adminlayout.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\shared\approvedlayoutheader.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\shared\footer.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\shared\header.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\shared\shared.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\student\application.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\student\foundation.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\student\lecturer.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\student\payment.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\student\policy.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\student\program.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\student\programdocument.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\student\question.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\css\internal\student\welcome.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\favicon.ico
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\about\graduation.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\call.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\certificate_quality.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\facebook.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\instagram.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\linkedin.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\mail.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\application.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\discussion.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\documentation.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\facebook.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\foundation.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\instagram.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\lecturer.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\linkedin.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\payment.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\policy.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\program.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\results.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\share.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\video.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\website.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\menus\youtube.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\user.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\Icons\whatsapp.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\index\graduation.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\index\graduation_birds_eye_view.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\index\IndexFrontImage.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\index\programs\administrationdesaffaires.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\index\programs\Informatique.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\index\programs\Informatique1.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\index\programs\management.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\index\programs\sciencedelasante.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\index\programs\scienceducation.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\index\programs\sciencescommunication.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\policies\bachelorfee.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\policies\masterfee.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\policies\policy.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\profilephotos\00d8f933-de25-4312-8b43-7573e665dbca_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\profilephotos\23821f86-461b-4931-a1d1-dede966e9192_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\profilephotos\4ad6f9f7-70b4-4d1d-9e76-bebd096c0ee2_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\profilephotos\d0a8e438-d47e-46ff-8a8b-4368f651f2fa_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\profilephotos\e149c650-ac89-46fb-a9be-e8fae8b1b7f8_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\profilephotos\fd6a6cd0-2846-496e-8092-d3270d7dcede_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\profilephotos\photo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programcalender\06046182-f333-4578-8764-2a9333e8412f_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programcalender\1ae7e1c2-b5eb-4dfc-99dd-23e0a19f353f_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programcalender\32e56d22-d18e-4065-bd00-6e36cc9989dd_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programcalender\379fdac1-497c-4f5e-a273-68adaddc4938_de170e39-f399-424b-a6a0-74770e564b5c_Name_ Quofi _ Ansah_IPMC Certificate.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programcalender\4b09fd74-6c92-4b8b-b9a3-3188b273da12_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programcalender\5990ac29-bf17-42a3-a73d-ae6be9a57c4b_de170e39-f399-424b-a6a0-74770e564b5c_Name_ Quofi _ Ansah_IPMC Certificate.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programcalender\93fed73d-41da-4e98-b9f8-2abd2a65a701_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programcalender\cddbeb0f-7eac-41da-a4a1-687759f4b266_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programdocuments\0b7c5d2d-0deb-4a6a-a2d0-01099431db1d_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programdocuments\52c976d7-10b4-43d8-a51c-379d20725a7e_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programdocuments\74dcd982-261d-4424-9f6f-bda36212b475_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programdocuments\c9c30c63-6ee0-4db5-b57a-bf638e5f5424_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\programdocuments\ddf1739d-7a1f-4321-a4c6-6f9704a68c96_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\0d7fbbd5-4321-4a72-9341-b56dd6d95df1_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\1db40f27-d813-43c5-acff-0e748bbbae5b_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\2040ab8a-6779-4a35-bd74-b1262dfda75b_NIIT Transcript.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\2318dc1e-02da-470e-99cb-cc959ff45c45_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\2da9f6ab-eab9-4957-a654-bd914704a6e4_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\3139c2ae-3e57-4178-9fca-205949419132_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\3524b116-3acb-494a-b684-41ff48e5916e_TOEFL Certificate.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\4598a7b5-aa69-48e9-a360-c9996ff66382_WASSCE.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\49e780d4-30ef-40aa-9c95-5fb7f4778d45_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\4d94dd47-a1bf-4d74-8c0e-d1a022d12700_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\505156b1-9161-454d-94c0-0d7858ac0c38_NIIT PROGRAM PERFORMANCE.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\5e3b0df8-5aa6-4c88-9aee-87062682c5e7_stat2 timetable.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\60b58891-bc17-4197-84bf-9de8a8a4373b_Mericon Certificate.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\7f1bbbfa-e1f9-4ebe-8ddc-cb875a889ef9_WASSCE.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\8ab12043-4559-4575-bdd5-eaeeecd47940_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\8d717b48-c79b-4f0e-9ad4-15837ee6ca4c_IPMC Certificate.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\adf247f5-06cc-4c62-abb7-249e98eabf30_TOEFL Certificate.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\b4f0dedf-9b96-45c1-98e0-c634642ca691_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\c542c6dd-54cc-464d-80d7-d21c0b05991b_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\d87bd3a5-e48f-4025-bfc6-ccefde59cf21_TOEFL Certificate.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\d8ac1ffe-4b30-4358-bea9-3a09cb06ee73_NIIT Transcript.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\d8f0d799-5737-457a-8067-91b316f716da_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\d9c59de9-4b6d-47c0-99ec-fa1053aa41ab_NIIT PROGRAM PERFORMANCE.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\eb616e50-a2f6-4302-934b-6d2692a0a4ba_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\ecb20d31-199b-461b-bae0-42abab2a6c31_WASSCE.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\f14449e9-5994-43ca-b102-c4d356258753_Mericon Certificate.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\questions\f9f53e72-48d0-4a1b-a289-8761d479fcea_NIIT PROGRAM PERFORMANCE.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\sharefiles\52437a15-0066-402a-98ac-d95283fd9554_2.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\sharefiles\76e19f9b-f5fb-4ea8-a147-43620cfef45f_1.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\sharefiles\db512d8f-86b1-4b76-a27f-6405c68a11e7_5.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\sharefiles\f37c2436-2495-48d9-9f03-02b70d30d824_3.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\studentexperience\bg.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\studentexperience\nikiema.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\studentexperience\one.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\studentexperience\two.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\student\welcome\bg.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\teachwithus\teachwithus.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\tuitionfree\tuitionfree.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\04503060-cc43-48b9-9c31-a67707870264_graduation.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\051e2bae-fc10-42b7-9080-2241ead269c3_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\0bacc2da-3141-4350-8bae-035fb92938a6_Name_ Quofi _ Ansah_NIIT Transcript.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\0d758462-88e4-41a9-b12c-90e32dbfb54a_KSoftNet Gmail Quotation.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\0f7e10bd-9c4f-46e2-bf15-d82aa653c2da_Name_ Quofi _ Ansah_TOEFL Certificate.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\0f941bf1-b60b-4ada-998c-3ab98d23ecd7_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\18969d93-4a7d-4695-849a-25154c5bb69e_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\1a7a0705-0347-4851-9fb4-65de68673d09_yotekghana_quotation.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\23065cba-09d6-4aa1-98f6-23c5b18f5bd3_NIIT Transcript.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\318c7e1d-4558-4312-a026-af0b2f5df2da_ID & password.txt
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\348dfa2a-2645-4178-9888-9b7ba07ef830_Jenga PGW Proposal - Finserve Africa.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\383c92f4-8336-43aa-baa5-2bf2f40455a7_authorization_param_shot.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\3863f7a7-bf9f-4d26-8923-78ae7f4edd27_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\3c089bcf-3ed0-4a97-8469-c1986cc33149_graduation.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\3d7abc1f-afee-4ff0-85ac-e2e87abb949c_Name_ Quofi _ Ansah_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\4049f10d-0ff1-4bf3-8e86-0d9566b4fd94_Things to learn.txt
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\425d101b-0c60-4649-ab63-cef4f7af8c09_Things to learn.txt
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\4b2cac31-e042-42fa-82ae-9d39cec610c6_KSoftNet Gmail Quotation.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\4b3ff1e6-d98a-4841-a797-621155fa307b_Create_Invoice_with_Order.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\5440d442-dcfd-470a-943a-af555ca59e27_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\55473f07-12dc-4b5a-b870-37d0f1037063_KSoftNet Gmail Quotation.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\5665c6ca-d3db-4efd-b897-51423e202f86_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\605d23db-a073-4e77-b036-407d35b6830c_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\61c7de2b-416a-4475-b2e8-0f5ddd287e01_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\67167d71-b8f0-4b66-82a1-5d1600347103_Name_ Quofi _ Ansah_WASSCE.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\67d84a7e-53c1-42e7-b69f-201cb2f4d013_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\6c2ccfdc-449f-45c2-83c2-fdd3d92117b4_Name_ Quofi _ Ansah_Mericon Certificate.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\6e246d28-412e-4d2f-8db7-96211ae9bb7d_ID & password.txt
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\761d67df-5b2c-4be0-bd2f-24178b47fd27_bn.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\7d0cfc29-ee74-4e9d-9ab8-15fdc93cabdd_graduation.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\7d66ef85-87da-4466-8fbe-8b0233d3beaf_TOEFL Certificate.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\801365b4-a877-41c1-8757-ba2a3157bca2_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\82e92a20-a037-4342-bb92-b74edb860b0d_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\836efdc5-550f-4d78-bd0d-825e06f08504_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\84d41ebc-5736-4bf2-85c3-2d7e7a217f59_WASSCE.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\8a7a42cf-e94b-4aca-8444-88af85af5beb_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\8ebca436-4dd4-4803-bf28-4b5a42497376_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\93baf4f8-4a36-4732-8801-d0418882f3e8_Create_Invoice_with_Order.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\95789281-9549-4a6c-b4df-57ecb2cbc276_Name_ Quofi _ Ansah_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\a14b671c-3bd5-4d32-8cf0-0ef92778292e_WASSCE.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\a1da229e-3d8b-4927-8ee5-96b3195d48ad_graduation.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\a5cfb412-b95d-43c0-886e-01b95096584c_Create_Invoice_with_Order_Items.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\a78189e7-df5a-45e2-b450-18955abfe659_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\a79a7abf-1858-4d1b-8554-f9f7f771da6a_Things to learn.txt
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\aa33ff2a-c56b-444f-bdd4-40e5314591cf_Unimechgh quotation.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\af63237f-33a8-4217-96f4-76eb0da40c70_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\b371e9d2-0a37-4537-9ba9-939831330057_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\b7e2152e-e191-4d68-88db-7b2835254995_KSoftNet WEBSITE Quotation.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\b84252f9-4bf4-4f41-a09a-5142f817a065_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\bad945cf-2b07-48cf-b364-2e0d0517a993_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\bc7e4264-0587-48e5-9413-3a6379a6137b_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\c0cda578-e4c9-448c-8275-4f85b88c51a8_Things to learn.txt
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\c16166a6-4278-40e1-b137-5d3531ca6001_Name_ Quofi _ Ansah_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\c22b01f0-64d1-4b92-ae2d-81bc5b9e9565_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\d0d6a3fd-a6d7-4cca-91da-2d0487894134_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\d6a61075-e0d0-452f-86e3-f435d591c852_bim_edu_logo.png
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\d8a6bcfe-42ad-4911-b9fe-27563d2f8c4b_Things to learn.txt
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\db157764-dcf0-4ca9-a030-42368d52c606_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\dbde7b60-78f9-4a84-b8c5-ce6d3c27c4e0_Name_ Quofi _ Ansah_Mericon Certificate.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\dc521b23-008c-4caa-ac90-715329f000ec_KSoftNet Gmail Quotation.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\de170e39-f399-424b-a6a0-74770e564b5c_Name_ Quofi _ Ansah_IPMC Certificate.jpg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\df8030af-749a-4b3a-a4b6-6f8a5ddb4bef_GROUP 15 SrcTechnologyChallenge.pptx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\df8868f2-ab99-47a8-ba56-1aa22c7681ad_Name_ Quofi _ Ansah_TOEFL Certificate.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\ed5d1696-3003-4fa0-a3d7-39e0ecd8356a_Create_Invoice_with_Order_Items.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\ee9b85d9-41f2-443d-bc1d-5b47815d7903_ID & password.txt
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\ef147d4c-01d2-4aa3-a5e3-0caf87f62035_Jenga PGW Proposal - Finserve Africa.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\efd21f03-513b-4997-82eb-4b0bb586dea5_yotekghana_quotation.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\f17c4163-022b-442c-93ea-fcf56e12b73f_facebook.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\f4fafd15-2ad9-4115-b0e3-5e758de9be44_Jenga PGW Proposal - Finserve Africa.pdf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\f822694a-48ed-4ee5-b6c7-77b87a9a65bc_Unimechgh quotation.docx
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\images\uploadeddocuments\fb840c2e-050a-40ff-9ab3-02ac97b2f350_facebook.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\js\internal\payment\newstudentpaymentsuccessurl.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\js\internal\payment\oldstudentpaymentsuccessurl.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\js\internal\shared\approvedshared.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\js\internal\shared\shared.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\.bower.json
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css.map
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\css\bootstrap-theme.min.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\css\bootstrap-theme.min.css.map
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.eot
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\dist\js\npm.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\bootstrap\LICENSE
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery-validation-unobtrusive\.bower.json
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery-validation\.bower.json
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery-validation\dist\additional-methods.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery-validation\LICENSE.md
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery\.bower.json
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery\dist\jquery.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery\dist\jquery.min.js
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery\dist\jquery.min.map
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\wwwroot\readme.md
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\appsettings.Development.json
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\appsettings.json
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\bim-edu.dll
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\bim-edu.runtimeconfig.json
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\bim-edu.pdb
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\Microsoft.EntityFrameworkCore.dll
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\Remotion.Linq.dll
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\System.Interactive.Async.dll
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\bim-edu.Views.dll
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\bim-edu.Views.pdb
+C:\Users\pc\Desktop\Lehn\bim-edu-project\bin\bim-edu\bim-edu.deps.json

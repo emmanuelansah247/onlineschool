@@ -1,0 +1,66 @@
+.programme_wrapper{
+    width: 100%;
+}
+
+.programme_wrapper .programme_container{
+    margin: 5% 10%;
+}
+
+.programme_container .apply_button_container{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.programme_container .apply_button_container:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.programme_container .apply_button_container .apply_button{
+    padding: 15px 20px;
+    background-color: #4b345d;
+    color: #fff;
+    font: normal normal normal 17px/1.2 "sans-serif";
+    float: right;
+    letter-spacing: 2px;
+}
+
+
+.programme_container .main_heading{
+    font: normal normal bold 35px/1.2em "Arial";
+    color: #4b345d;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.programme_container .sub_main_heading{
+    font: italic normal bold 30px/1.2em "Arial";
+    color: #4b345d;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+
+
+.programme_container .stand_out{
+    margin: 3% 0px;
+}
+
+.programme_container .stand_out .medium_heading{
+    margin-bottom: 15px;
+    font: normal normal bold 17px/1.2em "Arial";
+    padding: 10px 15px;
+    background-color: #e90172;
+    color: #fff;
+    cursor: pointer;
+}
+
+.programme_container .description{
+    font:  normal normal normal 18px/1.6em "Georgia";
+    margin-bottom: 20px;
+}
+
+.programme_container .sub_stand_out{
+    transition: all .5s ease-in-out;
+}

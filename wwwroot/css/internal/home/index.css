@@ -1,0 +1,362 @@
+/* 
+begin front image 
+*/
+
+.front_image_wrapper{
+    width: 100%;
+    box-sizing: border-box;
+    height: 600px;
+}
+
+
+.front_image_wrapper .front_image_container{
+    background: url(../../../images/index/IndexFrontImage.jpg) no-repeat center center /cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.front_image_wrapper:hover .front_image_container{
+    z-index: 1;
+}
+
+.front_image_container .text_wrapper{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    transform: translate(30%,-30%);
+    text-align: center;
+}
+
+.front_image_container .text_wrapper .big_heading{
+    font: normal normal bold 35px/1.2em "sans-serif";
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.front_image_container .text_wrapper .small_heading{
+    font: normal normal bold 30px/1.2em "sans-serif";
+    letter-spacing: 2px;
+    color: #000;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:920px){
+    .front_image_wrapper{
+        height: 250px;
+    }    
+
+    .front_image_container .text_wrapper .big_heading{
+        font: normal normal bold 20px/1.2em "sans-serif";
+        letter-spacing: 1px;
+    }
+    
+    .front_image_container .text_wrapper .small_heading{
+        font: normal normal normal 18px/1.2em "sans-serif";
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+    .front_image_wrapper .front_image_container{
+        background: url(../../../images/index/IndexFrontImage.jpg) no-repeat center center /cover;
+        background-position-x: 60%;
+    }
+
+}
+
+.action_button_container{
+    margin-top: 10px;
+}
+
+.action_button_container .action_button{
+    padding: 10px 10px;
+    font: normal normal normal 20px/1.2em "Helvetica";
+    color: #fff;
+    background-color: #e90172;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+.action_button_container .action_button:hover{
+    opacity: .8;
+}
+
+/* 
+end front image 
+*/
+
+
+/* 
+begin about bim-edu 
+*/
+
+.about_wrapper{
+    width: 100%;
+    background-color: #e90172;
+}
+
+.about_wrapper .about_container{
+    padding: 5% 10%;
+}
+
+.about_container .left_side{
+    width:46%;
+    float: left;
+    margin: 2% 2%;
+}
+
+.about_container .left_side .left_side_container{
+    width: 100%;
+}
+
+.about_container .left_side_container .description{
+    font: normal normal bold 18px/1.2em "Georgia";
+    margin-top: 10px;
+    color: #fff;
+}
+
+.about_container .left_side_container .heading{
+    font: normal normal bold 25px/1.2em "sans-serif";
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.about_container .left_side_container .action_button_container{
+    margin-top: 20px;
+}
+
+.about_container .left_side_container .action_button_container .action_button{
+    background-color: #000;
+    font-size: 15px;
+}
+
+.about_container .right_side{
+    width:46%;
+    float: left;
+    margin: 2% 2%;
+}
+
+@media screen and (max-width:920px){
+
+    .about_container .left_side{
+        width:96%;
+        float: none;
+        margin: 2% 2%;
+    }
+
+    .about_container .right_side{
+        display: none;
+    }
+
+    .about_container .left_side_container .description{
+        font: normal normal bold 14px/1.2em "Georgia";
+    }
+    
+    .about_container .left_side_container .heading{
+        font: normal normal bold 18px/1.2em "sans-serif";
+    }
+    
+
+}
+
+.about_container .right_side .image_container{
+    width: 100%;
+}
+
+.about_container .right_side .image_container img{
+    width: 100%;
+}
+
+/* 
+end about bim-edu 
+*/
+
+
+/* 
+begin programs  
+*/
+
+.programs_wrapper{
+    width: 60%;
+    margin: 5% 20%;
+}
+
+.programs_wrapper .programs_container{
+    width: 100%;    
+
+}
+
+.programs_container .heading{
+    font: normal normal normal 30px/1.2em "sans-serif";
+    text-align: center;
+}
+
+.programs_container .heading.image_container{
+    width: 100%;
+    text-align: center;
+}
+
+.programs_container .heading.image_container img{
+    width: 50px;
+}
+
+@media screen and (max-width:920px){
+    .programs_wrapper{
+        width: 98%;
+        margin: 5% 0%;
+        padding:  0 1%;
+        box-sizing: border-box;
+    }
+
+    .programs_container .heading{
+        font: normal normal normal 18px/1.2em "sans-serif";
+    }
+}
+
+
+ /* begin programs list */
+
+.programs_list{
+    width: 100%;
+}
+
+.programs_list .program{
+    margin-top: 15px;
+    background-color:#2d1938; 
+}
+
+.programs_list .program .left_side{
+    width: 20%;
+    float: left;
+}
+
+.programs_list .program .left_side .image_container{
+    width:100%;
+}
+
+.programs_list .left_side .image_container img{
+    width: 100%;
+}
+
+.programs_list .program .right_side{
+    width: 80%;
+    padding: 2% 2%;
+    box-sizing: border-box;
+    float: left;
+}
+
+.program .sub_heading{
+    font: normal normal normal 25px/1.2em "sans-serif";
+    color: #fff;
+}
+
+.program .description_container{
+    width: 100%;
+}
+
+.program .description_container .description{
+    width: 75%;
+    margin-right: 5%;
+    color: #fff;
+    float: left;
+    font: normal normal normal 16px/1.2em "Helvetica";
+}
+
+.program .description_container .description_button{
+    width: 20%;
+    float: left;
+}
+
+.program .description_container .description_button .action_button{
+    padding: 5px 5px;
+    color: #fff;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+@media screen and (max-width:768px){
+    .programs_list .program .left_side{
+        width: 35%;
+    }
+    
+    .programs_list .program .right_side{
+        width: 65%;
+    }
+    
+    .program .sub_heading{
+        font: normal normal normal 17px/1.2em "sans-serif";
+    }
+    
+    .program .description_container .description{
+        width: 100%;
+        margin-right: 0%;
+        color: #fff;
+        float: none;
+        display: block;
+        font: normal normal normal 14px/1.2em "Helvetica";
+    }
+    
+    .program .description_container .description_button{
+        width: 100%;
+        margin-top: 10px;
+        float: none;
+        display: block;
+        text-align: center;
+    }    
+}
+
+
+/* end programs list */
+
+
+/* 
+end programs 
+*/
+
+
+/*
+    begin students around
+*/
+
+.students_around_wrapper{
+    width: 100%;
+}
+
+.students_around_wrapper .students_around_container{
+    height: 600px;
+    background: url(../../../images/index/graduation_birds_eye_view.jpg) no-repeat center center /cover;
+    position: relative;
+    width: 100%;
+}
+
+.students_around_container .overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(75, 52, 93, .4);
+}
+
+.students_around_container .overlay .heading{
+    position: absolute;
+    top: 5%;
+    transform: translateY(-5%);
+    font: normal normal normal 35px/1.2em "sans-serif";
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.students_around_container .overlay .action_button_container{
+    position: absolute;
+    bottom: 5%;
+    transform: translateY(-5%);
+    width: 100%;
+    text-align: center;
+}
+
+/* 
+end students around 
+*/
