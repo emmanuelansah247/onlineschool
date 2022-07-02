@@ -42,8 +42,8 @@ the appsettings.json file
 Running The Application
 You can run the application using microsoft visual studio (By clicking run )
 
-or if you are using visual studio code, you can type
+or if you are using visual studio code, you can type following the command prompt or console
 
-   dotnet build
+    dotnet build
    
-   dotnet run
+ dotnet run
