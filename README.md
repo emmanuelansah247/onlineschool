@@ -35,7 +35,7 @@ You need to install the following from the windows package manager
 
 
 #### Setting up the database for the application
-You need to have microsoft sql server installed. Create a database [name_of_database] the update the connectionstring in the
+You need to have microsoft sql server installed. Create a database [name_of_database]. When you are done creating the database, you need to update the connectionstring in the
 the appsettings.json file
 ]Server=[name_of_server];User Id=[user_id[;Initial Catalog=[database_name]; Password=[password_to_the_server];
 
@@ -45,3 +45,7 @@ You can run the application using microsoft visual studio (By clicking run )
 or if you are using visual studio code, you can type following the command prompt or console
 
     dotnet run
+    
+#### Setting up the email service
+I created a node service for the email. You can create your own email and implement it in the application. But the application can still run without the 
+email service
